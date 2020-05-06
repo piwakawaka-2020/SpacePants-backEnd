@@ -725,9 +725,9 @@ module.exports = function(arraybuffer, start, end) {
 /***/ }),
 
 /***/ "./node_modules/asn1.js/lib/asn1.js":
-/*!******************************************!*\
-  !*** ./node_modules/asn1.js/lib/asn1.js ***!
-  \******************************************/
+/*!********************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/asn1.js/lib/asn1.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -745,14 +745,14 @@ asn1.encoders = __webpack_require__(/*! ./asn1/encoders */ "./node_modules/asn1.
 /***/ }),
 
 /***/ "./node_modules/asn1.js/lib/asn1/api.js":
-/*!**********************************************!*\
-  !*** ./node_modules/asn1.js/lib/asn1/api.js ***!
-  \**********************************************/
+/*!************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/asn1.js/lib/asn1/api.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 var asn1 = __webpack_require__(/*! ../asn1 */ "./node_modules/asn1.js/lib/asn1.js");
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js");
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31");
 
 var api = exports;
 
@@ -817,15 +817,15 @@ Entity.prototype.encode = function encode(data, enc, /* internal */ reporter) {
 /***/ }),
 
 /***/ "./node_modules/asn1.js/lib/asn1/base/buffer.js":
-/*!******************************************************!*\
-  !*** ./node_modules/asn1.js/lib/asn1/base/buffer.js ***!
-  \******************************************************/
+/*!********************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/asn1.js/lib/asn1/base/buffer.js ***!
+  \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js");
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31");
 var Reporter = __webpack_require__(/*! ../base */ "./node_modules/asn1.js/lib/asn1/base/index.js").Reporter;
-var Buffer = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js").Buffer;
+var Buffer = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js?1eb7").Buffer;
 
 function DecoderBuffer(base, options) {
   Reporter.call(this, options);
@@ -944,9 +944,9 @@ EncoderBuffer.prototype.join = function join(out, offset) {
 /***/ }),
 
 /***/ "./node_modules/asn1.js/lib/asn1/base/index.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/asn1.js/lib/asn1/base/index.js ***!
-  \*****************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/asn1.js/lib/asn1/base/index.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -961,9 +961,9 @@ base.Node = __webpack_require__(/*! ./node */ "./node_modules/asn1.js/lib/asn1/b
 /***/ }),
 
 /***/ "./node_modules/asn1.js/lib/asn1/base/node.js":
-/*!****************************************************!*\
-  !*** ./node_modules/asn1.js/lib/asn1/base/node.js ***!
-  \****************************************************/
+/*!******************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/asn1.js/lib/asn1/base/node.js ***!
+  \******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1606,13 +1606,13 @@ Node.prototype._isPrintstr = function isPrintstr(str) {
 /***/ }),
 
 /***/ "./node_modules/asn1.js/lib/asn1/base/reporter.js":
-/*!********************************************************!*\
-  !*** ./node_modules/asn1.js/lib/asn1/base/reporter.js ***!
-  \********************************************************/
+/*!**********************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/asn1.js/lib/asn1/base/reporter.js ***!
+  \**********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js");
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31");
 
 function Reporter(options) {
   this._reporterState = {
@@ -1738,9 +1738,9 @@ ReporterError.prototype.rethrow = function rethrow(msg) {
 /***/ }),
 
 /***/ "./node_modules/asn1.js/lib/asn1/constants/der.js":
-/*!********************************************************!*\
-  !*** ./node_modules/asn1.js/lib/asn1/constants/der.js ***!
-  \********************************************************/
+/*!**********************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/asn1.js/lib/asn1/constants/der.js ***!
+  \**********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1791,9 +1791,9 @@ exports.tagByName = constants._reverse(exports.tag);
 /***/ }),
 
 /***/ "./node_modules/asn1.js/lib/asn1/constants/index.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/asn1.js/lib/asn1/constants/index.js ***!
-  \**********************************************************/
+/*!************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/asn1.js/lib/asn1/constants/index.js ***!
+  \************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1821,13 +1821,13 @@ constants.der = __webpack_require__(/*! ./der */ "./node_modules/asn1.js/lib/asn
 /***/ }),
 
 /***/ "./node_modules/asn1.js/lib/asn1/decoders/der.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/asn1.js/lib/asn1/decoders/der.js ***!
-  \*******************************************************/
+/*!*********************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/asn1.js/lib/asn1/decoders/der.js ***!
+  \*********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js");
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31");
 
 var asn1 = __webpack_require__(/*! ../../asn1 */ "./node_modules/asn1.js/lib/asn1.js");
 var base = asn1.base;
@@ -2156,9 +2156,9 @@ function derDecodeLen(buf, primitive, fail) {
 /***/ }),
 
 /***/ "./node_modules/asn1.js/lib/asn1/decoders/index.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/asn1.js/lib/asn1/decoders/index.js ***!
-  \*********************************************************/
+/*!***********************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/asn1.js/lib/asn1/decoders/index.js ***!
+  \***********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2171,14 +2171,14 @@ decoders.pem = __webpack_require__(/*! ./pem */ "./node_modules/asn1.js/lib/asn1
 /***/ }),
 
 /***/ "./node_modules/asn1.js/lib/asn1/decoders/pem.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/asn1.js/lib/asn1/decoders/pem.js ***!
-  \*******************************************************/
+/*!*********************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/asn1.js/lib/asn1/decoders/pem.js ***!
+  \*********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js");
-var Buffer = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js").Buffer;
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31");
+var Buffer = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js?1eb7").Buffer;
 
 var DERDecoder = __webpack_require__(/*! ./der */ "./node_modules/asn1.js/lib/asn1/decoders/der.js");
 
@@ -2231,14 +2231,14 @@ PEMDecoder.prototype.decode = function decode(data, options) {
 /***/ }),
 
 /***/ "./node_modules/asn1.js/lib/asn1/encoders/der.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/asn1.js/lib/asn1/encoders/der.js ***!
-  \*******************************************************/
+/*!*********************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/asn1.js/lib/asn1/encoders/der.js ***!
+  \*********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js");
-var Buffer = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js").Buffer;
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31");
+var Buffer = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js?1eb7").Buffer;
 
 var asn1 = __webpack_require__(/*! ../../asn1 */ "./node_modules/asn1.js/lib/asn1.js");
 var base = asn1.base;
@@ -2537,9 +2537,9 @@ function encodeTag(tag, primitive, cls, reporter) {
 /***/ }),
 
 /***/ "./node_modules/asn1.js/lib/asn1/encoders/index.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/asn1.js/lib/asn1/encoders/index.js ***!
-  \*********************************************************/
+/*!***********************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/asn1.js/lib/asn1/encoders/index.js ***!
+  \***********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2552,13 +2552,13 @@ encoders.pem = __webpack_require__(/*! ./pem */ "./node_modules/asn1.js/lib/asn1
 /***/ }),
 
 /***/ "./node_modules/asn1.js/lib/asn1/encoders/pem.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/asn1.js/lib/asn1/encoders/pem.js ***!
-  \*******************************************************/
+/*!*********************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/asn1.js/lib/asn1/encoders/pem.js ***!
+  \*********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js");
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31");
 
 var DEREncoder = __webpack_require__(/*! ./der */ "./node_modules/asn1.js/lib/asn1/encoders/der.js");
 
@@ -2584,9 +2584,9 @@ PEMEncoder.prototype.encode = function encode(data, options) {
 /***/ }),
 
 /***/ "./node_modules/assert/assert.js":
-/*!***************************************!*\
-  !*** ./node_modules/assert/assert.js ***!
-  \***************************************/
+/*!*****************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/assert/assert.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3098,7 +3098,7 @@ var objectKeys = Object.keys || function (obj) {
   return keys;
 };
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js?cd00")))
 
 /***/ }),
 
@@ -3180,10 +3180,174 @@ var objectKeys = Object.keys || function (obj) {
 
 /***/ }),
 
-/***/ "./node_modules/base64-js/index.js":
+/***/ "./node_modules/base64-js/index.js?1fb5":
 /*!*****************************************!*\
   !*** ./node_modules/base64-js/index.js ***!
   \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.byteLength = byteLength
+exports.toByteArray = toByteArray
+exports.fromByteArray = fromByteArray
+
+var lookup = []
+var revLookup = []
+var Arr = typeof Uint8Array !== 'undefined' ? Uint8Array : Array
+
+var code = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+for (var i = 0, len = code.length; i < len; ++i) {
+  lookup[i] = code[i]
+  revLookup[code.charCodeAt(i)] = i
+}
+
+// Support decoding URL-safe base64 strings, as Node.js does.
+// See: https://en.wikipedia.org/wiki/Base64#URL_applications
+revLookup['-'.charCodeAt(0)] = 62
+revLookup['_'.charCodeAt(0)] = 63
+
+function getLens (b64) {
+  var len = b64.length
+
+  if (len % 4 > 0) {
+    throw new Error('Invalid string. Length must be a multiple of 4')
+  }
+
+  // Trim off extra bytes after placeholder bytes are found
+  // See: https://github.com/beatgammit/base64-js/issues/42
+  var validLen = b64.indexOf('=')
+  if (validLen === -1) validLen = len
+
+  var placeHoldersLen = validLen === len
+    ? 0
+    : 4 - (validLen % 4)
+
+  return [validLen, placeHoldersLen]
+}
+
+// base64 is 4/3 + up to two characters of the original data
+function byteLength (b64) {
+  var lens = getLens(b64)
+  var validLen = lens[0]
+  var placeHoldersLen = lens[1]
+  return ((validLen + placeHoldersLen) * 3 / 4) - placeHoldersLen
+}
+
+function _byteLength (b64, validLen, placeHoldersLen) {
+  return ((validLen + placeHoldersLen) * 3 / 4) - placeHoldersLen
+}
+
+function toByteArray (b64) {
+  var tmp
+  var lens = getLens(b64)
+  var validLen = lens[0]
+  var placeHoldersLen = lens[1]
+
+  var arr = new Arr(_byteLength(b64, validLen, placeHoldersLen))
+
+  var curByte = 0
+
+  // if there are placeholders, only get up to the last complete 4 chars
+  var len = placeHoldersLen > 0
+    ? validLen - 4
+    : validLen
+
+  var i
+  for (i = 0; i < len; i += 4) {
+    tmp =
+      (revLookup[b64.charCodeAt(i)] << 18) |
+      (revLookup[b64.charCodeAt(i + 1)] << 12) |
+      (revLookup[b64.charCodeAt(i + 2)] << 6) |
+      revLookup[b64.charCodeAt(i + 3)]
+    arr[curByte++] = (tmp >> 16) & 0xFF
+    arr[curByte++] = (tmp >> 8) & 0xFF
+    arr[curByte++] = tmp & 0xFF
+  }
+
+  if (placeHoldersLen === 2) {
+    tmp =
+      (revLookup[b64.charCodeAt(i)] << 2) |
+      (revLookup[b64.charCodeAt(i + 1)] >> 4)
+    arr[curByte++] = tmp & 0xFF
+  }
+
+  if (placeHoldersLen === 1) {
+    tmp =
+      (revLookup[b64.charCodeAt(i)] << 10) |
+      (revLookup[b64.charCodeAt(i + 1)] << 4) |
+      (revLookup[b64.charCodeAt(i + 2)] >> 2)
+    arr[curByte++] = (tmp >> 8) & 0xFF
+    arr[curByte++] = tmp & 0xFF
+  }
+
+  return arr
+}
+
+function tripletToBase64 (num) {
+  return lookup[num >> 18 & 0x3F] +
+    lookup[num >> 12 & 0x3F] +
+    lookup[num >> 6 & 0x3F] +
+    lookup[num & 0x3F]
+}
+
+function encodeChunk (uint8, start, end) {
+  var tmp
+  var output = []
+  for (var i = start; i < end; i += 3) {
+    tmp =
+      ((uint8[i] << 16) & 0xFF0000) +
+      ((uint8[i + 1] << 8) & 0xFF00) +
+      (uint8[i + 2] & 0xFF)
+    output.push(tripletToBase64(tmp))
+  }
+  return output.join('')
+}
+
+function fromByteArray (uint8) {
+  var tmp
+  var len = uint8.length
+  var extraBytes = len % 3 // if we have 1 byte left, pad 2 bytes
+  var parts = []
+  var maxChunkLength = 16383 // must be multiple of 3
+
+  // go through the array every three bytes, we'll deal with trailing stuff later
+  for (var i = 0, len2 = len - extraBytes; i < len2; i += maxChunkLength) {
+    parts.push(encodeChunk(
+      uint8, i, (i + maxChunkLength) > len2 ? len2 : (i + maxChunkLength)
+    ))
+  }
+
+  // pad the end with zeros, but make sure to not forget the extra bytes
+  if (extraBytes === 1) {
+    tmp = uint8[len - 1]
+    parts.push(
+      lookup[tmp >> 2] +
+      lookup[(tmp << 4) & 0x3F] +
+      '=='
+    )
+  } else if (extraBytes === 2) {
+    tmp = (uint8[len - 2] << 8) + uint8[len - 1]
+    parts.push(
+      lookup[tmp >> 10] +
+      lookup[(tmp >> 4) & 0x3F] +
+      lookup[(tmp << 2) & 0x3F] +
+      '='
+    )
+  }
+
+  return parts.join('')
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/base64-js/index.js?5568":
+/*!*******************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/base64-js/index.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3455,7 +3619,7 @@ Base64Id.prototype.generateId = function () {
 
 exports = module.exports = new Base64Id();
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../buffer/index.js */ "./node_modules/buffer/index.js").Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../buffer/index.js */ "./node_modules/buffer/index.js?b639").Buffer))
 
 /***/ }),
 
@@ -3571,9 +3735,9 @@ module.exports = (function() {
 /***/ }),
 
 /***/ "./node_modules/bn.js/lib/bn.js":
-/*!**************************************!*\
-  !*** ./node_modules/bn.js/lib/bn.js ***!
-  \**************************************/
+/*!****************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/bn.js/lib/bn.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7005,7 +7169,7 @@ module.exports = (function() {
   };
 })( false || module, this);
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js")(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js?ced2")(module)))
 
 /***/ }),
 
@@ -8354,7 +8518,7 @@ function parse(val) {
 var deprecate = __webpack_require__(/*! depd */ "./node_modules/depd/lib/browser/index.js")('http-errors')
 var setPrototypeOf = __webpack_require__(/*! setprototypeof */ "./node_modules/body-parser/node_modules/setprototypeof/index.js")
 var statuses = __webpack_require__(/*! statuses */ "./node_modules/body-parser/node_modules/statuses/index.js")
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js")
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?3fb5")
 var toIdentifier = __webpack_require__(/*! toidentifier */ "./node_modules/toidentifier/index.js")
 
 /**
@@ -9603,9 +9767,9 @@ function status (code) {
 /***/ }),
 
 /***/ "./node_modules/brorand/index.js":
-/*!***************************************!*\
-  !*** ./node_modules/brorand/index.js ***!
-  \***************************************/
+/*!*****************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/brorand/index.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9679,9 +9843,9 @@ if (typeof self === 'object') {
 /***/ }),
 
 /***/ "./node_modules/browserify-aes/aes.js":
-/*!********************************************!*\
-  !*** ./node_modules/browserify-aes/aes.js ***!
-  \********************************************/
+/*!**********************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/browserify-aes/aes.js ***!
+  \**********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9690,7 +9854,7 @@ if (typeof self === 'object') {
 // which is in turn based on the one from crypto-js
 // https://code.google.com/p/crypto-js/
 
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 
 function asUInt32Array (buf) {
   if (!Buffer.isBuffer(buf)) buf = Buffer.from(buf)
@@ -9918,16 +10082,16 @@ module.exports.AES = AES
 /***/ }),
 
 /***/ "./node_modules/browserify-aes/authCipher.js":
-/*!***************************************************!*\
-  !*** ./node_modules/browserify-aes/authCipher.js ***!
-  \***************************************************/
+/*!*****************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/browserify-aes/authCipher.js ***!
+  \*****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 var aes = __webpack_require__(/*! ./aes */ "./node_modules/browserify-aes/aes.js")
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 var Transform = __webpack_require__(/*! cipher-base */ "./node_modules/cipher-base/index.js")
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js")
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31")
 var GHASH = __webpack_require__(/*! ./ghash */ "./node_modules/browserify-aes/ghash.js")
 var xor = __webpack_require__(/*! buffer-xor */ "./node_modules/buffer-xor/index.js")
 var incr32 = __webpack_require__(/*! ./incr32 */ "./node_modules/browserify-aes/incr32.js")
@@ -10046,9 +10210,9 @@ module.exports = StreamCipher
 /***/ }),
 
 /***/ "./node_modules/browserify-aes/browser.js":
-/*!************************************************!*\
-  !*** ./node_modules/browserify-aes/browser.js ***!
-  \************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/browserify-aes/browser.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10070,20 +10234,20 @@ exports.listCiphers = exports.getCiphers = getCiphers
 /***/ }),
 
 /***/ "./node_modules/browserify-aes/decrypter.js":
-/*!**************************************************!*\
-  !*** ./node_modules/browserify-aes/decrypter.js ***!
-  \**************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/browserify-aes/decrypter.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AuthCipher = __webpack_require__(/*! ./authCipher */ "./node_modules/browserify-aes/authCipher.js")
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 var MODES = __webpack_require__(/*! ./modes */ "./node_modules/browserify-aes/modes/index.js")
 var StreamCipher = __webpack_require__(/*! ./streamCipher */ "./node_modules/browserify-aes/streamCipher.js")
 var Transform = __webpack_require__(/*! cipher-base */ "./node_modules/cipher-base/index.js")
 var aes = __webpack_require__(/*! ./aes */ "./node_modules/browserify-aes/aes.js")
 var ebtk = __webpack_require__(/*! evp_bytestokey */ "./node_modules/evp_bytestokey/index.js")
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js")
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31")
 
 function Decipher (mode, key, iv) {
   Transform.call(this)
@@ -10205,20 +10369,20 @@ exports.createDecipheriv = createDecipheriv
 /***/ }),
 
 /***/ "./node_modules/browserify-aes/encrypter.js":
-/*!**************************************************!*\
-  !*** ./node_modules/browserify-aes/encrypter.js ***!
-  \**************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/browserify-aes/encrypter.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 var MODES = __webpack_require__(/*! ./modes */ "./node_modules/browserify-aes/modes/index.js")
 var AuthCipher = __webpack_require__(/*! ./authCipher */ "./node_modules/browserify-aes/authCipher.js")
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 var StreamCipher = __webpack_require__(/*! ./streamCipher */ "./node_modules/browserify-aes/streamCipher.js")
 var Transform = __webpack_require__(/*! cipher-base */ "./node_modules/cipher-base/index.js")
 var aes = __webpack_require__(/*! ./aes */ "./node_modules/browserify-aes/aes.js")
 var ebtk = __webpack_require__(/*! evp_bytestokey */ "./node_modules/evp_bytestokey/index.js")
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js")
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31")
 
 function Cipher (mode, key, iv) {
   Transform.call(this)
@@ -10330,13 +10494,13 @@ exports.createCipher = createCipher
 /***/ }),
 
 /***/ "./node_modules/browserify-aes/ghash.js":
-/*!**********************************************!*\
-  !*** ./node_modules/browserify-aes/ghash.js ***!
-  \**********************************************/
+/*!************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/browserify-aes/ghash.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 var ZEROES = Buffer.alloc(16, 0)
 
 function toArray (buf) {
@@ -10430,9 +10594,9 @@ module.exports = GHASH
 /***/ }),
 
 /***/ "./node_modules/browserify-aes/incr32.js":
-/*!***********************************************!*\
-  !*** ./node_modules/browserify-aes/incr32.js ***!
-  \***********************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/browserify-aes/incr32.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -10456,9 +10620,9 @@ module.exports = incr32
 /***/ }),
 
 /***/ "./node_modules/browserify-aes/modes/cbc.js":
-/*!**************************************************!*\
-  !*** ./node_modules/browserify-aes/modes/cbc.js ***!
-  \**************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/browserify-aes/modes/cbc.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10484,13 +10648,13 @@ exports.decrypt = function (self, block) {
 /***/ }),
 
 /***/ "./node_modules/browserify-aes/modes/cfb.js":
-/*!**************************************************!*\
-  !*** ./node_modules/browserify-aes/modes/cfb.js ***!
-  \**************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/browserify-aes/modes/cfb.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 var xor = __webpack_require__(/*! buffer-xor */ "./node_modules/buffer-xor/index.js")
 
 function encryptStart (self, data, decrypt) {
@@ -10528,13 +10692,13 @@ exports.encrypt = function (self, data, decrypt) {
 /***/ }),
 
 /***/ "./node_modules/browserify-aes/modes/cfb1.js":
-/*!***************************************************!*\
-  !*** ./node_modules/browserify-aes/modes/cfb1.js ***!
-  \***************************************************/
+/*!*****************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/browserify-aes/modes/cfb1.js ***!
+  \*****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 
 function encryptByte (self, byteParam, decrypt) {
   var pad
@@ -10581,13 +10745,13 @@ exports.encrypt = function (self, chunk, decrypt) {
 /***/ }),
 
 /***/ "./node_modules/browserify-aes/modes/cfb8.js":
-/*!***************************************************!*\
-  !*** ./node_modules/browserify-aes/modes/cfb8.js ***!
-  \***************************************************/
+/*!*****************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/browserify-aes/modes/cfb8.js ***!
+  \*****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 
 function encryptByte (self, byteParam, decrypt) {
   var pad = self._cipher.encryptBlock(self._prev)
@@ -10617,14 +10781,14 @@ exports.encrypt = function (self, chunk, decrypt) {
 /***/ }),
 
 /***/ "./node_modules/browserify-aes/modes/ctr.js":
-/*!**************************************************!*\
-  !*** ./node_modules/browserify-aes/modes/ctr.js ***!
-  \**************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/browserify-aes/modes/ctr.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 var xor = __webpack_require__(/*! buffer-xor */ "./node_modules/buffer-xor/index.js")
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 var incr32 = __webpack_require__(/*! ../incr32 */ "./node_modules/browserify-aes/incr32.js")
 
 function getBlock (self) {
@@ -10658,9 +10822,9 @@ exports.encrypt = function (self, chunk) {
 /***/ }),
 
 /***/ "./node_modules/browserify-aes/modes/ecb.js":
-/*!**************************************************!*\
-  !*** ./node_modules/browserify-aes/modes/ecb.js ***!
-  \**************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/browserify-aes/modes/ecb.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -10676,9 +10840,9 @@ exports.decrypt = function (self, block) {
 /***/ }),
 
 /***/ "./node_modules/browserify-aes/modes/index.js":
-/*!****************************************************!*\
-  !*** ./node_modules/browserify-aes/modes/index.js ***!
-  \****************************************************/
+/*!******************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/browserify-aes/modes/index.js ***!
+  \******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10705,9 +10869,9 @@ module.exports = modes
 /***/ }),
 
 /***/ "./node_modules/browserify-aes/modes/list.json":
-/*!*****************************************************!*\
-  !*** ./node_modules/browserify-aes/modes/list.json ***!
-  \*****************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/browserify-aes/modes/list.json ***!
+  \*******************************************************************************************************************/
 /*! exports provided: aes-128-ecb, aes-192-ecb, aes-256-ecb, aes-128-cbc, aes-192-cbc, aes-256-cbc, aes128, aes192, aes256, aes-128-cfb, aes-192-cfb, aes-256-cfb, aes-128-cfb8, aes-192-cfb8, aes-256-cfb8, aes-128-cfb1, aes-192-cfb1, aes-256-cfb1, aes-128-ofb, aes-192-ofb, aes-256-ofb, aes-128-ctr, aes-192-ctr, aes-256-ctr, aes-128-gcm, aes-192-gcm, aes-256-gcm, default */
 /***/ (function(module) {
 
@@ -10716,9 +10880,9 @@ module.exports = JSON.parse("{\"aes-128-ecb\":{\"cipher\":\"AES\",\"key\":128,\"
 /***/ }),
 
 /***/ "./node_modules/browserify-aes/modes/ofb.js":
-/*!**************************************************!*\
-  !*** ./node_modules/browserify-aes/modes/ofb.js ***!
-  \**************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/browserify-aes/modes/ofb.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10739,21 +10903,21 @@ exports.encrypt = function (self, chunk) {
   return xor(chunk, pad)
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../buffer/index.js */ "./node_modules/buffer/index.js").Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../buffer/index.js */ "./node_modules/buffer/index.js?1eb7").Buffer))
 
 /***/ }),
 
 /***/ "./node_modules/browserify-aes/streamCipher.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/browserify-aes/streamCipher.js ***!
-  \*****************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/browserify-aes/streamCipher.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 var aes = __webpack_require__(/*! ./aes */ "./node_modules/browserify-aes/aes.js")
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 var Transform = __webpack_require__(/*! cipher-base */ "./node_modules/cipher-base/index.js")
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js")
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31")
 
 function StreamCipher (mode, key, iv, decrypt) {
   Transform.call(this)
@@ -10782,9 +10946,9 @@ module.exports = StreamCipher
 /***/ }),
 
 /***/ "./node_modules/browserify-cipher/browser.js":
-/*!***************************************************!*\
-  !*** ./node_modules/browserify-cipher/browser.js ***!
-  \***************************************************/
+/*!*****************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/browserify-cipher/browser.js ***!
+  \*****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10860,16 +11024,16 @@ exports.listCiphers = exports.getCiphers = getCiphers
 /***/ }),
 
 /***/ "./node_modules/browserify-des/index.js":
-/*!**********************************************!*\
-  !*** ./node_modules/browserify-des/index.js ***!
-  \**********************************************/
+/*!************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/browserify-des/index.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 var CipherBase = __webpack_require__(/*! cipher-base */ "./node_modules/cipher-base/index.js")
 var des = __webpack_require__(/*! des.js */ "./node_modules/des.js/lib/des.js")
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js")
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31")
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 
 var modes = {
   'des-ede3-cbc': des.CBC.instantiate(des.EDE),
@@ -10921,9 +11085,9 @@ DES.prototype._final = function () {
 /***/ }),
 
 /***/ "./node_modules/browserify-des/modes.js":
-/*!**********************************************!*\
-  !*** ./node_modules/browserify-des/modes.js ***!
-  \**********************************************/
+/*!************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/browserify-des/modes.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -10956,9 +11120,9 @@ exports['des-ede'] = {
 /***/ }),
 
 /***/ "./node_modules/browserify-rsa/index.js":
-/*!**********************************************!*\
-  !*** ./node_modules/browserify-rsa/index.js ***!
-  \**********************************************/
+/*!************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/browserify-rsa/index.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11003,14 +11167,14 @@ function getr(priv) {
   return r;
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../buffer/index.js */ "./node_modules/buffer/index.js").Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../buffer/index.js */ "./node_modules/buffer/index.js?1eb7").Buffer))
 
 /***/ }),
 
 /***/ "./node_modules/browserify-sign/algos.js":
-/*!***********************************************!*\
-  !*** ./node_modules/browserify-sign/algos.js ***!
-  \***********************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/browserify-sign/algos.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11020,9 +11184,9 @@ module.exports = __webpack_require__(/*! ./browser/algorithms.json */ "./node_mo
 /***/ }),
 
 /***/ "./node_modules/browserify-sign/browser/algorithms.json":
-/*!**************************************************************!*\
-  !*** ./node_modules/browserify-sign/browser/algorithms.json ***!
-  \**************************************************************/
+/*!****************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/browserify-sign/browser/algorithms.json ***!
+  \****************************************************************************************************************************/
 /*! exports provided: sha224WithRSAEncryption, RSA-SHA224, sha256WithRSAEncryption, RSA-SHA256, sha384WithRSAEncryption, RSA-SHA384, sha512WithRSAEncryption, RSA-SHA512, RSA-SHA1, ecdsa-with-SHA1, sha256, sha224, sha384, sha512, DSA-SHA, DSA-SHA1, DSA, DSA-WITH-SHA224, DSA-SHA224, DSA-WITH-SHA256, DSA-SHA256, DSA-WITH-SHA384, DSA-SHA384, DSA-WITH-SHA512, DSA-SHA512, DSA-RIPEMD160, ripemd160WithRSA, RSA-RIPEMD160, md5WithRSAEncryption, RSA-MD5, default */
 /***/ (function(module) {
 
@@ -11031,9 +11195,9 @@ module.exports = JSON.parse("{\"sha224WithRSAEncryption\":{\"sign\":\"rsa\",\"ha
 /***/ }),
 
 /***/ "./node_modules/browserify-sign/browser/curves.json":
-/*!**********************************************************!*\
-  !*** ./node_modules/browserify-sign/browser/curves.json ***!
-  \**********************************************************/
+/*!************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/browserify-sign/browser/curves.json ***!
+  \************************************************************************************************************************/
 /*! exports provided: 1.3.132.0.10, 1.3.132.0.33, 1.2.840.10045.3.1.1, 1.2.840.10045.3.1.7, 1.3.132.0.34, 1.3.132.0.35, default */
 /***/ (function(module) {
 
@@ -11042,15 +11206,15 @@ module.exports = JSON.parse("{\"1.3.132.0.10\":\"secp256k1\",\"1.3.132.0.33\":\"
 /***/ }),
 
 /***/ "./node_modules/browserify-sign/browser/index.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/browserify-sign/browser/index.js ***!
-  \*******************************************************/
+/*!*********************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/browserify-sign/browser/index.js ***!
+  \*********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {var createHash = __webpack_require__(/*! create-hash */ "./node_modules/create-hash/browser.js")
 var stream = __webpack_require__(/*! stream */ "./node_modules/stream-browserify/index.js")
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js")
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31")
 var sign = __webpack_require__(/*! ./sign */ "./node_modules/browserify-sign/browser/sign.js")
 var verify = __webpack_require__(/*! ./verify */ "./node_modules/browserify-sign/browser/verify.js")
 
@@ -11140,14 +11304,14 @@ module.exports = {
   createVerify: createVerify
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../buffer/index.js */ "./node_modules/buffer/index.js").Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../buffer/index.js */ "./node_modules/buffer/index.js?1eb7").Buffer))
 
 /***/ }),
 
 /***/ "./node_modules/browserify-sign/browser/sign.js":
-/*!******************************************************!*\
-  !*** ./node_modules/browserify-sign/browser/sign.js ***!
-  \******************************************************/
+/*!********************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/browserify-sign/browser/sign.js ***!
+  \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11297,14 +11461,14 @@ module.exports = sign
 module.exports.getKey = getKey
 module.exports.makeKey = makeKey
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../buffer/index.js */ "./node_modules/buffer/index.js").Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../buffer/index.js */ "./node_modules/buffer/index.js?1eb7").Buffer))
 
 /***/ }),
 
 /***/ "./node_modules/browserify-sign/browser/verify.js":
-/*!********************************************************!*\
-  !*** ./node_modules/browserify-sign/browser/verify.js ***!
-  \********************************************************/
+/*!**********************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/browserify-sign/browser/verify.js ***!
+  \**********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11392,14 +11556,14 @@ function checkValue (b, q) {
 
 module.exports = verify
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../buffer/index.js */ "./node_modules/buffer/index.js").Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../buffer/index.js */ "./node_modules/buffer/index.js?1eb7").Buffer))
 
 /***/ }),
 
 /***/ "./node_modules/browserify-zlib/lib/binding.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/browserify-zlib/lib/binding.js ***!
-  \*****************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/browserify-zlib/lib/binding.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11813,26 +11977,26 @@ Zlib.prototype._reset = function () {
 };
 
 exports.Zlib = Zlib;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../buffer/index.js */ "./node_modules/buffer/index.js").Buffer, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../buffer/index.js */ "./node_modules/buffer/index.js?1eb7").Buffer, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js?20f2")))
 
 /***/ }),
 
 /***/ "./node_modules/browserify-zlib/lib/index.js":
-/*!***************************************************!*\
-  !*** ./node_modules/browserify-zlib/lib/index.js ***!
-  \***************************************************/
+/*!*****************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/browserify-zlib/lib/index.js ***!
+  \*****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
-var Buffer = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js").Buffer;
+var Buffer = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js?1eb7").Buffer;
 var Transform = __webpack_require__(/*! stream */ "./node_modules/stream-browserify/index.js").Transform;
 var binding = __webpack_require__(/*! ./binding */ "./node_modules/browserify-zlib/lib/binding.js");
 var util = __webpack_require__(/*! util */ "./node_modules/util/util.js");
 var assert = __webpack_require__(/*! assert */ "./node_modules/assert/assert.js").ok;
-var kMaxLength = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js").kMaxLength;
+var kMaxLength = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js?1eb7").kMaxLength;
 var kRangeErrorMessage = 'Cannot create final Buffer. It would be larger ' + 'than 0x' + kMaxLength.toString(16) + ' bytes';
 
 // zlib doesn't provide these, so kludge them in following the same
@@ -12434,14 +12598,14 @@ util.inherits(Gunzip, Zlib);
 util.inherits(DeflateRaw, Zlib);
 util.inherits(InflateRaw, Zlib);
 util.inherits(Unzip, Zlib);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js?20f2")))
 
 /***/ }),
 
 /***/ "./node_modules/buffer-xor/index.js":
-/*!******************************************!*\
-  !*** ./node_modules/buffer-xor/index.js ***!
-  \******************************************/
+/*!********************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/buffer-xor/index.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12456,14 +12620,14 @@ util.inherits(Unzip, Zlib);
   return buffer
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../buffer/index.js */ "./node_modules/buffer/index.js").Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../buffer/index.js */ "./node_modules/buffer/index.js?1eb7").Buffer))
 
 /***/ }),
 
-/***/ "./node_modules/buffer/index.js":
-/*!**************************************!*\
-  !*** ./node_modules/buffer/index.js ***!
-  \**************************************/
+/***/ "./node_modules/buffer/index.js?1eb7":
+/*!****************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/buffer/index.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12478,9 +12642,9 @@ util.inherits(Unzip, Zlib);
 
 
 
-var base64 = __webpack_require__(/*! base64-js */ "./node_modules/base64-js/index.js")
-var ieee754 = __webpack_require__(/*! ieee754 */ "./node_modules/ieee754/index.js")
-var isArray = __webpack_require__(/*! isarray */ "./node_modules/isarray/index.js")
+var base64 = __webpack_require__(/*! base64-js */ "./node_modules/base64-js/index.js?5568")
+var ieee754 = __webpack_require__(/*! ieee754 */ "./node_modules/ieee754/index.js?7f3c")
+var isArray = __webpack_require__(/*! isarray */ "./node_modules/isarray/index.js?12d8")
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -14258,14 +14422,1816 @@ function isnan (val) {
   return val !== val // eslint-disable-line no-self-compare
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js?cd00")))
+
+/***/ }),
+
+/***/ "./node_modules/buffer/index.js?b639":
+/*!**************************************!*\
+  !*** ./node_modules/buffer/index.js ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {/*!
+ * The buffer module from node.js, for the browser.
+ *
+ * @author   Feross Aboukhadijeh <http://feross.org>
+ * @license  MIT
+ */
+/* eslint-disable no-proto */
+
+
+
+var base64 = __webpack_require__(/*! base64-js */ "./node_modules/base64-js/index.js?1fb5")
+var ieee754 = __webpack_require__(/*! ieee754 */ "./node_modules/ieee754/index.js?9152")
+var isArray = __webpack_require__(/*! isarray */ "./node_modules/isarray/index.js?e3db")
+
+exports.Buffer = Buffer
+exports.SlowBuffer = SlowBuffer
+exports.INSPECT_MAX_BYTES = 50
+
+/**
+ * If `Buffer.TYPED_ARRAY_SUPPORT`:
+ *   === true    Use Uint8Array implementation (fastest)
+ *   === false   Use Object implementation (most compatible, even IE6)
+ *
+ * Browsers that support typed arrays are IE 10+, Firefox 4+, Chrome 7+, Safari 5.1+,
+ * Opera 11.6+, iOS 4.2+.
+ *
+ * Due to various browser bugs, sometimes the Object implementation will be used even
+ * when the browser supports typed arrays.
+ *
+ * Note:
+ *
+ *   - Firefox 4-29 lacks support for adding new properties to `Uint8Array` instances,
+ *     See: https://bugzilla.mozilla.org/show_bug.cgi?id=695438.
+ *
+ *   - Chrome 9-10 is missing the `TypedArray.prototype.subarray` function.
+ *
+ *   - IE10 has a broken `TypedArray.prototype.subarray` function which returns arrays of
+ *     incorrect length in some situations.
+
+ * We detect these buggy browsers and set `Buffer.TYPED_ARRAY_SUPPORT` to `false` so they
+ * get the Object implementation, which is slower but behaves correctly.
+ */
+Buffer.TYPED_ARRAY_SUPPORT = global.TYPED_ARRAY_SUPPORT !== undefined
+  ? global.TYPED_ARRAY_SUPPORT
+  : typedArraySupport()
+
+/*
+ * Export kMaxLength after typed array support is determined.
+ */
+exports.kMaxLength = kMaxLength()
+
+function typedArraySupport () {
+  try {
+    var arr = new Uint8Array(1)
+    arr.__proto__ = {__proto__: Uint8Array.prototype, foo: function () { return 42 }}
+    return arr.foo() === 42 && // typed array instances can be augmented
+        typeof arr.subarray === 'function' && // chrome 9-10 lack `subarray`
+        arr.subarray(1, 1).byteLength === 0 // ie10 has broken `subarray`
+  } catch (e) {
+    return false
+  }
+}
+
+function kMaxLength () {
+  return Buffer.TYPED_ARRAY_SUPPORT
+    ? 0x7fffffff
+    : 0x3fffffff
+}
+
+function createBuffer (that, length) {
+  if (kMaxLength() < length) {
+    throw new RangeError('Invalid typed array length')
+  }
+  if (Buffer.TYPED_ARRAY_SUPPORT) {
+    // Return an augmented `Uint8Array` instance, for best performance
+    that = new Uint8Array(length)
+    that.__proto__ = Buffer.prototype
+  } else {
+    // Fallback: Return an object instance of the Buffer class
+    if (that === null) {
+      that = new Buffer(length)
+    }
+    that.length = length
+  }
+
+  return that
+}
+
+/**
+ * The Buffer constructor returns instances of `Uint8Array` that have their
+ * prototype changed to `Buffer.prototype`. Furthermore, `Buffer` is a subclass of
+ * `Uint8Array`, so the returned instances will have all the node `Buffer` methods
+ * and the `Uint8Array` methods. Square bracket notation works as expected -- it
+ * returns a single octet.
+ *
+ * The `Uint8Array` prototype remains unmodified.
+ */
+
+function Buffer (arg, encodingOrOffset, length) {
+  if (!Buffer.TYPED_ARRAY_SUPPORT && !(this instanceof Buffer)) {
+    return new Buffer(arg, encodingOrOffset, length)
+  }
+
+  // Common case.
+  if (typeof arg === 'number') {
+    if (typeof encodingOrOffset === 'string') {
+      throw new Error(
+        'If encoding is specified then the first argument must be a string'
+      )
+    }
+    return allocUnsafe(this, arg)
+  }
+  return from(this, arg, encodingOrOffset, length)
+}
+
+Buffer.poolSize = 8192 // not used by this implementation
+
+// TODO: Legacy, not needed anymore. Remove in next major version.
+Buffer._augment = function (arr) {
+  arr.__proto__ = Buffer.prototype
+  return arr
+}
+
+function from (that, value, encodingOrOffset, length) {
+  if (typeof value === 'number') {
+    throw new TypeError('"value" argument must not be a number')
+  }
+
+  if (typeof ArrayBuffer !== 'undefined' && value instanceof ArrayBuffer) {
+    return fromArrayBuffer(that, value, encodingOrOffset, length)
+  }
+
+  if (typeof value === 'string') {
+    return fromString(that, value, encodingOrOffset)
+  }
+
+  return fromObject(that, value)
+}
+
+/**
+ * Functionally equivalent to Buffer(arg, encoding) but throws a TypeError
+ * if value is a number.
+ * Buffer.from(str[, encoding])
+ * Buffer.from(array)
+ * Buffer.from(buffer)
+ * Buffer.from(arrayBuffer[, byteOffset[, length]])
+ **/
+Buffer.from = function (value, encodingOrOffset, length) {
+  return from(null, value, encodingOrOffset, length)
+}
+
+if (Buffer.TYPED_ARRAY_SUPPORT) {
+  Buffer.prototype.__proto__ = Uint8Array.prototype
+  Buffer.__proto__ = Uint8Array
+  if (typeof Symbol !== 'undefined' && Symbol.species &&
+      Buffer[Symbol.species] === Buffer) {
+    // Fix subarray() in ES2016. See: https://github.com/feross/buffer/pull/97
+    Object.defineProperty(Buffer, Symbol.species, {
+      value: null,
+      configurable: true
+    })
+  }
+}
+
+function assertSize (size) {
+  if (typeof size !== 'number') {
+    throw new TypeError('"size" argument must be a number')
+  } else if (size < 0) {
+    throw new RangeError('"size" argument must not be negative')
+  }
+}
+
+function alloc (that, size, fill, encoding) {
+  assertSize(size)
+  if (size <= 0) {
+    return createBuffer(that, size)
+  }
+  if (fill !== undefined) {
+    // Only pay attention to encoding if it's a string. This
+    // prevents accidentally sending in a number that would
+    // be interpretted as a start offset.
+    return typeof encoding === 'string'
+      ? createBuffer(that, size).fill(fill, encoding)
+      : createBuffer(that, size).fill(fill)
+  }
+  return createBuffer(that, size)
+}
+
+/**
+ * Creates a new filled Buffer instance.
+ * alloc(size[, fill[, encoding]])
+ **/
+Buffer.alloc = function (size, fill, encoding) {
+  return alloc(null, size, fill, encoding)
+}
+
+function allocUnsafe (that, size) {
+  assertSize(size)
+  that = createBuffer(that, size < 0 ? 0 : checked(size) | 0)
+  if (!Buffer.TYPED_ARRAY_SUPPORT) {
+    for (var i = 0; i < size; ++i) {
+      that[i] = 0
+    }
+  }
+  return that
+}
+
+/**
+ * Equivalent to Buffer(num), by default creates a non-zero-filled Buffer instance.
+ * */
+Buffer.allocUnsafe = function (size) {
+  return allocUnsafe(null, size)
+}
+/**
+ * Equivalent to SlowBuffer(num), by default creates a non-zero-filled Buffer instance.
+ */
+Buffer.allocUnsafeSlow = function (size) {
+  return allocUnsafe(null, size)
+}
+
+function fromString (that, string, encoding) {
+  if (typeof encoding !== 'string' || encoding === '') {
+    encoding = 'utf8'
+  }
+
+  if (!Buffer.isEncoding(encoding)) {
+    throw new TypeError('"encoding" must be a valid string encoding')
+  }
+
+  var length = byteLength(string, encoding) | 0
+  that = createBuffer(that, length)
+
+  var actual = that.write(string, encoding)
+
+  if (actual !== length) {
+    // Writing a hex string, for example, that contains invalid characters will
+    // cause everything after the first invalid character to be ignored. (e.g.
+    // 'abxxcd' will be treated as 'ab')
+    that = that.slice(0, actual)
+  }
+
+  return that
+}
+
+function fromArrayLike (that, array) {
+  var length = array.length < 0 ? 0 : checked(array.length) | 0
+  that = createBuffer(that, length)
+  for (var i = 0; i < length; i += 1) {
+    that[i] = array[i] & 255
+  }
+  return that
+}
+
+function fromArrayBuffer (that, array, byteOffset, length) {
+  array.byteLength // this throws if `array` is not a valid ArrayBuffer
+
+  if (byteOffset < 0 || array.byteLength < byteOffset) {
+    throw new RangeError('\'offset\' is out of bounds')
+  }
+
+  if (array.byteLength < byteOffset + (length || 0)) {
+    throw new RangeError('\'length\' is out of bounds')
+  }
+
+  if (byteOffset === undefined && length === undefined) {
+    array = new Uint8Array(array)
+  } else if (length === undefined) {
+    array = new Uint8Array(array, byteOffset)
+  } else {
+    array = new Uint8Array(array, byteOffset, length)
+  }
+
+  if (Buffer.TYPED_ARRAY_SUPPORT) {
+    // Return an augmented `Uint8Array` instance, for best performance
+    that = array
+    that.__proto__ = Buffer.prototype
+  } else {
+    // Fallback: Return an object instance of the Buffer class
+    that = fromArrayLike(that, array)
+  }
+  return that
+}
+
+function fromObject (that, obj) {
+  if (Buffer.isBuffer(obj)) {
+    var len = checked(obj.length) | 0
+    that = createBuffer(that, len)
+
+    if (that.length === 0) {
+      return that
+    }
+
+    obj.copy(that, 0, 0, len)
+    return that
+  }
+
+  if (obj) {
+    if ((typeof ArrayBuffer !== 'undefined' &&
+        obj.buffer instanceof ArrayBuffer) || 'length' in obj) {
+      if (typeof obj.length !== 'number' || isnan(obj.length)) {
+        return createBuffer(that, 0)
+      }
+      return fromArrayLike(that, obj)
+    }
+
+    if (obj.type === 'Buffer' && isArray(obj.data)) {
+      return fromArrayLike(that, obj.data)
+    }
+  }
+
+  throw new TypeError('First argument must be a string, Buffer, ArrayBuffer, Array, or array-like object.')
+}
+
+function checked (length) {
+  // Note: cannot use `length < kMaxLength()` here because that fails when
+  // length is NaN (which is otherwise coerced to zero.)
+  if (length >= kMaxLength()) {
+    throw new RangeError('Attempt to allocate Buffer larger than maximum ' +
+                         'size: 0x' + kMaxLength().toString(16) + ' bytes')
+  }
+  return length | 0
+}
+
+function SlowBuffer (length) {
+  if (+length != length) { // eslint-disable-line eqeqeq
+    length = 0
+  }
+  return Buffer.alloc(+length)
+}
+
+Buffer.isBuffer = function isBuffer (b) {
+  return !!(b != null && b._isBuffer)
+}
+
+Buffer.compare = function compare (a, b) {
+  if (!Buffer.isBuffer(a) || !Buffer.isBuffer(b)) {
+    throw new TypeError('Arguments must be Buffers')
+  }
+
+  if (a === b) return 0
+
+  var x = a.length
+  var y = b.length
+
+  for (var i = 0, len = Math.min(x, y); i < len; ++i) {
+    if (a[i] !== b[i]) {
+      x = a[i]
+      y = b[i]
+      break
+    }
+  }
+
+  if (x < y) return -1
+  if (y < x) return 1
+  return 0
+}
+
+Buffer.isEncoding = function isEncoding (encoding) {
+  switch (String(encoding).toLowerCase()) {
+    case 'hex':
+    case 'utf8':
+    case 'utf-8':
+    case 'ascii':
+    case 'latin1':
+    case 'binary':
+    case 'base64':
+    case 'ucs2':
+    case 'ucs-2':
+    case 'utf16le':
+    case 'utf-16le':
+      return true
+    default:
+      return false
+  }
+}
+
+Buffer.concat = function concat (list, length) {
+  if (!isArray(list)) {
+    throw new TypeError('"list" argument must be an Array of Buffers')
+  }
+
+  if (list.length === 0) {
+    return Buffer.alloc(0)
+  }
+
+  var i
+  if (length === undefined) {
+    length = 0
+    for (i = 0; i < list.length; ++i) {
+      length += list[i].length
+    }
+  }
+
+  var buffer = Buffer.allocUnsafe(length)
+  var pos = 0
+  for (i = 0; i < list.length; ++i) {
+    var buf = list[i]
+    if (!Buffer.isBuffer(buf)) {
+      throw new TypeError('"list" argument must be an Array of Buffers')
+    }
+    buf.copy(buffer, pos)
+    pos += buf.length
+  }
+  return buffer
+}
+
+function byteLength (string, encoding) {
+  if (Buffer.isBuffer(string)) {
+    return string.length
+  }
+  if (typeof ArrayBuffer !== 'undefined' && typeof ArrayBuffer.isView === 'function' &&
+      (ArrayBuffer.isView(string) || string instanceof ArrayBuffer)) {
+    return string.byteLength
+  }
+  if (typeof string !== 'string') {
+    string = '' + string
+  }
+
+  var len = string.length
+  if (len === 0) return 0
+
+  // Use a for loop to avoid recursion
+  var loweredCase = false
+  for (;;) {
+    switch (encoding) {
+      case 'ascii':
+      case 'latin1':
+      case 'binary':
+        return len
+      case 'utf8':
+      case 'utf-8':
+      case undefined:
+        return utf8ToBytes(string).length
+      case 'ucs2':
+      case 'ucs-2':
+      case 'utf16le':
+      case 'utf-16le':
+        return len * 2
+      case 'hex':
+        return len >>> 1
+      case 'base64':
+        return base64ToBytes(string).length
+      default:
+        if (loweredCase) return utf8ToBytes(string).length // assume utf8
+        encoding = ('' + encoding).toLowerCase()
+        loweredCase = true
+    }
+  }
+}
+Buffer.byteLength = byteLength
+
+function slowToString (encoding, start, end) {
+  var loweredCase = false
+
+  // No need to verify that "this.length <= MAX_UINT32" since it's a read-only
+  // property of a typed array.
+
+  // This behaves neither like String nor Uint8Array in that we set start/end
+  // to their upper/lower bounds if the value passed is out of range.
+  // undefined is handled specially as per ECMA-262 6th Edition,
+  // Section 13.3.3.7 Runtime Semantics: KeyedBindingInitialization.
+  if (start === undefined || start < 0) {
+    start = 0
+  }
+  // Return early if start > this.length. Done here to prevent potential uint32
+  // coercion fail below.
+  if (start > this.length) {
+    return ''
+  }
+
+  if (end === undefined || end > this.length) {
+    end = this.length
+  }
+
+  if (end <= 0) {
+    return ''
+  }
+
+  // Force coersion to uint32. This will also coerce falsey/NaN values to 0.
+  end >>>= 0
+  start >>>= 0
+
+  if (end <= start) {
+    return ''
+  }
+
+  if (!encoding) encoding = 'utf8'
+
+  while (true) {
+    switch (encoding) {
+      case 'hex':
+        return hexSlice(this, start, end)
+
+      case 'utf8':
+      case 'utf-8':
+        return utf8Slice(this, start, end)
+
+      case 'ascii':
+        return asciiSlice(this, start, end)
+
+      case 'latin1':
+      case 'binary':
+        return latin1Slice(this, start, end)
+
+      case 'base64':
+        return base64Slice(this, start, end)
+
+      case 'ucs2':
+      case 'ucs-2':
+      case 'utf16le':
+      case 'utf-16le':
+        return utf16leSlice(this, start, end)
+
+      default:
+        if (loweredCase) throw new TypeError('Unknown encoding: ' + encoding)
+        encoding = (encoding + '').toLowerCase()
+        loweredCase = true
+    }
+  }
+}
+
+// The property is used by `Buffer.isBuffer` and `is-buffer` (in Safari 5-7) to detect
+// Buffer instances.
+Buffer.prototype._isBuffer = true
+
+function swap (b, n, m) {
+  var i = b[n]
+  b[n] = b[m]
+  b[m] = i
+}
+
+Buffer.prototype.swap16 = function swap16 () {
+  var len = this.length
+  if (len % 2 !== 0) {
+    throw new RangeError('Buffer size must be a multiple of 16-bits')
+  }
+  for (var i = 0; i < len; i += 2) {
+    swap(this, i, i + 1)
+  }
+  return this
+}
+
+Buffer.prototype.swap32 = function swap32 () {
+  var len = this.length
+  if (len % 4 !== 0) {
+    throw new RangeError('Buffer size must be a multiple of 32-bits')
+  }
+  for (var i = 0; i < len; i += 4) {
+    swap(this, i, i + 3)
+    swap(this, i + 1, i + 2)
+  }
+  return this
+}
+
+Buffer.prototype.swap64 = function swap64 () {
+  var len = this.length
+  if (len % 8 !== 0) {
+    throw new RangeError('Buffer size must be a multiple of 64-bits')
+  }
+  for (var i = 0; i < len; i += 8) {
+    swap(this, i, i + 7)
+    swap(this, i + 1, i + 6)
+    swap(this, i + 2, i + 5)
+    swap(this, i + 3, i + 4)
+  }
+  return this
+}
+
+Buffer.prototype.toString = function toString () {
+  var length = this.length | 0
+  if (length === 0) return ''
+  if (arguments.length === 0) return utf8Slice(this, 0, length)
+  return slowToString.apply(this, arguments)
+}
+
+Buffer.prototype.equals = function equals (b) {
+  if (!Buffer.isBuffer(b)) throw new TypeError('Argument must be a Buffer')
+  if (this === b) return true
+  return Buffer.compare(this, b) === 0
+}
+
+Buffer.prototype.inspect = function inspect () {
+  var str = ''
+  var max = exports.INSPECT_MAX_BYTES
+  if (this.length > 0) {
+    str = this.toString('hex', 0, max).match(/.{2}/g).join(' ')
+    if (this.length > max) str += ' ... '
+  }
+  return '<Buffer ' + str + '>'
+}
+
+Buffer.prototype.compare = function compare (target, start, end, thisStart, thisEnd) {
+  if (!Buffer.isBuffer(target)) {
+    throw new TypeError('Argument must be a Buffer')
+  }
+
+  if (start === undefined) {
+    start = 0
+  }
+  if (end === undefined) {
+    end = target ? target.length : 0
+  }
+  if (thisStart === undefined) {
+    thisStart = 0
+  }
+  if (thisEnd === undefined) {
+    thisEnd = this.length
+  }
+
+  if (start < 0 || end > target.length || thisStart < 0 || thisEnd > this.length) {
+    throw new RangeError('out of range index')
+  }
+
+  if (thisStart >= thisEnd && start >= end) {
+    return 0
+  }
+  if (thisStart >= thisEnd) {
+    return -1
+  }
+  if (start >= end) {
+    return 1
+  }
+
+  start >>>= 0
+  end >>>= 0
+  thisStart >>>= 0
+  thisEnd >>>= 0
+
+  if (this === target) return 0
+
+  var x = thisEnd - thisStart
+  var y = end - start
+  var len = Math.min(x, y)
+
+  var thisCopy = this.slice(thisStart, thisEnd)
+  var targetCopy = target.slice(start, end)
+
+  for (var i = 0; i < len; ++i) {
+    if (thisCopy[i] !== targetCopy[i]) {
+      x = thisCopy[i]
+      y = targetCopy[i]
+      break
+    }
+  }
+
+  if (x < y) return -1
+  if (y < x) return 1
+  return 0
+}
+
+// Finds either the first index of `val` in `buffer` at offset >= `byteOffset`,
+// OR the last index of `val` in `buffer` at offset <= `byteOffset`.
+//
+// Arguments:
+// - buffer - a Buffer to search
+// - val - a string, Buffer, or number
+// - byteOffset - an index into `buffer`; will be clamped to an int32
+// - encoding - an optional encoding, relevant is val is a string
+// - dir - true for indexOf, false for lastIndexOf
+function bidirectionalIndexOf (buffer, val, byteOffset, encoding, dir) {
+  // Empty buffer means no match
+  if (buffer.length === 0) return -1
+
+  // Normalize byteOffset
+  if (typeof byteOffset === 'string') {
+    encoding = byteOffset
+    byteOffset = 0
+  } else if (byteOffset > 0x7fffffff) {
+    byteOffset = 0x7fffffff
+  } else if (byteOffset < -0x80000000) {
+    byteOffset = -0x80000000
+  }
+  byteOffset = +byteOffset  // Coerce to Number.
+  if (isNaN(byteOffset)) {
+    // byteOffset: it it's undefined, null, NaN, "foo", etc, search whole buffer
+    byteOffset = dir ? 0 : (buffer.length - 1)
+  }
+
+  // Normalize byteOffset: negative offsets start from the end of the buffer
+  if (byteOffset < 0) byteOffset = buffer.length + byteOffset
+  if (byteOffset >= buffer.length) {
+    if (dir) return -1
+    else byteOffset = buffer.length - 1
+  } else if (byteOffset < 0) {
+    if (dir) byteOffset = 0
+    else return -1
+  }
+
+  // Normalize val
+  if (typeof val === 'string') {
+    val = Buffer.from(val, encoding)
+  }
+
+  // Finally, search either indexOf (if dir is true) or lastIndexOf
+  if (Buffer.isBuffer(val)) {
+    // Special case: looking for empty string/buffer always fails
+    if (val.length === 0) {
+      return -1
+    }
+    return arrayIndexOf(buffer, val, byteOffset, encoding, dir)
+  } else if (typeof val === 'number') {
+    val = val & 0xFF // Search for a byte value [0-255]
+    if (Buffer.TYPED_ARRAY_SUPPORT &&
+        typeof Uint8Array.prototype.indexOf === 'function') {
+      if (dir) {
+        return Uint8Array.prototype.indexOf.call(buffer, val, byteOffset)
+      } else {
+        return Uint8Array.prototype.lastIndexOf.call(buffer, val, byteOffset)
+      }
+    }
+    return arrayIndexOf(buffer, [ val ], byteOffset, encoding, dir)
+  }
+
+  throw new TypeError('val must be string, number or Buffer')
+}
+
+function arrayIndexOf (arr, val, byteOffset, encoding, dir) {
+  var indexSize = 1
+  var arrLength = arr.length
+  var valLength = val.length
+
+  if (encoding !== undefined) {
+    encoding = String(encoding).toLowerCase()
+    if (encoding === 'ucs2' || encoding === 'ucs-2' ||
+        encoding === 'utf16le' || encoding === 'utf-16le') {
+      if (arr.length < 2 || val.length < 2) {
+        return -1
+      }
+      indexSize = 2
+      arrLength /= 2
+      valLength /= 2
+      byteOffset /= 2
+    }
+  }
+
+  function read (buf, i) {
+    if (indexSize === 1) {
+      return buf[i]
+    } else {
+      return buf.readUInt16BE(i * indexSize)
+    }
+  }
+
+  var i
+  if (dir) {
+    var foundIndex = -1
+    for (i = byteOffset; i < arrLength; i++) {
+      if (read(arr, i) === read(val, foundIndex === -1 ? 0 : i - foundIndex)) {
+        if (foundIndex === -1) foundIndex = i
+        if (i - foundIndex + 1 === valLength) return foundIndex * indexSize
+      } else {
+        if (foundIndex !== -1) i -= i - foundIndex
+        foundIndex = -1
+      }
+    }
+  } else {
+    if (byteOffset + valLength > arrLength) byteOffset = arrLength - valLength
+    for (i = byteOffset; i >= 0; i--) {
+      var found = true
+      for (var j = 0; j < valLength; j++) {
+        if (read(arr, i + j) !== read(val, j)) {
+          found = false
+          break
+        }
+      }
+      if (found) return i
+    }
+  }
+
+  return -1
+}
+
+Buffer.prototype.includes = function includes (val, byteOffset, encoding) {
+  return this.indexOf(val, byteOffset, encoding) !== -1
+}
+
+Buffer.prototype.indexOf = function indexOf (val, byteOffset, encoding) {
+  return bidirectionalIndexOf(this, val, byteOffset, encoding, true)
+}
+
+Buffer.prototype.lastIndexOf = function lastIndexOf (val, byteOffset, encoding) {
+  return bidirectionalIndexOf(this, val, byteOffset, encoding, false)
+}
+
+function hexWrite (buf, string, offset, length) {
+  offset = Number(offset) || 0
+  var remaining = buf.length - offset
+  if (!length) {
+    length = remaining
+  } else {
+    length = Number(length)
+    if (length > remaining) {
+      length = remaining
+    }
+  }
+
+  // must be an even number of digits
+  var strLen = string.length
+  if (strLen % 2 !== 0) throw new TypeError('Invalid hex string')
+
+  if (length > strLen / 2) {
+    length = strLen / 2
+  }
+  for (var i = 0; i < length; ++i) {
+    var parsed = parseInt(string.substr(i * 2, 2), 16)
+    if (isNaN(parsed)) return i
+    buf[offset + i] = parsed
+  }
+  return i
+}
+
+function utf8Write (buf, string, offset, length) {
+  return blitBuffer(utf8ToBytes(string, buf.length - offset), buf, offset, length)
+}
+
+function asciiWrite (buf, string, offset, length) {
+  return blitBuffer(asciiToBytes(string), buf, offset, length)
+}
+
+function latin1Write (buf, string, offset, length) {
+  return asciiWrite(buf, string, offset, length)
+}
+
+function base64Write (buf, string, offset, length) {
+  return blitBuffer(base64ToBytes(string), buf, offset, length)
+}
+
+function ucs2Write (buf, string, offset, length) {
+  return blitBuffer(utf16leToBytes(string, buf.length - offset), buf, offset, length)
+}
+
+Buffer.prototype.write = function write (string, offset, length, encoding) {
+  // Buffer#write(string)
+  if (offset === undefined) {
+    encoding = 'utf8'
+    length = this.length
+    offset = 0
+  // Buffer#write(string, encoding)
+  } else if (length === undefined && typeof offset === 'string') {
+    encoding = offset
+    length = this.length
+    offset = 0
+  // Buffer#write(string, offset[, length][, encoding])
+  } else if (isFinite(offset)) {
+    offset = offset | 0
+    if (isFinite(length)) {
+      length = length | 0
+      if (encoding === undefined) encoding = 'utf8'
+    } else {
+      encoding = length
+      length = undefined
+    }
+  // legacy write(string, encoding, offset, length) - remove in v0.13
+  } else {
+    throw new Error(
+      'Buffer.write(string, encoding, offset[, length]) is no longer supported'
+    )
+  }
+
+  var remaining = this.length - offset
+  if (length === undefined || length > remaining) length = remaining
+
+  if ((string.length > 0 && (length < 0 || offset < 0)) || offset > this.length) {
+    throw new RangeError('Attempt to write outside buffer bounds')
+  }
+
+  if (!encoding) encoding = 'utf8'
+
+  var loweredCase = false
+  for (;;) {
+    switch (encoding) {
+      case 'hex':
+        return hexWrite(this, string, offset, length)
+
+      case 'utf8':
+      case 'utf-8':
+        return utf8Write(this, string, offset, length)
+
+      case 'ascii':
+        return asciiWrite(this, string, offset, length)
+
+      case 'latin1':
+      case 'binary':
+        return latin1Write(this, string, offset, length)
+
+      case 'base64':
+        // Warning: maxLength not taken into account in base64Write
+        return base64Write(this, string, offset, length)
+
+      case 'ucs2':
+      case 'ucs-2':
+      case 'utf16le':
+      case 'utf-16le':
+        return ucs2Write(this, string, offset, length)
+
+      default:
+        if (loweredCase) throw new TypeError('Unknown encoding: ' + encoding)
+        encoding = ('' + encoding).toLowerCase()
+        loweredCase = true
+    }
+  }
+}
+
+Buffer.prototype.toJSON = function toJSON () {
+  return {
+    type: 'Buffer',
+    data: Array.prototype.slice.call(this._arr || this, 0)
+  }
+}
+
+function base64Slice (buf, start, end) {
+  if (start === 0 && end === buf.length) {
+    return base64.fromByteArray(buf)
+  } else {
+    return base64.fromByteArray(buf.slice(start, end))
+  }
+}
+
+function utf8Slice (buf, start, end) {
+  end = Math.min(buf.length, end)
+  var res = []
+
+  var i = start
+  while (i < end) {
+    var firstByte = buf[i]
+    var codePoint = null
+    var bytesPerSequence = (firstByte > 0xEF) ? 4
+      : (firstByte > 0xDF) ? 3
+      : (firstByte > 0xBF) ? 2
+      : 1
+
+    if (i + bytesPerSequence <= end) {
+      var secondByte, thirdByte, fourthByte, tempCodePoint
+
+      switch (bytesPerSequence) {
+        case 1:
+          if (firstByte < 0x80) {
+            codePoint = firstByte
+          }
+          break
+        case 2:
+          secondByte = buf[i + 1]
+          if ((secondByte & 0xC0) === 0x80) {
+            tempCodePoint = (firstByte & 0x1F) << 0x6 | (secondByte & 0x3F)
+            if (tempCodePoint > 0x7F) {
+              codePoint = tempCodePoint
+            }
+          }
+          break
+        case 3:
+          secondByte = buf[i + 1]
+          thirdByte = buf[i + 2]
+          if ((secondByte & 0xC0) === 0x80 && (thirdByte & 0xC0) === 0x80) {
+            tempCodePoint = (firstByte & 0xF) << 0xC | (secondByte & 0x3F) << 0x6 | (thirdByte & 0x3F)
+            if (tempCodePoint > 0x7FF && (tempCodePoint < 0xD800 || tempCodePoint > 0xDFFF)) {
+              codePoint = tempCodePoint
+            }
+          }
+          break
+        case 4:
+          secondByte = buf[i + 1]
+          thirdByte = buf[i + 2]
+          fourthByte = buf[i + 3]
+          if ((secondByte & 0xC0) === 0x80 && (thirdByte & 0xC0) === 0x80 && (fourthByte & 0xC0) === 0x80) {
+            tempCodePoint = (firstByte & 0xF) << 0x12 | (secondByte & 0x3F) << 0xC | (thirdByte & 0x3F) << 0x6 | (fourthByte & 0x3F)
+            if (tempCodePoint > 0xFFFF && tempCodePoint < 0x110000) {
+              codePoint = tempCodePoint
+            }
+          }
+      }
+    }
+
+    if (codePoint === null) {
+      // we did not generate a valid codePoint so insert a
+      // replacement char (U+FFFD) and advance only 1 byte
+      codePoint = 0xFFFD
+      bytesPerSequence = 1
+    } else if (codePoint > 0xFFFF) {
+      // encode to utf16 (surrogate pair dance)
+      codePoint -= 0x10000
+      res.push(codePoint >>> 10 & 0x3FF | 0xD800)
+      codePoint = 0xDC00 | codePoint & 0x3FF
+    }
+
+    res.push(codePoint)
+    i += bytesPerSequence
+  }
+
+  return decodeCodePointsArray(res)
+}
+
+// Based on http://stackoverflow.com/a/22747272/680742, the browser with
+// the lowest limit is Chrome, with 0x10000 args.
+// We go 1 magnitude less, for safety
+var MAX_ARGUMENTS_LENGTH = 0x1000
+
+function decodeCodePointsArray (codePoints) {
+  var len = codePoints.length
+  if (len <= MAX_ARGUMENTS_LENGTH) {
+    return String.fromCharCode.apply(String, codePoints) // avoid extra slice()
+  }
+
+  // Decode in chunks to avoid "call stack size exceeded".
+  var res = ''
+  var i = 0
+  while (i < len) {
+    res += String.fromCharCode.apply(
+      String,
+      codePoints.slice(i, i += MAX_ARGUMENTS_LENGTH)
+    )
+  }
+  return res
+}
+
+function asciiSlice (buf, start, end) {
+  var ret = ''
+  end = Math.min(buf.length, end)
+
+  for (var i = start; i < end; ++i) {
+    ret += String.fromCharCode(buf[i] & 0x7F)
+  }
+  return ret
+}
+
+function latin1Slice (buf, start, end) {
+  var ret = ''
+  end = Math.min(buf.length, end)
+
+  for (var i = start; i < end; ++i) {
+    ret += String.fromCharCode(buf[i])
+  }
+  return ret
+}
+
+function hexSlice (buf, start, end) {
+  var len = buf.length
+
+  if (!start || start < 0) start = 0
+  if (!end || end < 0 || end > len) end = len
+
+  var out = ''
+  for (var i = start; i < end; ++i) {
+    out += toHex(buf[i])
+  }
+  return out
+}
+
+function utf16leSlice (buf, start, end) {
+  var bytes = buf.slice(start, end)
+  var res = ''
+  for (var i = 0; i < bytes.length; i += 2) {
+    res += String.fromCharCode(bytes[i] + bytes[i + 1] * 256)
+  }
+  return res
+}
+
+Buffer.prototype.slice = function slice (start, end) {
+  var len = this.length
+  start = ~~start
+  end = end === undefined ? len : ~~end
+
+  if (start < 0) {
+    start += len
+    if (start < 0) start = 0
+  } else if (start > len) {
+    start = len
+  }
+
+  if (end < 0) {
+    end += len
+    if (end < 0) end = 0
+  } else if (end > len) {
+    end = len
+  }
+
+  if (end < start) end = start
+
+  var newBuf
+  if (Buffer.TYPED_ARRAY_SUPPORT) {
+    newBuf = this.subarray(start, end)
+    newBuf.__proto__ = Buffer.prototype
+  } else {
+    var sliceLen = end - start
+    newBuf = new Buffer(sliceLen, undefined)
+    for (var i = 0; i < sliceLen; ++i) {
+      newBuf[i] = this[i + start]
+    }
+  }
+
+  return newBuf
+}
+
+/*
+ * Need to make sure that buffer isn't trying to write out of bounds.
+ */
+function checkOffset (offset, ext, length) {
+  if ((offset % 1) !== 0 || offset < 0) throw new RangeError('offset is not uint')
+  if (offset + ext > length) throw new RangeError('Trying to access beyond buffer length')
+}
+
+Buffer.prototype.readUIntLE = function readUIntLE (offset, byteLength, noAssert) {
+  offset = offset | 0
+  byteLength = byteLength | 0
+  if (!noAssert) checkOffset(offset, byteLength, this.length)
+
+  var val = this[offset]
+  var mul = 1
+  var i = 0
+  while (++i < byteLength && (mul *= 0x100)) {
+    val += this[offset + i] * mul
+  }
+
+  return val
+}
+
+Buffer.prototype.readUIntBE = function readUIntBE (offset, byteLength, noAssert) {
+  offset = offset | 0
+  byteLength = byteLength | 0
+  if (!noAssert) {
+    checkOffset(offset, byteLength, this.length)
+  }
+
+  var val = this[offset + --byteLength]
+  var mul = 1
+  while (byteLength > 0 && (mul *= 0x100)) {
+    val += this[offset + --byteLength] * mul
+  }
+
+  return val
+}
+
+Buffer.prototype.readUInt8 = function readUInt8 (offset, noAssert) {
+  if (!noAssert) checkOffset(offset, 1, this.length)
+  return this[offset]
+}
+
+Buffer.prototype.readUInt16LE = function readUInt16LE (offset, noAssert) {
+  if (!noAssert) checkOffset(offset, 2, this.length)
+  return this[offset] | (this[offset + 1] << 8)
+}
+
+Buffer.prototype.readUInt16BE = function readUInt16BE (offset, noAssert) {
+  if (!noAssert) checkOffset(offset, 2, this.length)
+  return (this[offset] << 8) | this[offset + 1]
+}
+
+Buffer.prototype.readUInt32LE = function readUInt32LE (offset, noAssert) {
+  if (!noAssert) checkOffset(offset, 4, this.length)
+
+  return ((this[offset]) |
+      (this[offset + 1] << 8) |
+      (this[offset + 2] << 16)) +
+      (this[offset + 3] * 0x1000000)
+}
+
+Buffer.prototype.readUInt32BE = function readUInt32BE (offset, noAssert) {
+  if (!noAssert) checkOffset(offset, 4, this.length)
+
+  return (this[offset] * 0x1000000) +
+    ((this[offset + 1] << 16) |
+    (this[offset + 2] << 8) |
+    this[offset + 3])
+}
+
+Buffer.prototype.readIntLE = function readIntLE (offset, byteLength, noAssert) {
+  offset = offset | 0
+  byteLength = byteLength | 0
+  if (!noAssert) checkOffset(offset, byteLength, this.length)
+
+  var val = this[offset]
+  var mul = 1
+  var i = 0
+  while (++i < byteLength && (mul *= 0x100)) {
+    val += this[offset + i] * mul
+  }
+  mul *= 0x80
+
+  if (val >= mul) val -= Math.pow(2, 8 * byteLength)
+
+  return val
+}
+
+Buffer.prototype.readIntBE = function readIntBE (offset, byteLength, noAssert) {
+  offset = offset | 0
+  byteLength = byteLength | 0
+  if (!noAssert) checkOffset(offset, byteLength, this.length)
+
+  var i = byteLength
+  var mul = 1
+  var val = this[offset + --i]
+  while (i > 0 && (mul *= 0x100)) {
+    val += this[offset + --i] * mul
+  }
+  mul *= 0x80
+
+  if (val >= mul) val -= Math.pow(2, 8 * byteLength)
+
+  return val
+}
+
+Buffer.prototype.readInt8 = function readInt8 (offset, noAssert) {
+  if (!noAssert) checkOffset(offset, 1, this.length)
+  if (!(this[offset] & 0x80)) return (this[offset])
+  return ((0xff - this[offset] + 1) * -1)
+}
+
+Buffer.prototype.readInt16LE = function readInt16LE (offset, noAssert) {
+  if (!noAssert) checkOffset(offset, 2, this.length)
+  var val = this[offset] | (this[offset + 1] << 8)
+  return (val & 0x8000) ? val | 0xFFFF0000 : val
+}
+
+Buffer.prototype.readInt16BE = function readInt16BE (offset, noAssert) {
+  if (!noAssert) checkOffset(offset, 2, this.length)
+  var val = this[offset + 1] | (this[offset] << 8)
+  return (val & 0x8000) ? val | 0xFFFF0000 : val
+}
+
+Buffer.prototype.readInt32LE = function readInt32LE (offset, noAssert) {
+  if (!noAssert) checkOffset(offset, 4, this.length)
+
+  return (this[offset]) |
+    (this[offset + 1] << 8) |
+    (this[offset + 2] << 16) |
+    (this[offset + 3] << 24)
+}
+
+Buffer.prototype.readInt32BE = function readInt32BE (offset, noAssert) {
+  if (!noAssert) checkOffset(offset, 4, this.length)
+
+  return (this[offset] << 24) |
+    (this[offset + 1] << 16) |
+    (this[offset + 2] << 8) |
+    (this[offset + 3])
+}
+
+Buffer.prototype.readFloatLE = function readFloatLE (offset, noAssert) {
+  if (!noAssert) checkOffset(offset, 4, this.length)
+  return ieee754.read(this, offset, true, 23, 4)
+}
+
+Buffer.prototype.readFloatBE = function readFloatBE (offset, noAssert) {
+  if (!noAssert) checkOffset(offset, 4, this.length)
+  return ieee754.read(this, offset, false, 23, 4)
+}
+
+Buffer.prototype.readDoubleLE = function readDoubleLE (offset, noAssert) {
+  if (!noAssert) checkOffset(offset, 8, this.length)
+  return ieee754.read(this, offset, true, 52, 8)
+}
+
+Buffer.prototype.readDoubleBE = function readDoubleBE (offset, noAssert) {
+  if (!noAssert) checkOffset(offset, 8, this.length)
+  return ieee754.read(this, offset, false, 52, 8)
+}
+
+function checkInt (buf, value, offset, ext, max, min) {
+  if (!Buffer.isBuffer(buf)) throw new TypeError('"buffer" argument must be a Buffer instance')
+  if (value > max || value < min) throw new RangeError('"value" argument is out of bounds')
+  if (offset + ext > buf.length) throw new RangeError('Index out of range')
+}
+
+Buffer.prototype.writeUIntLE = function writeUIntLE (value, offset, byteLength, noAssert) {
+  value = +value
+  offset = offset | 0
+  byteLength = byteLength | 0
+  if (!noAssert) {
+    var maxBytes = Math.pow(2, 8 * byteLength) - 1
+    checkInt(this, value, offset, byteLength, maxBytes, 0)
+  }
+
+  var mul = 1
+  var i = 0
+  this[offset] = value & 0xFF
+  while (++i < byteLength && (mul *= 0x100)) {
+    this[offset + i] = (value / mul) & 0xFF
+  }
+
+  return offset + byteLength
+}
+
+Buffer.prototype.writeUIntBE = function writeUIntBE (value, offset, byteLength, noAssert) {
+  value = +value
+  offset = offset | 0
+  byteLength = byteLength | 0
+  if (!noAssert) {
+    var maxBytes = Math.pow(2, 8 * byteLength) - 1
+    checkInt(this, value, offset, byteLength, maxBytes, 0)
+  }
+
+  var i = byteLength - 1
+  var mul = 1
+  this[offset + i] = value & 0xFF
+  while (--i >= 0 && (mul *= 0x100)) {
+    this[offset + i] = (value / mul) & 0xFF
+  }
+
+  return offset + byteLength
+}
+
+Buffer.prototype.writeUInt8 = function writeUInt8 (value, offset, noAssert) {
+  value = +value
+  offset = offset | 0
+  if (!noAssert) checkInt(this, value, offset, 1, 0xff, 0)
+  if (!Buffer.TYPED_ARRAY_SUPPORT) value = Math.floor(value)
+  this[offset] = (value & 0xff)
+  return offset + 1
+}
+
+function objectWriteUInt16 (buf, value, offset, littleEndian) {
+  if (value < 0) value = 0xffff + value + 1
+  for (var i = 0, j = Math.min(buf.length - offset, 2); i < j; ++i) {
+    buf[offset + i] = (value & (0xff << (8 * (littleEndian ? i : 1 - i)))) >>>
+      (littleEndian ? i : 1 - i) * 8
+  }
+}
+
+Buffer.prototype.writeUInt16LE = function writeUInt16LE (value, offset, noAssert) {
+  value = +value
+  offset = offset | 0
+  if (!noAssert) checkInt(this, value, offset, 2, 0xffff, 0)
+  if (Buffer.TYPED_ARRAY_SUPPORT) {
+    this[offset] = (value & 0xff)
+    this[offset + 1] = (value >>> 8)
+  } else {
+    objectWriteUInt16(this, value, offset, true)
+  }
+  return offset + 2
+}
+
+Buffer.prototype.writeUInt16BE = function writeUInt16BE (value, offset, noAssert) {
+  value = +value
+  offset = offset | 0
+  if (!noAssert) checkInt(this, value, offset, 2, 0xffff, 0)
+  if (Buffer.TYPED_ARRAY_SUPPORT) {
+    this[offset] = (value >>> 8)
+    this[offset + 1] = (value & 0xff)
+  } else {
+    objectWriteUInt16(this, value, offset, false)
+  }
+  return offset + 2
+}
+
+function objectWriteUInt32 (buf, value, offset, littleEndian) {
+  if (value < 0) value = 0xffffffff + value + 1
+  for (var i = 0, j = Math.min(buf.length - offset, 4); i < j; ++i) {
+    buf[offset + i] = (value >>> (littleEndian ? i : 3 - i) * 8) & 0xff
+  }
+}
+
+Buffer.prototype.writeUInt32LE = function writeUInt32LE (value, offset, noAssert) {
+  value = +value
+  offset = offset | 0
+  if (!noAssert) checkInt(this, value, offset, 4, 0xffffffff, 0)
+  if (Buffer.TYPED_ARRAY_SUPPORT) {
+    this[offset + 3] = (value >>> 24)
+    this[offset + 2] = (value >>> 16)
+    this[offset + 1] = (value >>> 8)
+    this[offset] = (value & 0xff)
+  } else {
+    objectWriteUInt32(this, value, offset, true)
+  }
+  return offset + 4
+}
+
+Buffer.prototype.writeUInt32BE = function writeUInt32BE (value, offset, noAssert) {
+  value = +value
+  offset = offset | 0
+  if (!noAssert) checkInt(this, value, offset, 4, 0xffffffff, 0)
+  if (Buffer.TYPED_ARRAY_SUPPORT) {
+    this[offset] = (value >>> 24)
+    this[offset + 1] = (value >>> 16)
+    this[offset + 2] = (value >>> 8)
+    this[offset + 3] = (value & 0xff)
+  } else {
+    objectWriteUInt32(this, value, offset, false)
+  }
+  return offset + 4
+}
+
+Buffer.prototype.writeIntLE = function writeIntLE (value, offset, byteLength, noAssert) {
+  value = +value
+  offset = offset | 0
+  if (!noAssert) {
+    var limit = Math.pow(2, 8 * byteLength - 1)
+
+    checkInt(this, value, offset, byteLength, limit - 1, -limit)
+  }
+
+  var i = 0
+  var mul = 1
+  var sub = 0
+  this[offset] = value & 0xFF
+  while (++i < byteLength && (mul *= 0x100)) {
+    if (value < 0 && sub === 0 && this[offset + i - 1] !== 0) {
+      sub = 1
+    }
+    this[offset + i] = ((value / mul) >> 0) - sub & 0xFF
+  }
+
+  return offset + byteLength
+}
+
+Buffer.prototype.writeIntBE = function writeIntBE (value, offset, byteLength, noAssert) {
+  value = +value
+  offset = offset | 0
+  if (!noAssert) {
+    var limit = Math.pow(2, 8 * byteLength - 1)
+
+    checkInt(this, value, offset, byteLength, limit - 1, -limit)
+  }
+
+  var i = byteLength - 1
+  var mul = 1
+  var sub = 0
+  this[offset + i] = value & 0xFF
+  while (--i >= 0 && (mul *= 0x100)) {
+    if (value < 0 && sub === 0 && this[offset + i + 1] !== 0) {
+      sub = 1
+    }
+    this[offset + i] = ((value / mul) >> 0) - sub & 0xFF
+  }
+
+  return offset + byteLength
+}
+
+Buffer.prototype.writeInt8 = function writeInt8 (value, offset, noAssert) {
+  value = +value
+  offset = offset | 0
+  if (!noAssert) checkInt(this, value, offset, 1, 0x7f, -0x80)
+  if (!Buffer.TYPED_ARRAY_SUPPORT) value = Math.floor(value)
+  if (value < 0) value = 0xff + value + 1
+  this[offset] = (value & 0xff)
+  return offset + 1
+}
+
+Buffer.prototype.writeInt16LE = function writeInt16LE (value, offset, noAssert) {
+  value = +value
+  offset = offset | 0
+  if (!noAssert) checkInt(this, value, offset, 2, 0x7fff, -0x8000)
+  if (Buffer.TYPED_ARRAY_SUPPORT) {
+    this[offset] = (value & 0xff)
+    this[offset + 1] = (value >>> 8)
+  } else {
+    objectWriteUInt16(this, value, offset, true)
+  }
+  return offset + 2
+}
+
+Buffer.prototype.writeInt16BE = function writeInt16BE (value, offset, noAssert) {
+  value = +value
+  offset = offset | 0
+  if (!noAssert) checkInt(this, value, offset, 2, 0x7fff, -0x8000)
+  if (Buffer.TYPED_ARRAY_SUPPORT) {
+    this[offset] = (value >>> 8)
+    this[offset + 1] = (value & 0xff)
+  } else {
+    objectWriteUInt16(this, value, offset, false)
+  }
+  return offset + 2
+}
+
+Buffer.prototype.writeInt32LE = function writeInt32LE (value, offset, noAssert) {
+  value = +value
+  offset = offset | 0
+  if (!noAssert) checkInt(this, value, offset, 4, 0x7fffffff, -0x80000000)
+  if (Buffer.TYPED_ARRAY_SUPPORT) {
+    this[offset] = (value & 0xff)
+    this[offset + 1] = (value >>> 8)
+    this[offset + 2] = (value >>> 16)
+    this[offset + 3] = (value >>> 24)
+  } else {
+    objectWriteUInt32(this, value, offset, true)
+  }
+  return offset + 4
+}
+
+Buffer.prototype.writeInt32BE = function writeInt32BE (value, offset, noAssert) {
+  value = +value
+  offset = offset | 0
+  if (!noAssert) checkInt(this, value, offset, 4, 0x7fffffff, -0x80000000)
+  if (value < 0) value = 0xffffffff + value + 1
+  if (Buffer.TYPED_ARRAY_SUPPORT) {
+    this[offset] = (value >>> 24)
+    this[offset + 1] = (value >>> 16)
+    this[offset + 2] = (value >>> 8)
+    this[offset + 3] = (value & 0xff)
+  } else {
+    objectWriteUInt32(this, value, offset, false)
+  }
+  return offset + 4
+}
+
+function checkIEEE754 (buf, value, offset, ext, max, min) {
+  if (offset + ext > buf.length) throw new RangeError('Index out of range')
+  if (offset < 0) throw new RangeError('Index out of range')
+}
+
+function writeFloat (buf, value, offset, littleEndian, noAssert) {
+  if (!noAssert) {
+    checkIEEE754(buf, value, offset, 4, 3.4028234663852886e+38, -3.4028234663852886e+38)
+  }
+  ieee754.write(buf, value, offset, littleEndian, 23, 4)
+  return offset + 4
+}
+
+Buffer.prototype.writeFloatLE = function writeFloatLE (value, offset, noAssert) {
+  return writeFloat(this, value, offset, true, noAssert)
+}
+
+Buffer.prototype.writeFloatBE = function writeFloatBE (value, offset, noAssert) {
+  return writeFloat(this, value, offset, false, noAssert)
+}
+
+function writeDouble (buf, value, offset, littleEndian, noAssert) {
+  if (!noAssert) {
+    checkIEEE754(buf, value, offset, 8, 1.7976931348623157E+308, -1.7976931348623157E+308)
+  }
+  ieee754.write(buf, value, offset, littleEndian, 52, 8)
+  return offset + 8
+}
+
+Buffer.prototype.writeDoubleLE = function writeDoubleLE (value, offset, noAssert) {
+  return writeDouble(this, value, offset, true, noAssert)
+}
+
+Buffer.prototype.writeDoubleBE = function writeDoubleBE (value, offset, noAssert) {
+  return writeDouble(this, value, offset, false, noAssert)
+}
+
+// copy(targetBuffer, targetStart=0, sourceStart=0, sourceEnd=buffer.length)
+Buffer.prototype.copy = function copy (target, targetStart, start, end) {
+  if (!start) start = 0
+  if (!end && end !== 0) end = this.length
+  if (targetStart >= target.length) targetStart = target.length
+  if (!targetStart) targetStart = 0
+  if (end > 0 && end < start) end = start
+
+  // Copy 0 bytes; we're done
+  if (end === start) return 0
+  if (target.length === 0 || this.length === 0) return 0
+
+  // Fatal error conditions
+  if (targetStart < 0) {
+    throw new RangeError('targetStart out of bounds')
+  }
+  if (start < 0 || start >= this.length) throw new RangeError('sourceStart out of bounds')
+  if (end < 0) throw new RangeError('sourceEnd out of bounds')
+
+  // Are we oob?
+  if (end > this.length) end = this.length
+  if (target.length - targetStart < end - start) {
+    end = target.length - targetStart + start
+  }
+
+  var len = end - start
+  var i
+
+  if (this === target && start < targetStart && targetStart < end) {
+    // descending copy from end
+    for (i = len - 1; i >= 0; --i) {
+      target[i + targetStart] = this[i + start]
+    }
+  } else if (len < 1000 || !Buffer.TYPED_ARRAY_SUPPORT) {
+    // ascending copy from start
+    for (i = 0; i < len; ++i) {
+      target[i + targetStart] = this[i + start]
+    }
+  } else {
+    Uint8Array.prototype.set.call(
+      target,
+      this.subarray(start, start + len),
+      targetStart
+    )
+  }
+
+  return len
+}
+
+// Usage:
+//    buffer.fill(number[, offset[, end]])
+//    buffer.fill(buffer[, offset[, end]])
+//    buffer.fill(string[, offset[, end]][, encoding])
+Buffer.prototype.fill = function fill (val, start, end, encoding) {
+  // Handle string cases:
+  if (typeof val === 'string') {
+    if (typeof start === 'string') {
+      encoding = start
+      start = 0
+      end = this.length
+    } else if (typeof end === 'string') {
+      encoding = end
+      end = this.length
+    }
+    if (val.length === 1) {
+      var code = val.charCodeAt(0)
+      if (code < 256) {
+        val = code
+      }
+    }
+    if (encoding !== undefined && typeof encoding !== 'string') {
+      throw new TypeError('encoding must be a string')
+    }
+    if (typeof encoding === 'string' && !Buffer.isEncoding(encoding)) {
+      throw new TypeError('Unknown encoding: ' + encoding)
+    }
+  } else if (typeof val === 'number') {
+    val = val & 255
+  }
+
+  // Invalid ranges are not set to a default, so can range check early.
+  if (start < 0 || this.length < start || this.length < end) {
+    throw new RangeError('Out of range index')
+  }
+
+  if (end <= start) {
+    return this
+  }
+
+  start = start >>> 0
+  end = end === undefined ? this.length : end >>> 0
+
+  if (!val) val = 0
+
+  var i
+  if (typeof val === 'number') {
+    for (i = start; i < end; ++i) {
+      this[i] = val
+    }
+  } else {
+    var bytes = Buffer.isBuffer(val)
+      ? val
+      : utf8ToBytes(new Buffer(val, encoding).toString())
+    var len = bytes.length
+    for (i = 0; i < end - start; ++i) {
+      this[i + start] = bytes[i % len]
+    }
+  }
+
+  return this
+}
+
+// HELPER FUNCTIONS
+// ================
+
+var INVALID_BASE64_RE = /[^+\/0-9A-Za-z-_]/g
+
+function base64clean (str) {
+  // Node strips out invalid characters like \n and \t from the string, base64-js does not
+  str = stringtrim(str).replace(INVALID_BASE64_RE, '')
+  // Node converts strings with length < 2 to ''
+  if (str.length < 2) return ''
+  // Node allows for non-padded base64 strings (missing trailing ===), base64-js does not
+  while (str.length % 4 !== 0) {
+    str = str + '='
+  }
+  return str
+}
+
+function stringtrim (str) {
+  if (str.trim) return str.trim()
+  return str.replace(/^\s+|\s+$/g, '')
+}
+
+function toHex (n) {
+  if (n < 16) return '0' + n.toString(16)
+  return n.toString(16)
+}
+
+function utf8ToBytes (string, units) {
+  units = units || Infinity
+  var codePoint
+  var length = string.length
+  var leadSurrogate = null
+  var bytes = []
+
+  for (var i = 0; i < length; ++i) {
+    codePoint = string.charCodeAt(i)
+
+    // is surrogate component
+    if (codePoint > 0xD7FF && codePoint < 0xE000) {
+      // last char was a lead
+      if (!leadSurrogate) {
+        // no lead yet
+        if (codePoint > 0xDBFF) {
+          // unexpected trail
+          if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
+          continue
+        } else if (i + 1 === length) {
+          // unpaired lead
+          if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
+          continue
+        }
+
+        // valid lead
+        leadSurrogate = codePoint
+
+        continue
+      }
+
+      // 2 leads in a row
+      if (codePoint < 0xDC00) {
+        if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
+        leadSurrogate = codePoint
+        continue
+      }
+
+      // valid surrogate pair
+      codePoint = (leadSurrogate - 0xD800 << 10 | codePoint - 0xDC00) + 0x10000
+    } else if (leadSurrogate) {
+      // valid bmp char, but last char was a lead
+      if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
+    }
+
+    leadSurrogate = null
+
+    // encode utf8
+    if (codePoint < 0x80) {
+      if ((units -= 1) < 0) break
+      bytes.push(codePoint)
+    } else if (codePoint < 0x800) {
+      if ((units -= 2) < 0) break
+      bytes.push(
+        codePoint >> 0x6 | 0xC0,
+        codePoint & 0x3F | 0x80
+      )
+    } else if (codePoint < 0x10000) {
+      if ((units -= 3) < 0) break
+      bytes.push(
+        codePoint >> 0xC | 0xE0,
+        codePoint >> 0x6 & 0x3F | 0x80,
+        codePoint & 0x3F | 0x80
+      )
+    } else if (codePoint < 0x110000) {
+      if ((units -= 4) < 0) break
+      bytes.push(
+        codePoint >> 0x12 | 0xF0,
+        codePoint >> 0xC & 0x3F | 0x80,
+        codePoint >> 0x6 & 0x3F | 0x80,
+        codePoint & 0x3F | 0x80
+      )
+    } else {
+      throw new Error('Invalid code point')
+    }
+  }
+
+  return bytes
+}
+
+function asciiToBytes (str) {
+  var byteArray = []
+  for (var i = 0; i < str.length; ++i) {
+    // Node's code seems to be doing this and not & 0x7F..
+    byteArray.push(str.charCodeAt(i) & 0xFF)
+  }
+  return byteArray
+}
+
+function utf16leToBytes (str, units) {
+  var c, hi, lo
+  var byteArray = []
+  for (var i = 0; i < str.length; ++i) {
+    if ((units -= 2) < 0) break
+
+    c = str.charCodeAt(i)
+    hi = c >> 8
+    lo = c % 256
+    byteArray.push(lo)
+    byteArray.push(hi)
+  }
+
+  return byteArray
+}
+
+function base64ToBytes (str) {
+  return base64.toByteArray(base64clean(str))
+}
+
+function blitBuffer (src, dst, offset, length) {
+  for (var i = 0; i < length; ++i) {
+    if ((i + offset >= dst.length) || (i >= src.length)) break
+    dst[i + offset] = src[i]
+  }
+  return i
+}
+
+function isnan (val) {
+  return val !== val // eslint-disable-line no-self-compare
+}
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js?c8ba")))
 
 /***/ }),
 
 /***/ "./node_modules/builtin-status-codes/browser.js":
-/*!******************************************************!*\
-  !*** ./node_modules/builtin-status-codes/browser.js ***!
-  \******************************************************/
+/*!********************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/builtin-status-codes/browser.js ***!
+  \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -14338,16 +16304,16 @@ module.exports = {
 /***/ }),
 
 /***/ "./node_modules/cipher-base/index.js":
-/*!*******************************************!*\
-  !*** ./node_modules/cipher-base/index.js ***!
-  \*******************************************/
+/*!*********************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/cipher-base/index.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 var Transform = __webpack_require__(/*! stream */ "./node_modules/stream-browserify/index.js").Transform
 var StringDecoder = __webpack_require__(/*! string_decoder */ "./node_modules/string_decoder/lib/string_decoder.js").StringDecoder
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js")
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31")
 
 function CipherBase (hashMode) {
   Transform.call(this)
@@ -14651,7 +16617,7 @@ module.exports.parse = parse
  */
 
 var basename = __webpack_require__(/*! path */ "./node_modules/path-browserify/index.js").basename
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?8707").Buffer
 
 /**
  * RegExp to match non attr-char, *after* encodeURIComponent (i.e. not including "%")
@@ -15598,9 +17564,9 @@ function tryDecode(str, decode) {
 /***/ }),
 
 /***/ "./node_modules/core-util-is/lib/util.js":
-/*!***********************************************!*\
-  !*** ./node_modules/core-util-is/lib/util.js ***!
-  \***********************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/core-util-is/lib/util.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15712,14 +17678,14 @@ function objectToString(o) {
   return Object.prototype.toString.call(o);
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../buffer/index.js */ "./node_modules/buffer/index.js").Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../buffer/index.js */ "./node_modules/buffer/index.js?1eb7").Buffer))
 
 /***/ }),
 
 /***/ "./node_modules/create-ecdh/browser.js":
-/*!*********************************************!*\
-  !*** ./node_modules/create-ecdh/browser.js ***!
-  \*********************************************/
+/*!***********************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/create-ecdh/browser.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15848,20 +17814,20 @@ function formatReturnValue (bn, enc, len) {
   }
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../buffer/index.js */ "./node_modules/buffer/index.js").Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../buffer/index.js */ "./node_modules/buffer/index.js?1eb7").Buffer))
 
 /***/ }),
 
 /***/ "./node_modules/create-hash/browser.js":
-/*!*********************************************!*\
-  !*** ./node_modules/create-hash/browser.js ***!
-  \*********************************************/
+/*!***********************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/create-hash/browser.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js")
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31")
 var MD5 = __webpack_require__(/*! md5.js */ "./node_modules/md5.js/index.js")
 var RIPEMD160 = __webpack_require__(/*! ripemd160 */ "./node_modules/ripemd160/index.js")
 var sha = __webpack_require__(/*! sha.js */ "./node_modules/sha.js/index.js")
@@ -15895,9 +17861,9 @@ module.exports = function createHash (alg) {
 /***/ }),
 
 /***/ "./node_modules/create-hash/md5.js":
-/*!*****************************************!*\
-  !*** ./node_modules/create-hash/md5.js ***!
-  \*****************************************/
+/*!*******************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/create-hash/md5.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15911,18 +17877,18 @@ module.exports = function (buffer) {
 /***/ }),
 
 /***/ "./node_modules/create-hmac/browser.js":
-/*!*********************************************!*\
-  !*** ./node_modules/create-hmac/browser.js ***!
-  \*********************************************/
+/*!***********************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/create-hmac/browser.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js")
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31")
 var Legacy = __webpack_require__(/*! ./legacy */ "./node_modules/create-hmac/legacy.js")
 var Base = __webpack_require__(/*! cipher-base */ "./node_modules/cipher-base/index.js")
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 var md5 = __webpack_require__(/*! create-hash/md5 */ "./node_modules/create-hash/md5.js")
 var RIPEMD160 = __webpack_require__(/*! ripemd160 */ "./node_modules/ripemd160/index.js")
 
@@ -15985,16 +17951,16 @@ module.exports = function createHmac (alg, key) {
 /***/ }),
 
 /***/ "./node_modules/create-hmac/legacy.js":
-/*!********************************************!*\
-  !*** ./node_modules/create-hmac/legacy.js ***!
-  \********************************************/
+/*!**********************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/create-hmac/legacy.js ***!
+  \**********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js")
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31")
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 
 var Base = __webpack_require__(/*! cipher-base */ "./node_modules/cipher-base/index.js")
 
@@ -16043,9 +18009,9 @@ module.exports = Hmac
 /***/ }),
 
 /***/ "./node_modules/crypto-browserify/index.js":
-/*!*************************************************!*\
-  !*** ./node_modules/crypto-browserify/index.js ***!
-  \*************************************************/
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/crypto-browserify/index.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16344,7 +18310,7 @@ function localstorage() {
   } catch (e) {}
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js?f28c")))
 
 /***/ }),
 
@@ -16651,9 +18617,9 @@ function wrapproperty (obj, prop, message) {
 /***/ }),
 
 /***/ "./node_modules/des.js/lib/des.js":
-/*!****************************************!*\
-  !*** ./node_modules/des.js/lib/des.js ***!
-  \****************************************/
+/*!******************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/des.js/lib/des.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16670,9 +18636,9 @@ exports.EDE = __webpack_require__(/*! ./des/ede */ "./node_modules/des.js/lib/de
 /***/ }),
 
 /***/ "./node_modules/des.js/lib/des/cbc.js":
-/*!********************************************!*\
-  !*** ./node_modules/des.js/lib/des/cbc.js ***!
-  \********************************************/
+/*!**********************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/des.js/lib/des/cbc.js ***!
+  \**********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16680,7 +18646,7 @@ exports.EDE = __webpack_require__(/*! ./des/ede */ "./node_modules/des.js/lib/de
 
 
 var assert = __webpack_require__(/*! minimalistic-assert */ "./node_modules/minimalistic-assert/index.js");
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js");
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31");
 
 var proto = {};
 
@@ -16747,9 +18713,9 @@ proto._update = function _update(inp, inOff, out, outOff) {
 /***/ }),
 
 /***/ "./node_modules/des.js/lib/des/cipher.js":
-/*!***********************************************!*\
-  !*** ./node_modules/des.js/lib/des/cipher.js ***!
-  \***********************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/des.js/lib/des/cipher.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16900,9 +18866,9 @@ Cipher.prototype._finalDecrypt = function _finalDecrypt() {
 /***/ }),
 
 /***/ "./node_modules/des.js/lib/des/des.js":
-/*!********************************************!*\
-  !*** ./node_modules/des.js/lib/des/des.js ***!
-  \********************************************/
+/*!**********************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/des.js/lib/des/des.js ***!
+  \**********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16910,7 +18876,7 @@ Cipher.prototype._finalDecrypt = function _finalDecrypt() {
 
 
 var assert = __webpack_require__(/*! minimalistic-assert */ "./node_modules/minimalistic-assert/index.js");
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js");
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31");
 
 var utils = __webpack_require__(/*! ./utils */ "./node_modules/des.js/lib/des/utils.js");
 var Cipher = __webpack_require__(/*! ./cipher */ "./node_modules/des.js/lib/des/cipher.js");
@@ -17054,9 +19020,9 @@ DES.prototype._decrypt = function _decrypt(state, lStart, rStart, out, off) {
 /***/ }),
 
 /***/ "./node_modules/des.js/lib/des/ede.js":
-/*!********************************************!*\
-  !*** ./node_modules/des.js/lib/des/ede.js ***!
-  \********************************************/
+/*!**********************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/des.js/lib/des/ede.js ***!
+  \**********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17064,7 +19030,7 @@ DES.prototype._decrypt = function _decrypt(state, lStart, rStart, out, off) {
 
 
 var assert = __webpack_require__(/*! minimalistic-assert */ "./node_modules/minimalistic-assert/index.js");
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js");
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31");
 
 var Cipher = __webpack_require__(/*! ./cipher */ "./node_modules/des.js/lib/des/cipher.js");
 var DES = __webpack_require__(/*! ./des */ "./node_modules/des.js/lib/des/des.js");
@@ -17120,9 +19086,9 @@ EDE.prototype._unpad = DES.prototype._unpad;
 /***/ }),
 
 /***/ "./node_modules/des.js/lib/des/utils.js":
-/*!**********************************************!*\
-  !*** ./node_modules/des.js/lib/des/utils.js ***!
-  \**********************************************/
+/*!************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/des.js/lib/des/utils.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17475,9 +19441,9 @@ function onOpenClose() {
 /***/ }),
 
 /***/ "./node_modules/diffie-hellman/browser.js":
-/*!************************************************!*\
-  !*** ./node_modules/diffie-hellman/browser.js ***!
-  \************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/diffie-hellman/browser.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17524,14 +19490,14 @@ function createDiffieHellman (prime, enc, generator, genc) {
 exports.DiffieHellmanGroup = exports.createDiffieHellmanGroup = exports.getDiffieHellman = getDiffieHellman
 exports.createDiffieHellman = exports.DiffieHellman = createDiffieHellman
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../buffer/index.js */ "./node_modules/buffer/index.js").Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../buffer/index.js */ "./node_modules/buffer/index.js?1eb7").Buffer))
 
 /***/ }),
 
 /***/ "./node_modules/diffie-hellman/lib/dh.js":
-/*!***********************************************!*\
-  !*** ./node_modules/diffie-hellman/lib/dh.js ***!
-  \***********************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/diffie-hellman/lib/dh.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17700,14 +19666,14 @@ function formatReturnValue(bn, enc) {
   }
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../buffer/index.js */ "./node_modules/buffer/index.js").Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../buffer/index.js */ "./node_modules/buffer/index.js?1eb7").Buffer))
 
 /***/ }),
 
 /***/ "./node_modules/diffie-hellman/lib/generatePrime.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/diffie-hellman/lib/generatePrime.js ***!
-  \**********************************************************/
+/*!************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/diffie-hellman/lib/generatePrime.js ***!
+  \************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17821,9 +19787,9 @@ function findPrime(bits, gen) {
 /***/ }),
 
 /***/ "./node_modules/diffie-hellman/lib/primes.json":
-/*!*****************************************************!*\
-  !*** ./node_modules/diffie-hellman/lib/primes.json ***!
-  \*****************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/diffie-hellman/lib/primes.json ***!
+  \*******************************************************************************************************************/
 /*! exports provided: modp1, modp2, modp5, modp14, modp15, modp16, modp17, modp18, default */
 /***/ (function(module) {
 
@@ -17939,9 +19905,9 @@ function listener(event, done) {
 /***/ }),
 
 /***/ "./node_modules/elliptic/lib/elliptic.js":
-/*!***********************************************!*\
-  !*** ./node_modules/elliptic/lib/elliptic.js ***!
-  \***********************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/elliptic/lib/elliptic.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17964,9 +19930,9 @@ elliptic.eddsa = __webpack_require__(/*! ./elliptic/eddsa */ "./node_modules/ell
 /***/ }),
 
 /***/ "./node_modules/elliptic/lib/elliptic/curve/base.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/elliptic/lib/elliptic/curve/base.js ***!
-  \**********************************************************/
+/*!************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/elliptic/lib/elliptic/curve/base.js ***!
+  \************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18352,9 +20318,9 @@ BasePoint.prototype.dblp = function dblp(k) {
 /***/ }),
 
 /***/ "./node_modules/elliptic/lib/elliptic/curve/edwards.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/elliptic/lib/elliptic/curve/edwards.js ***!
-  \*************************************************************/
+/*!***************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/elliptic/lib/elliptic/curve/edwards.js ***!
+  \***************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18363,7 +20329,7 @@ BasePoint.prototype.dblp = function dblp(k) {
 
 var utils = __webpack_require__(/*! ../utils */ "./node_modules/elliptic/lib/elliptic/utils.js");
 var BN = __webpack_require__(/*! bn.js */ "./node_modules/bn.js/lib/bn.js");
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js");
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31");
 var Base = __webpack_require__(/*! ./base */ "./node_modules/elliptic/lib/elliptic/curve/base.js");
 
 var assert = utils.assert;
@@ -18796,9 +20762,9 @@ Point.prototype.mixedAdd = Point.prototype.add;
 /***/ }),
 
 /***/ "./node_modules/elliptic/lib/elliptic/curve/index.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/elliptic/lib/elliptic/curve/index.js ***!
-  \***********************************************************/
+/*!*************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/elliptic/lib/elliptic/curve/index.js ***!
+  \*************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18816,9 +20782,9 @@ curve.edwards = __webpack_require__(/*! ./edwards */ "./node_modules/elliptic/li
 /***/ }),
 
 /***/ "./node_modules/elliptic/lib/elliptic/curve/mont.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/elliptic/lib/elliptic/curve/mont.js ***!
-  \**********************************************************/
+/*!************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/elliptic/lib/elliptic/curve/mont.js ***!
+  \************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18826,7 +20792,7 @@ curve.edwards = __webpack_require__(/*! ./edwards */ "./node_modules/elliptic/li
 
 
 var BN = __webpack_require__(/*! bn.js */ "./node_modules/bn.js/lib/bn.js");
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js");
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31");
 var Base = __webpack_require__(/*! ./base */ "./node_modules/elliptic/lib/elliptic/curve/base.js");
 
 var utils = __webpack_require__(/*! ../utils */ "./node_modules/elliptic/lib/elliptic/utils.js");
@@ -19006,9 +20972,9 @@ Point.prototype.getX = function getX() {
 /***/ }),
 
 /***/ "./node_modules/elliptic/lib/elliptic/curve/short.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/elliptic/lib/elliptic/curve/short.js ***!
-  \***********************************************************/
+/*!*************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/elliptic/lib/elliptic/curve/short.js ***!
+  \*************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19017,7 +20983,7 @@ Point.prototype.getX = function getX() {
 
 var utils = __webpack_require__(/*! ../utils */ "./node_modules/elliptic/lib/elliptic/utils.js");
 var BN = __webpack_require__(/*! bn.js */ "./node_modules/bn.js/lib/bn.js");
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js");
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31");
 var Base = __webpack_require__(/*! ./base */ "./node_modules/elliptic/lib/elliptic/curve/base.js");
 
 var assert = utils.assert;
@@ -19955,9 +21921,9 @@ JPoint.prototype.isInfinity = function isInfinity() {
 /***/ }),
 
 /***/ "./node_modules/elliptic/lib/elliptic/curves.js":
-/*!******************************************************!*\
-  !*** ./node_modules/elliptic/lib/elliptic/curves.js ***!
-  \******************************************************/
+/*!********************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/elliptic/lib/elliptic/curves.js ***!
+  \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20173,9 +22139,9 @@ defineCurve('secp256k1', {
 /***/ }),
 
 /***/ "./node_modules/elliptic/lib/elliptic/ec/index.js":
-/*!********************************************************!*\
-  !*** ./node_modules/elliptic/lib/elliptic/ec/index.js ***!
-  \********************************************************/
+/*!**********************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/elliptic/lib/elliptic/ec/index.js ***!
+  \**********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20426,9 +22392,9 @@ EC.prototype.getKeyRecoveryParam = function(e, signature, Q, enc) {
 /***/ }),
 
 /***/ "./node_modules/elliptic/lib/elliptic/ec/key.js":
-/*!******************************************************!*\
-  !*** ./node_modules/elliptic/lib/elliptic/ec/key.js ***!
-  \******************************************************/
+/*!********************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/elliptic/lib/elliptic/ec/key.js ***!
+  \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20556,9 +22522,9 @@ KeyPair.prototype.inspect = function inspect() {
 /***/ }),
 
 /***/ "./node_modules/elliptic/lib/elliptic/ec/signature.js":
-/*!************************************************************!*\
-  !*** ./node_modules/elliptic/lib/elliptic/ec/signature.js ***!
-  \************************************************************/
+/*!**************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/elliptic/lib/elliptic/ec/signature.js ***!
+  \**************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20702,9 +22668,9 @@ Signature.prototype.toDER = function toDER(enc) {
 /***/ }),
 
 /***/ "./node_modules/elliptic/lib/elliptic/eddsa/index.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/elliptic/lib/elliptic/eddsa/index.js ***!
-  \***********************************************************/
+/*!*************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/elliptic/lib/elliptic/eddsa/index.js ***!
+  \*************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20832,9 +22798,9 @@ EDDSA.prototype.isPoint = function isPoint(val) {
 /***/ }),
 
 /***/ "./node_modules/elliptic/lib/elliptic/eddsa/key.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/elliptic/lib/elliptic/eddsa/key.js ***!
-  \*********************************************************/
+/*!***********************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/elliptic/lib/elliptic/eddsa/key.js ***!
+  \***********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20939,9 +22905,9 @@ module.exports = KeyPair;
 /***/ }),
 
 /***/ "./node_modules/elliptic/lib/elliptic/eddsa/signature.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/elliptic/lib/elliptic/eddsa/signature.js ***!
-  \***************************************************************/
+/*!*****************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/elliptic/lib/elliptic/eddsa/signature.js ***!
+  \*****************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21016,9 +22982,9 @@ module.exports = Signature;
 /***/ }),
 
 /***/ "./node_modules/elliptic/lib/elliptic/precomputed/secp256k1.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/elliptic/lib/elliptic/precomputed/secp256k1.js ***!
-  \*********************************************************************/
+/*!***********************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/elliptic/lib/elliptic/precomputed/secp256k1.js ***!
+  \***********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -21807,9 +23773,9 @@ module.exports = {
 /***/ }),
 
 /***/ "./node_modules/elliptic/lib/elliptic/utils.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/elliptic/lib/elliptic/utils.js ***!
-  \*****************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/elliptic/lib/elliptic/utils.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21938,13 +23904,13 @@ utils.intFromLE = intFromLE;
 /***/ }),
 
 /***/ "./node_modules/elliptic/package.json":
-/*!********************************************!*\
-  !*** ./node_modules/elliptic/package.json ***!
-  \********************************************/
+/*!**********************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/elliptic/package.json ***!
+  \**********************************************************************************************************/
 /*! exports provided: _args, _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _spec, _where, author, bugs, dependencies, description, devDependencies, files, homepage, keywords, license, main, name, repository, scripts, version, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"_args\":[[\"elliptic@6.5.2\",\"/Users/hieutran/Desktop/EDA_Bootcamp/Project/final-group/SpacePants-backEnd\"]],\"_from\":\"elliptic@6.5.2\",\"_id\":\"elliptic@6.5.2\",\"_inBundle\":false,\"_integrity\":\"sha512-f4x70okzZbIQl/NSRLkI/+tteV/9WqL98zx+SQ69KbXxmVrmjwsNUPn/gYJJ0sHvEak24cZgHIPegRePAtA/xw==\",\"_location\":\"/elliptic\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"version\",\"registry\":true,\"raw\":\"elliptic@6.5.2\",\"name\":\"elliptic\",\"escapedName\":\"elliptic\",\"rawSpec\":\"6.5.2\",\"saveSpec\":null,\"fetchSpec\":\"6.5.2\"},\"_requiredBy\":[\"/browserify-sign\",\"/create-ecdh\"],\"_resolved\":\"https://registry.npmjs.org/elliptic/-/elliptic-6.5.2.tgz\",\"_spec\":\"6.5.2\",\"_where\":\"/Users/hieutran/Desktop/EDA_Bootcamp/Project/final-group/SpacePants-backEnd\",\"author\":{\"name\":\"Fedor Indutny\",\"email\":\"fedor@indutny.com\"},\"bugs\":{\"url\":\"https://github.com/indutny/elliptic/issues\"},\"dependencies\":{\"bn.js\":\"^4.4.0\",\"brorand\":\"^1.0.1\",\"hash.js\":\"^1.0.0\",\"hmac-drbg\":\"^1.0.0\",\"inherits\":\"^2.0.1\",\"minimalistic-assert\":\"^1.0.0\",\"minimalistic-crypto-utils\":\"^1.0.0\"},\"description\":\"EC cryptography\",\"devDependencies\":{\"brfs\":\"^1.4.3\",\"coveralls\":\"^3.0.8\",\"grunt\":\"^1.0.4\",\"grunt-browserify\":\"^5.0.0\",\"grunt-cli\":\"^1.2.0\",\"grunt-contrib-connect\":\"^1.0.0\",\"grunt-contrib-copy\":\"^1.0.0\",\"grunt-contrib-uglify\":\"^1.0.1\",\"grunt-mocha-istanbul\":\"^3.0.1\",\"grunt-saucelabs\":\"^9.0.1\",\"istanbul\":\"^0.4.2\",\"jscs\":\"^3.0.7\",\"jshint\":\"^2.10.3\",\"mocha\":\"^6.2.2\"},\"files\":[\"lib\"],\"homepage\":\"https://github.com/indutny/elliptic\",\"keywords\":[\"EC\",\"Elliptic\",\"curve\",\"Cryptography\"],\"license\":\"MIT\",\"main\":\"lib/elliptic.js\",\"name\":\"elliptic\",\"repository\":{\"type\":\"git\",\"url\":\"git+ssh://git@github.com/indutny/elliptic.git\"},\"scripts\":{\"jscs\":\"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js\",\"jshint\":\"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js\",\"lint\":\"npm run jscs && npm run jshint\",\"test\":\"npm run lint && npm run unit\",\"unit\":\"istanbul test _mocha --reporter=spec test/index.js\",\"version\":\"grunt dist && git add dist/\"},\"version\":\"6.5.2\"}");
+module.exports = JSON.parse("{\"_args\":[[\"elliptic@6.5.2\",\"C:\\\\Users\\\\twent\\\\desktop\\\\DevAcademy\\\\SpacePants\\\\SpacePants-backEnd\"]],\"_from\":\"elliptic@6.5.2\",\"_id\":\"elliptic@6.5.2\",\"_inBundle\":false,\"_integrity\":\"sha512-f4x70okzZbIQl/NSRLkI/+tteV/9WqL98zx+SQ69KbXxmVrmjwsNUPn/gYJJ0sHvEak24cZgHIPegRePAtA/xw==\",\"_location\":\"/elliptic\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"version\",\"registry\":true,\"raw\":\"elliptic@6.5.2\",\"name\":\"elliptic\",\"escapedName\":\"elliptic\",\"rawSpec\":\"6.5.2\",\"saveSpec\":null,\"fetchSpec\":\"6.5.2\"},\"_requiredBy\":[\"/browserify-sign\",\"/create-ecdh\"],\"_resolved\":\"https://registry.npmjs.org/elliptic/-/elliptic-6.5.2.tgz\",\"_spec\":\"6.5.2\",\"_where\":\"C:\\\\Users\\\\twent\\\\desktop\\\\DevAcademy\\\\SpacePants\\\\SpacePants-backEnd\",\"author\":{\"name\":\"Fedor Indutny\",\"email\":\"fedor@indutny.com\"},\"bugs\":{\"url\":\"https://github.com/indutny/elliptic/issues\"},\"dependencies\":{\"bn.js\":\"^4.4.0\",\"brorand\":\"^1.0.1\",\"hash.js\":\"^1.0.0\",\"hmac-drbg\":\"^1.0.0\",\"inherits\":\"^2.0.1\",\"minimalistic-assert\":\"^1.0.0\",\"minimalistic-crypto-utils\":\"^1.0.0\"},\"description\":\"EC cryptography\",\"devDependencies\":{\"brfs\":\"^1.4.3\",\"coveralls\":\"^3.0.8\",\"grunt\":\"^1.0.4\",\"grunt-browserify\":\"^5.0.0\",\"grunt-cli\":\"^1.2.0\",\"grunt-contrib-connect\":\"^1.0.0\",\"grunt-contrib-copy\":\"^1.0.0\",\"grunt-contrib-uglify\":\"^1.0.1\",\"grunt-mocha-istanbul\":\"^3.0.1\",\"grunt-saucelabs\":\"^9.0.1\",\"istanbul\":\"^0.4.2\",\"jscs\":\"^3.0.7\",\"jshint\":\"^2.10.3\",\"mocha\":\"^6.2.2\"},\"files\":[\"lib\"],\"homepage\":\"https://github.com/indutny/elliptic\",\"keywords\":[\"EC\",\"Elliptic\",\"curve\",\"Cryptography\"],\"license\":\"MIT\",\"main\":\"lib/elliptic.js\",\"name\":\"elliptic\",\"repository\":{\"type\":\"git\",\"url\":\"git+ssh://git@github.com/indutny/elliptic.git\"},\"scripts\":{\"jscs\":\"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js\",\"jshint\":\"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js\",\"lint\":\"npm run jscs && npm run jshint\",\"test\":\"npm run lint && npm run unit\",\"unit\":\"istanbul test _mocha --reporter=spec test/index.js\",\"version\":\"grunt dist && git add dist/\"},\"version\":\"6.5.2\"}");
 
 /***/ }),
 
@@ -23623,7 +25589,7 @@ function checkInvalidHeaderChar(val) {
   return false;
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js"), __webpack_require__(/*! ./../../buffer/index.js */ "./node_modules/buffer/index.js").Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js?f28c"), __webpack_require__(/*! ./../../buffer/index.js */ "./node_modules/buffer/index.js?b639").Buffer))
 
 /***/ }),
 
@@ -24121,7 +26087,7 @@ Socket.prototype.closeTransport = function (discard) {
   this.transport.close(this.onClose.bind(this, 'forced close'));
 };
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js?f28c")))
 
 /***/ }),
 
@@ -24892,7 +26858,7 @@ Polling.prototype.headers = function (req, headers) {
   return headers;
 };
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../buffer/index.js */ "./node_modules/buffer/index.js").Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../buffer/index.js */ "./node_modules/buffer/index.js?b639").Buffer))
 
 /***/ }),
 
@@ -25038,7 +27004,7 @@ WebSocket.prototype.doClose = function (fn) {
   fn && fn();
 };
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../buffer/index.js */ "./node_modules/buffer/index.js").Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../buffer/index.js */ "./node_modules/buffer/index.js?b639").Buffer))
 
 /***/ }),
 
@@ -25521,7 +27487,7 @@ formatters.j = function (v) {
 	}
 };
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../process/browser.js */ "./node_modules/process/browser.js?f28c")))
 
 /***/ }),
 
@@ -26205,14 +28171,14 @@ function stattag (stat) {
   return '"' + size + '-' + mtime + '"'
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../buffer/index.js */ "./node_modules/buffer/index.js").Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../buffer/index.js */ "./node_modules/buffer/index.js?b639").Buffer))
 
 /***/ }),
 
 /***/ "./node_modules/events/events.js":
-/*!***************************************!*\
-  !*** ./node_modules/events/events.js ***!
-  \***************************************/
+/*!*****************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/events/events.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -26668,13 +28634,13 @@ function unwrapListeners(arr) {
 /***/ }),
 
 /***/ "./node_modules/evp_bytestokey/index.js":
-/*!**********************************************!*\
-  !*** ./node_modules/evp_bytestokey/index.js ***!
-  \**********************************************/
+/*!************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/evp_bytestokey/index.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 var MD5 = __webpack_require__(/*! md5.js */ "./node_modules/md5.js/index.js")
 
 /* eslint-disable camelcase */
@@ -28222,7 +30188,7 @@ function defineGetter(obj, name, getter) {
  * @private
  */
 
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?8707").Buffer
 var contentDisposition = __webpack_require__(/*! content-disposition */ "./node_modules/content-disposition/index.js");
 var deprecate = __webpack_require__(/*! depd */ "./node_modules/depd/lib/browser/index.js")('express');
 var encodeUrl = __webpack_require__(/*! encodeurl */ "./node_modules/encodeurl/index.js");
@@ -29351,7 +31317,7 @@ function stringify (value, replacer, spaces, escape) {
   return json
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../timers-browserify/main.js */ "./node_modules/timers-browserify/main.js").setImmediate))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../timers-browserify/main.js */ "./node_modules/timers-browserify/main.js?5118").setImmediate))
 
 /***/ }),
 
@@ -30026,7 +31992,7 @@ function wrap(old, fn) {
   };
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../timers-browserify/main.js */ "./node_modules/timers-browserify/main.js").setImmediate))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../timers-browserify/main.js */ "./node_modules/timers-browserify/main.js?5118").setImmediate))
 
 /***/ }),
 
@@ -30473,7 +32439,7 @@ methods.forEach(function(method){
  * @api private
  */
 
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?8707").Buffer
 var contentDisposition = __webpack_require__(/*! content-disposition */ "./node_modules/content-disposition/index.js");
 var contentType = __webpack_require__(/*! content-type */ "./node_modules/content-type/index.js");
 var deprecate = __webpack_require__(/*! depd */ "./node_modules/depd/lib/browser/index.js")('express');
@@ -33961,7 +35927,7 @@ function setHeaders (res, headers) {
   }
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../timers-browserify/main.js */ "./node_modules/timers-browserify/main.js").setImmediate, __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js"), __webpack_require__(/*! ./../buffer/index.js */ "./node_modules/buffer/index.js").Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../timers-browserify/main.js */ "./node_modules/timers-browserify/main.js?5118").setImmediate, __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js?f28c"), __webpack_require__(/*! ./../buffer/index.js */ "./node_modules/buffer/index.js?b639").Buffer))
 
 /***/ }),
 
@@ -34580,7 +36546,7 @@ function hasBinary (obj) {
   return false;
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../buffer/index.js */ "./node_modules/buffer/index.js").Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../buffer/index.js */ "./node_modules/buffer/index.js?b639").Buffer))
 
 /***/ }),
 
@@ -34601,9 +36567,9 @@ module.exports = Array.isArray || function (arr) {
 /***/ }),
 
 /***/ "./node_modules/hash-base/index.js":
-/*!*****************************************!*\
-  !*** ./node_modules/hash-base/index.js ***!
-  \*****************************************/
+/*!*******************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/hash-base/index.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -34708,9 +36674,9 @@ module.exports = HashBase
 /***/ }),
 
 /***/ "./node_modules/hash-base/node_modules/inherits/inherits_browser.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/hash-base/node_modules/inherits/inherits_browser.js ***!
-  \**************************************************************************/
+/*!****************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/hash-base/node_modules/inherits/inherits_browser.js ***!
+  \****************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -34746,9 +36712,9 @@ if (typeof Object.create === 'function') {
 /***/ }),
 
 /***/ "./node_modules/hash-base/node_modules/readable-stream/errors-browser.js":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/hash-base/node_modules/readable-stream/errors-browser.js ***!
-  \*******************************************************************************/
+/*!*********************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/hash-base/node_modules/readable-stream/errors-browser.js ***!
+  \*********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -34885,9 +36851,9 @@ module.exports.codes = codes;
 /***/ }),
 
 /***/ "./node_modules/hash-base/node_modules/readable-stream/lib/_stream_duplex.js":
-/*!***********************************************************************************!*\
-  !*** ./node_modules/hash-base/node_modules/readable-stream/lib/_stream_duplex.js ***!
-  \***********************************************************************************/
+/*!*************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/hash-base/node_modules/readable-stream/lib/_stream_duplex.js ***!
+  \*************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -35031,14 +36997,14 @@ Object.defineProperty(Duplex.prototype, 'destroyed', {
     this._writableState.destroyed = value;
   }
 });
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../process/browser.js */ "./node_modules/process/browser.js?20f2")))
 
 /***/ }),
 
 /***/ "./node_modules/hash-base/node_modules/readable-stream/lib/_stream_passthrough.js":
-/*!****************************************************************************************!*\
-  !*** ./node_modules/hash-base/node_modules/readable-stream/lib/_stream_passthrough.js ***!
-  \****************************************************************************************/
+/*!******************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/hash-base/node_modules/readable-stream/lib/_stream_passthrough.js ***!
+  \******************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -35086,9 +37052,9 @@ PassThrough.prototype._transform = function (chunk, encoding, cb) {
 /***/ }),
 
 /***/ "./node_modules/hash-base/node_modules/readable-stream/lib/_stream_readable.js":
-/*!*************************************************************************************!*\
-  !*** ./node_modules/hash-base/node_modules/readable-stream/lib/_stream_readable.js ***!
-  \*************************************************************************************/
+/*!***************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/hash-base/node_modules/readable-stream/lib/_stream_readable.js ***!
+  \***************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -35138,7 +37104,7 @@ var Stream = __webpack_require__(/*! ./internal/streams/stream */ "./node_module
 /*</replacement>*/
 
 
-var Buffer = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js").Buffer;
+var Buffer = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js?1eb7").Buffer;
 
 var OurUint8Array = global.Uint8Array || function () {};
 
@@ -36217,14 +38183,14 @@ function indexOf(xs, x) {
 
   return -1;
 }
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../../../../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js?cd00"), __webpack_require__(/*! ./../../../../process/browser.js */ "./node_modules/process/browser.js?20f2")))
 
 /***/ }),
 
 /***/ "./node_modules/hash-base/node_modules/readable-stream/lib/_stream_transform.js":
-/*!**************************************************************************************!*\
-  !*** ./node_modules/hash-base/node_modules/readable-stream/lib/_stream_transform.js ***!
-  \**************************************************************************************/
+/*!****************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/hash-base/node_modules/readable-stream/lib/_stream_transform.js ***!
+  \****************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -36434,9 +38400,9 @@ function done(stream, er, data) {
 /***/ }),
 
 /***/ "./node_modules/hash-base/node_modules/readable-stream/lib/_stream_writable.js":
-/*!*************************************************************************************!*\
-  !*** ./node_modules/hash-base/node_modules/readable-stream/lib/_stream_writable.js ***!
-  \*************************************************************************************/
+/*!***************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/hash-base/node_modules/readable-stream/lib/_stream_writable.js ***!
+  \***************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -36510,7 +38476,7 @@ var Stream = __webpack_require__(/*! ./internal/streams/stream */ "./node_module
 /*</replacement>*/
 
 
-var Buffer = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js").Buffer;
+var Buffer = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js?1eb7").Buffer;
 
 var OurUint8Array = global.Uint8Array || function () {};
 
@@ -37138,14 +39104,14 @@ Writable.prototype._undestroy = destroyImpl.undestroy;
 Writable.prototype._destroy = function (err, cb) {
   cb(err);
 };
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../../../../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js?cd00"), __webpack_require__(/*! ./../../../../process/browser.js */ "./node_modules/process/browser.js?20f2")))
 
 /***/ }),
 
 /***/ "./node_modules/hash-base/node_modules/readable-stream/lib/internal/streams/async_iterator.js":
-/*!****************************************************************************************************!*\
-  !*** ./node_modules/hash-base/node_modules/readable-stream/lib/internal/streams/async_iterator.js ***!
-  \****************************************************************************************************/
+/*!******************************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/hash-base/node_modules/readable-stream/lib/internal/streams/async_iterator.js ***!
+  \******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -37357,14 +39323,14 @@ var createReadableStreamAsyncIterator = function createReadableStreamAsyncIterat
 };
 
 module.exports = createReadableStreamAsyncIterator;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../process/browser.js */ "./node_modules/process/browser.js?20f2")))
 
 /***/ }),
 
 /***/ "./node_modules/hash-base/node_modules/readable-stream/lib/internal/streams/buffer_list.js":
-/*!*************************************************************************************************!*\
-  !*** ./node_modules/hash-base/node_modules/readable-stream/lib/internal/streams/buffer_list.js ***!
-  \*************************************************************************************************/
+/*!***************************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/hash-base/node_modules/readable-stream/lib/internal/streams/buffer_list.js ***!
+  \***************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -37383,7 +39349,7 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-var _require = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js"),
+var _require = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js?1eb7"),
     Buffer = _require.Buffer;
 
 var _require2 = __webpack_require__(/*! util */ 3),
@@ -37583,9 +39549,9 @@ function () {
 /***/ }),
 
 /***/ "./node_modules/hash-base/node_modules/readable-stream/lib/internal/streams/destroy.js":
-/*!*********************************************************************************************!*\
-  !*** ./node_modules/hash-base/node_modules/readable-stream/lib/internal/streams/destroy.js ***!
-  \*********************************************************************************************/
+/*!***********************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/hash-base/node_modules/readable-stream/lib/internal/streams/destroy.js ***!
+  \***********************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -37695,14 +39661,14 @@ module.exports = {
   undestroy: undestroy,
   errorOrDestroy: errorOrDestroy
 };
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../process/browser.js */ "./node_modules/process/browser.js?20f2")))
 
 /***/ }),
 
 /***/ "./node_modules/hash-base/node_modules/readable-stream/lib/internal/streams/end-of-stream.js":
-/*!***************************************************************************************************!*\
-  !*** ./node_modules/hash-base/node_modules/readable-stream/lib/internal/streams/end-of-stream.js ***!
-  \***************************************************************************************************/
+/*!*****************************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/hash-base/node_modules/readable-stream/lib/internal/streams/end-of-stream.js ***!
+  \*****************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -37815,9 +39781,9 @@ module.exports = eos;
 /***/ }),
 
 /***/ "./node_modules/hash-base/node_modules/readable-stream/lib/internal/streams/from-browser.js":
-/*!**************************************************************************************************!*\
-  !*** ./node_modules/hash-base/node_modules/readable-stream/lib/internal/streams/from-browser.js ***!
-  \**************************************************************************************************/
+/*!****************************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/hash-base/node_modules/readable-stream/lib/internal/streams/from-browser.js ***!
+  \****************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -37829,9 +39795,9 @@ module.exports = function () {
 /***/ }),
 
 /***/ "./node_modules/hash-base/node_modules/readable-stream/lib/internal/streams/pipeline.js":
-/*!**********************************************************************************************!*\
-  !*** ./node_modules/hash-base/node_modules/readable-stream/lib/internal/streams/pipeline.js ***!
-  \**********************************************************************************************/
+/*!************************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/hash-base/node_modules/readable-stream/lib/internal/streams/pipeline.js ***!
+  \************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -37937,9 +39903,9 @@ module.exports = pipeline;
 /***/ }),
 
 /***/ "./node_modules/hash-base/node_modules/readable-stream/lib/internal/streams/state.js":
-/*!*******************************************************************************************!*\
-  !*** ./node_modules/hash-base/node_modules/readable-stream/lib/internal/streams/state.js ***!
-  \*******************************************************************************************/
+/*!*********************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/hash-base/node_modules/readable-stream/lib/internal/streams/state.js ***!
+  \*********************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -37975,9 +39941,9 @@ module.exports = {
 /***/ }),
 
 /***/ "./node_modules/hash-base/node_modules/readable-stream/lib/internal/streams/stream-browser.js":
-/*!****************************************************************************************************!*\
-  !*** ./node_modules/hash-base/node_modules/readable-stream/lib/internal/streams/stream-browser.js ***!
-  \****************************************************************************************************/
+/*!******************************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/hash-base/node_modules/readable-stream/lib/internal/streams/stream-browser.js ***!
+  \******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -37987,9 +39953,9 @@ module.exports = __webpack_require__(/*! events */ "./node_modules/events/events
 /***/ }),
 
 /***/ "./node_modules/hash-base/node_modules/readable-stream/readable-browser.js":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/hash-base/node_modules/readable-stream/readable-browser.js ***!
-  \*********************************************************************************/
+/*!***********************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/hash-base/node_modules/readable-stream/readable-browser.js ***!
+  \***********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -38007,14 +39973,14 @@ exports.pipeline = __webpack_require__(/*! ./lib/internal/streams/pipeline.js */
 /***/ }),
 
 /***/ "./node_modules/hash-base/node_modules/safe-buffer/index.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/hash-base/node_modules/safe-buffer/index.js ***!
-  \******************************************************************/
+/*!********************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/hash-base/node_modules/safe-buffer/index.js ***!
+  \********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* eslint-disable node/no-deprecated-api */
-var buffer = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js")
+var buffer = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js?1eb7")
 var Buffer = buffer.Buffer
 
 // alternative to using Object.keys for old browsers
@@ -38082,9 +40048,9 @@ SafeBuffer.allocUnsafeSlow = function (size) {
 /***/ }),
 
 /***/ "./node_modules/hash.js/lib/hash.js":
-/*!******************************************!*\
-  !*** ./node_modules/hash.js/lib/hash.js ***!
-  \******************************************/
+/*!********************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/hash.js/lib/hash.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -38108,9 +40074,9 @@ hash.ripemd160 = hash.ripemd.ripemd160;
 /***/ }),
 
 /***/ "./node_modules/hash.js/lib/hash/common.js":
-/*!*************************************************!*\
-  !*** ./node_modules/hash.js/lib/hash/common.js ***!
-  \*************************************************/
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/hash.js/lib/hash/common.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -38212,9 +40178,9 @@ BlockHash.prototype._pad = function pad() {
 /***/ }),
 
 /***/ "./node_modules/hash.js/lib/hash/hmac.js":
-/*!***********************************************!*\
-  !*** ./node_modules/hash.js/lib/hash/hmac.js ***!
-  \***********************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/hash.js/lib/hash/hmac.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -38271,9 +40237,9 @@ Hmac.prototype.digest = function digest(enc) {
 /***/ }),
 
 /***/ "./node_modules/hash.js/lib/hash/ripemd.js":
-/*!*************************************************!*\
-  !*** ./node_modules/hash.js/lib/hash/ripemd.js ***!
-  \*************************************************/
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/hash.js/lib/hash/ripemd.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -38429,9 +40395,9 @@ var sh = [
 /***/ }),
 
 /***/ "./node_modules/hash.js/lib/hash/sha.js":
-/*!**********************************************!*\
-  !*** ./node_modules/hash.js/lib/hash/sha.js ***!
-  \**********************************************/
+/*!************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/hash.js/lib/hash/sha.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -38448,9 +40414,9 @@ exports.sha512 = __webpack_require__(/*! ./sha/512 */ "./node_modules/hash.js/li
 /***/ }),
 
 /***/ "./node_modules/hash.js/lib/hash/sha/1.js":
-/*!************************************************!*\
-  !*** ./node_modules/hash.js/lib/hash/sha/1.js ***!
-  \************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/hash.js/lib/hash/sha/1.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -38534,9 +40500,9 @@ SHA1.prototype._digest = function digest(enc) {
 /***/ }),
 
 /***/ "./node_modules/hash.js/lib/hash/sha/224.js":
-/*!**************************************************!*\
-  !*** ./node_modules/hash.js/lib/hash/sha/224.js ***!
-  \**************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/hash.js/lib/hash/sha/224.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -38576,9 +40542,9 @@ SHA224.prototype._digest = function digest(enc) {
 /***/ }),
 
 /***/ "./node_modules/hash.js/lib/hash/sha/256.js":
-/*!**************************************************!*\
-  !*** ./node_modules/hash.js/lib/hash/sha/256.js ***!
-  \**************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/hash.js/lib/hash/sha/256.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -38693,9 +40659,9 @@ SHA256.prototype._digest = function digest(enc) {
 /***/ }),
 
 /***/ "./node_modules/hash.js/lib/hash/sha/384.js":
-/*!**************************************************!*\
-  !*** ./node_modules/hash.js/lib/hash/sha/384.js ***!
-  \**************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/hash.js/lib/hash/sha/384.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -38740,9 +40706,9 @@ SHA384.prototype._digest = function digest(enc) {
 /***/ }),
 
 /***/ "./node_modules/hash.js/lib/hash/sha/512.js":
-/*!**************************************************!*\
-  !*** ./node_modules/hash.js/lib/hash/sha/512.js ***!
-  \**************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/hash.js/lib/hash/sha/512.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -39082,9 +41048,9 @@ function g1_512_lo(xh, xl) {
 /***/ }),
 
 /***/ "./node_modules/hash.js/lib/hash/sha/common.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/hash.js/lib/hash/sha/common.js ***!
-  \*****************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/hash.js/lib/hash/sha/common.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -39143,9 +41109,9 @@ exports.g1_256 = g1_256;
 /***/ }),
 
 /***/ "./node_modules/hash.js/lib/hash/utils.js":
-/*!************************************************!*\
-  !*** ./node_modules/hash.js/lib/hash/utils.js ***!
-  \************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/hash.js/lib/hash/utils.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -39153,7 +41119,7 @@ exports.g1_256 = g1_256;
 
 
 var assert = __webpack_require__(/*! minimalistic-assert */ "./node_modules/minimalistic-assert/index.js");
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js");
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31");
 
 exports.inherits = inherits;
 
@@ -39433,9 +41399,9 @@ exports.shr64_lo = shr64_lo;
 /***/ }),
 
 /***/ "./node_modules/hmac-drbg/lib/hmac-drbg.js":
-/*!*************************************************!*\
-  !*** ./node_modules/hmac-drbg/lib/hmac-drbg.js ***!
-  \*************************************************/
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/hmac-drbg/lib/hmac-drbg.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -42081,11 +44047,106 @@ if (nodeVer) {
 
 if (false) {}
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js?f28c")))
 
 /***/ }),
 
-/***/ "./node_modules/ieee754/index.js":
+/***/ "./node_modules/ieee754/index.js?7f3c":
+/*!*****************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/ieee754/index.js ***!
+  \*****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+exports.read = function (buffer, offset, isLE, mLen, nBytes) {
+  var e, m
+  var eLen = (nBytes * 8) - mLen - 1
+  var eMax = (1 << eLen) - 1
+  var eBias = eMax >> 1
+  var nBits = -7
+  var i = isLE ? (nBytes - 1) : 0
+  var d = isLE ? -1 : 1
+  var s = buffer[offset + i]
+
+  i += d
+
+  e = s & ((1 << (-nBits)) - 1)
+  s >>= (-nBits)
+  nBits += eLen
+  for (; nBits > 0; e = (e * 256) + buffer[offset + i], i += d, nBits -= 8) {}
+
+  m = e & ((1 << (-nBits)) - 1)
+  e >>= (-nBits)
+  nBits += mLen
+  for (; nBits > 0; m = (m * 256) + buffer[offset + i], i += d, nBits -= 8) {}
+
+  if (e === 0) {
+    e = 1 - eBias
+  } else if (e === eMax) {
+    return m ? NaN : ((s ? -1 : 1) * Infinity)
+  } else {
+    m = m + Math.pow(2, mLen)
+    e = e - eBias
+  }
+  return (s ? -1 : 1) * m * Math.pow(2, e - mLen)
+}
+
+exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
+  var e, m, c
+  var eLen = (nBytes * 8) - mLen - 1
+  var eMax = (1 << eLen) - 1
+  var eBias = eMax >> 1
+  var rt = (mLen === 23 ? Math.pow(2, -24) - Math.pow(2, -77) : 0)
+  var i = isLE ? 0 : (nBytes - 1)
+  var d = isLE ? 1 : -1
+  var s = value < 0 || (value === 0 && 1 / value < 0) ? 1 : 0
+
+  value = Math.abs(value)
+
+  if (isNaN(value) || value === Infinity) {
+    m = isNaN(value) ? 1 : 0
+    e = eMax
+  } else {
+    e = Math.floor(Math.log(value) / Math.LN2)
+    if (value * (c = Math.pow(2, -e)) < 1) {
+      e--
+      c *= 2
+    }
+    if (e + eBias >= 1) {
+      value += rt / c
+    } else {
+      value += rt * Math.pow(2, 1 - eBias)
+    }
+    if (value * c >= 2) {
+      e++
+      c /= 2
+    }
+
+    if (e + eBias >= eMax) {
+      m = 0
+      e = eMax
+    } else if (e + eBias >= 1) {
+      m = ((value * c) - 1) * Math.pow(2, mLen)
+      e = e + eBias
+    } else {
+      m = value * Math.pow(2, eBias - 1) * Math.pow(2, mLen)
+      e = 0
+    }
+  }
+
+  for (; mLen >= 8; buffer[offset + i] = m & 0xff, i += d, m /= 256, mLen -= 8) {}
+
+  e = (e << mLen) | m
+  eLen += mLen
+  for (; eLen > 0; buffer[offset + i] = e & 0xff, i += d, e /= 256, eLen -= 8) {}
+
+  buffer[offset + i - d] |= s * 128
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/ieee754/index.js?9152":
 /*!***************************************!*\
   !*** ./node_modules/ieee754/index.js ***!
   \***************************************/
@@ -42180,7 +44241,41 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 
 /***/ }),
 
-/***/ "./node_modules/inherits/inherits_browser.js":
+/***/ "./node_modules/inherits/inherits_browser.js?2f31":
+/*!*****************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/inherits/inherits_browser.js ***!
+  \*****************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+if (typeof Object.create === 'function') {
+  // implementation from standard node.js 'util' module
+  module.exports = function inherits(ctor, superCtor) {
+    ctor.super_ = superCtor
+    ctor.prototype = Object.create(superCtor.prototype, {
+      constructor: {
+        value: ctor,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+  };
+} else {
+  // old school shim for old browsers
+  module.exports = function inherits(ctor, superCtor) {
+    ctor.super_ = superCtor
+    var TempCtor = function () {}
+    TempCtor.prototype = superCtor.prototype
+    ctor.prototype = new TempCtor()
+    ctor.prototype.constructor = ctor
+  }
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/inherits/inherits_browser.js?3fb5":
 /*!***************************************************!*\
   !*** ./node_modules/inherits/inherits_browser.js ***!
   \***************************************************/
@@ -42895,11 +44990,27 @@ if (typeof Object.create === 'function') {
 
 }).call(this);
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js")(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js?62e4")(module)))
 
 /***/ }),
 
-/***/ "./node_modules/isarray/index.js":
+/***/ "./node_modules/isarray/index.js?12d8":
+/*!*****************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/isarray/index.js ***!
+  \*****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var toString = {}.toString;
+
+module.exports = Array.isArray || function (arr) {
+  return toString.call(arr) == '[object Array]';
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/isarray/index.js?e3db":
 /*!***************************************!*\
   !*** ./node_modules/isarray/index.js ***!
   \***************************************/
@@ -42916,17 +45027,17 @@ module.exports = Array.isArray || function (arr) {
 /***/ }),
 
 /***/ "./node_modules/md5.js/index.js":
-/*!**************************************!*\
-  !*** ./node_modules/md5.js/index.js ***!
-  \**************************************/
+/*!****************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/md5.js/index.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js")
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31")
 var HashBase = __webpack_require__(/*! hash-base */ "./node_modules/hash-base/index.js")
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 
 var ARRAY16 = new Array(16)
 
@@ -43508,9 +45619,9 @@ function getBasicNodeMethods() {
 /***/ }),
 
 /***/ "./node_modules/miller-rabin/lib/mr.js":
-/*!*********************************************!*\
-  !*** ./node_modules/miller-rabin/lib/mr.js ***!
-  \*********************************************/
+/*!***********************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/miller-rabin/lib/mr.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -43749,7 +45860,7 @@ mime.charsets = {
 
 module.exports = mime;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js?f28c")))
 
 /***/ }),
 
@@ -43765,9 +45876,9 @@ module.exports = JSON.parse("{\"application/andrew-inset\":[\"ez\"],\"applicatio
 /***/ }),
 
 /***/ "./node_modules/minimalistic-assert/index.js":
-/*!***************************************************!*\
-  !*** ./node_modules/minimalistic-assert/index.js ***!
-  \***************************************************/
+/*!*****************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/minimalistic-assert/index.js ***!
+  \*****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -43787,9 +45898,9 @@ assert.equal = function assertEqual(l, r, msg) {
 /***/ }),
 
 /***/ "./node_modules/minimalistic-crypto-utils/lib/utils.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/minimalistic-crypto-utils/lib/utils.js ***!
-  \*************************************************************/
+/*!***************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/minimalistic-crypto-utils/lib/utils.js ***!
+  \***************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -45030,9 +47141,9 @@ function splitParameters(str) {
 /***/ }),
 
 /***/ "./node_modules/node-libs-browser/node_modules/punycode/punycode.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/node-libs-browser/node_modules/punycode/punycode.js ***!
-  \**************************************************************************/
+/*!****************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/node-libs-browser/node_modules/punycode/punycode.js ***!
+  \****************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -45556,14 +47667,14 @@ function splitParameters(str) {
 
 }(this));
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js")(module), __webpack_require__(/*! ./../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js?ced2")(module), __webpack_require__(/*! ./../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js?cd00")))
 
 /***/ }),
 
 /***/ "./node_modules/object-assign/index.js":
-/*!*********************************************!*\
-  !*** ./node_modules/object-assign/index.js ***!
-  \*********************************************/
+/*!***********************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/object-assign/index.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -45867,14 +47978,14 @@ function patchAssignSocket(res, callback) {
   }
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../timers-browserify/main.js */ "./node_modules/timers-browserify/main.js").setImmediate, __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../timers-browserify/main.js */ "./node_modules/timers-browserify/main.js?5118").setImmediate, __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js?f28c")))
 
 /***/ }),
 
 /***/ "./node_modules/pako/lib/utils/common.js":
-/*!***********************************************!*\
-  !*** ./node_modules/pako/lib/utils/common.js ***!
-  \***********************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/pako/lib/utils/common.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -45989,9 +48100,9 @@ exports.setTyped(TYPED_OK);
 /***/ }),
 
 /***/ "./node_modules/pako/lib/zlib/adler32.js":
-/*!***********************************************!*\
-  !*** ./node_modules/pako/lib/zlib/adler32.js ***!
-  \***********************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/pako/lib/zlib/adler32.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -46052,9 +48163,9 @@ module.exports = adler32;
 /***/ }),
 
 /***/ "./node_modules/pako/lib/zlib/constants.js":
-/*!*************************************************!*\
-  !*** ./node_modules/pako/lib/zlib/constants.js ***!
-  \*************************************************/
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/pako/lib/zlib/constants.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -46132,9 +48243,9 @@ module.exports = {
 /***/ }),
 
 /***/ "./node_modules/pako/lib/zlib/crc32.js":
-/*!*********************************************!*\
-  !*** ./node_modules/pako/lib/zlib/crc32.js ***!
-  \*********************************************/
+/*!***********************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/pako/lib/zlib/crc32.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -46203,9 +48314,9 @@ module.exports = crc32;
 /***/ }),
 
 /***/ "./node_modules/pako/lib/zlib/deflate.js":
-/*!***********************************************!*\
-  !*** ./node_modules/pako/lib/zlib/deflate.js ***!
-  \***********************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/pako/lib/zlib/deflate.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -48089,9 +50200,9 @@ exports.deflateTune = deflateTune;
 /***/ }),
 
 /***/ "./node_modules/pako/lib/zlib/inffast.js":
-/*!***********************************************!*\
-  !*** ./node_modules/pako/lib/zlib/inffast.js ***!
-  \***********************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/pako/lib/zlib/inffast.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -48446,9 +50557,9 @@ module.exports = function inflate_fast(strm, start) {
 /***/ }),
 
 /***/ "./node_modules/pako/lib/zlib/inflate.js":
-/*!***********************************************!*\
-  !*** ./node_modules/pako/lib/zlib/inflate.js ***!
-  \***********************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/pako/lib/zlib/inflate.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -50014,9 +52125,9 @@ exports.inflateUndermine = inflateUndermine;
 /***/ }),
 
 /***/ "./node_modules/pako/lib/zlib/inftrees.js":
-/*!************************************************!*\
-  !*** ./node_modules/pako/lib/zlib/inftrees.js ***!
-  \************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/pako/lib/zlib/inftrees.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -50369,9 +52480,9 @@ module.exports = function inflate_table(type, lens, lens_index, codes, table, ta
 /***/ }),
 
 /***/ "./node_modules/pako/lib/zlib/messages.js":
-/*!************************************************!*\
-  !*** ./node_modules/pako/lib/zlib/messages.js ***!
-  \************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/pako/lib/zlib/messages.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -50413,9 +52524,9 @@ module.exports = {
 /***/ }),
 
 /***/ "./node_modules/pako/lib/zlib/trees.js":
-/*!*********************************************!*\
-  !*** ./node_modules/pako/lib/zlib/trees.js ***!
-  \*********************************************/
+/*!***********************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/pako/lib/zlib/trees.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -51647,9 +53758,9 @@ exports._tr_align = _tr_align;
 /***/ }),
 
 /***/ "./node_modules/pako/lib/zlib/zstream.js":
-/*!***********************************************!*\
-  !*** ./node_modules/pako/lib/zlib/zstream.js ***!
-  \***********************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/pako/lib/zlib/zstream.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -51706,9 +53817,9 @@ module.exports = ZStream;
 /***/ }),
 
 /***/ "./node_modules/parse-asn1/aesid.json":
-/*!********************************************!*\
-  !*** ./node_modules/parse-asn1/aesid.json ***!
-  \********************************************/
+/*!**********************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/parse-asn1/aesid.json ***!
+  \**********************************************************************************************************/
 /*! exports provided: 2.16.840.1.101.3.4.1.1, 2.16.840.1.101.3.4.1.2, 2.16.840.1.101.3.4.1.3, 2.16.840.1.101.3.4.1.4, 2.16.840.1.101.3.4.1.21, 2.16.840.1.101.3.4.1.22, 2.16.840.1.101.3.4.1.23, 2.16.840.1.101.3.4.1.24, 2.16.840.1.101.3.4.1.41, 2.16.840.1.101.3.4.1.42, 2.16.840.1.101.3.4.1.43, 2.16.840.1.101.3.4.1.44, default */
 /***/ (function(module) {
 
@@ -51717,9 +53828,9 @@ module.exports = JSON.parse("{\"2.16.840.1.101.3.4.1.1\":\"aes-128-ecb\",\"2.16.
 /***/ }),
 
 /***/ "./node_modules/parse-asn1/asn1.js":
-/*!*****************************************!*\
-  !*** ./node_modules/parse-asn1/asn1.js ***!
-  \*****************************************/
+/*!*******************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/parse-asn1/asn1.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -51851,9 +53962,9 @@ exports.signature = asn1.define('signature', function () {
 /***/ }),
 
 /***/ "./node_modules/parse-asn1/certificate.js":
-/*!************************************************!*\
-  !*** ./node_modules/parse-asn1/certificate.js ***!
-  \************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/parse-asn1/certificate.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -51952,9 +54063,9 @@ module.exports = X509Certificate
 /***/ }),
 
 /***/ "./node_modules/parse-asn1/fixProc.js":
-/*!********************************************!*\
-  !*** ./node_modules/parse-asn1/fixProc.js ***!
-  \********************************************/
+/*!**********************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/parse-asn1/fixProc.js ***!
+  \**********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -51964,7 +54075,7 @@ var startRegex = /^-----BEGIN ((?:.*? KEY)|CERTIFICATE)-----/m
 var fullRegex = /^-----BEGIN ((?:.*? KEY)|CERTIFICATE)-----([0-9A-z\n\r\+\/\=]+)-----END \1-----$/m
 var evp = __webpack_require__(/*! evp_bytestokey */ "./node_modules/evp_bytestokey/index.js")
 var ciphers = __webpack_require__(/*! browserify-aes */ "./node_modules/browserify-aes/browser.js")
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 module.exports = function (okey, password) {
   var key = okey.toString()
   var match = key.match(findProc)
@@ -51994,9 +54105,9 @@ module.exports = function (okey, password) {
 /***/ }),
 
 /***/ "./node_modules/parse-asn1/index.js":
-/*!******************************************!*\
-  !*** ./node_modules/parse-asn1/index.js ***!
-  \******************************************/
+/*!********************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/parse-asn1/index.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -52005,7 +54116,7 @@ var aesid = __webpack_require__(/*! ./aesid.json */ "./node_modules/parse-asn1/a
 var fixProc = __webpack_require__(/*! ./fixProc */ "./node_modules/parse-asn1/fixProc.js")
 var ciphers = __webpack_require__(/*! browserify-aes */ "./node_modules/browserify-aes/browser.js")
 var compat = __webpack_require__(/*! pbkdf2 */ "./node_modules/pbkdf2/browser.js")
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 module.exports = parseKeys
 
 function parseKeys (buffer) {
@@ -52112,9 +54223,9 @@ function decrypt (data, password) {
 /***/ }),
 
 /***/ "./node_modules/path-browserify/index.js":
-/*!***********************************************!*\
-  !*** ./node_modules/path-browserify/index.js ***!
-  \***********************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/path-browserify/index.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -52421,7 +54532,7 @@ var substr = 'ab'.substr(-1) === 'b'
     }
 ;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js?20f2")))
 
 /***/ }),
 
@@ -52566,9 +54677,9 @@ function pathtoRegexp(path, keys, options) {
 /***/ }),
 
 /***/ "./node_modules/pbkdf2/browser.js":
-/*!****************************************!*\
-  !*** ./node_modules/pbkdf2/browser.js ***!
-  \****************************************/
+/*!******************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/pbkdf2/browser.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -52579,16 +54690,16 @@ exports.pbkdf2Sync = __webpack_require__(/*! ./lib/sync */ "./node_modules/pbkdf
 /***/ }),
 
 /***/ "./node_modules/pbkdf2/lib/async.js":
-/*!******************************************!*\
-  !*** ./node_modules/pbkdf2/lib/async.js ***!
-  \******************************************/
+/*!********************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/pbkdf2/lib/async.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {var checkParameters = __webpack_require__(/*! ./precondition */ "./node_modules/pbkdf2/lib/precondition.js")
 var defaultEncoding = __webpack_require__(/*! ./default-encoding */ "./node_modules/pbkdf2/lib/default-encoding.js")
 var sync = __webpack_require__(/*! ./sync */ "./node_modules/pbkdf2/lib/sync-browser.js")
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 
 var ZERO_BUF
 var subtle = global.crypto && global.crypto.subtle
@@ -52686,14 +54797,14 @@ module.exports = function (password, salt, iterations, keylen, digest, callback)
   }), callback)
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js?cd00"), __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js?20f2")))
 
 /***/ }),
 
 /***/ "./node_modules/pbkdf2/lib/default-encoding.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/pbkdf2/lib/default-encoding.js ***!
-  \*****************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/pbkdf2/lib/default-encoding.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -52708,14 +54819,14 @@ if (process.browser) {
 }
 module.exports = defaultEncoding
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js?20f2")))
 
 /***/ }),
 
 /***/ "./node_modules/pbkdf2/lib/precondition.js":
-/*!*************************************************!*\
-  !*** ./node_modules/pbkdf2/lib/precondition.js ***!
-  \*************************************************/
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/pbkdf2/lib/precondition.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -52748,14 +54859,14 @@ module.exports = function (password, salt, iterations, keylen) {
   }
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../buffer/index.js */ "./node_modules/buffer/index.js").Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../buffer/index.js */ "./node_modules/buffer/index.js?1eb7").Buffer))
 
 /***/ }),
 
 /***/ "./node_modules/pbkdf2/lib/sync-browser.js":
-/*!*************************************************!*\
-  !*** ./node_modules/pbkdf2/lib/sync-browser.js ***!
-  \*************************************************/
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/pbkdf2/lib/sync-browser.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -52765,7 +54876,7 @@ var sha = __webpack_require__(/*! sha.js */ "./node_modules/sha.js/index.js")
 
 var checkParameters = __webpack_require__(/*! ./precondition */ "./node_modules/pbkdf2/lib/precondition.js")
 var defaultEncoding = __webpack_require__(/*! ./default-encoding */ "./node_modules/pbkdf2/lib/default-encoding.js")
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 var ZEROS = Buffer.alloc(128)
 var sizes = {
   md5: 16,
@@ -52868,9 +54979,9 @@ module.exports = pbkdf2
 /***/ }),
 
 /***/ "./node_modules/process-nextick-args/index.js":
-/*!****************************************************!*\
-  !*** ./node_modules/process-nextick-args/index.js ***!
-  \****************************************************/
+/*!******************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/process-nextick-args/index.js ***!
+  \******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -52921,11 +55032,206 @@ function nextTick(fn, arg1, arg2, arg3) {
 }
 
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js?20f2")))
 
 /***/ }),
 
-/***/ "./node_modules/process/browser.js":
+/***/ "./node_modules/process/browser.js?20f2":
+/*!*******************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/process/browser.js ***!
+  \*******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// shim for using process in browser
+var process = module.exports = {};
+
+// cached from whatever global is present so that test runners that stub it
+// don't break things.  But we need to wrap it in a try catch in case it is
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+// function because try/catches deoptimize in certain engines.
+
+var cachedSetTimeout;
+var cachedClearTimeout;
+
+function defaultSetTimout() {
+    throw new Error('setTimeout has not been defined');
+}
+function defaultClearTimeout () {
+    throw new Error('clearTimeout has not been defined');
+}
+(function () {
+    try {
+        if (typeof setTimeout === 'function') {
+            cachedSetTimeout = setTimeout;
+        } else {
+            cachedSetTimeout = defaultSetTimout;
+        }
+    } catch (e) {
+        cachedSetTimeout = defaultSetTimout;
+    }
+    try {
+        if (typeof clearTimeout === 'function') {
+            cachedClearTimeout = clearTimeout;
+        } else {
+            cachedClearTimeout = defaultClearTimeout;
+        }
+    } catch (e) {
+        cachedClearTimeout = defaultClearTimeout;
+    }
+} ())
+function runTimeout(fun) {
+    if (cachedSetTimeout === setTimeout) {
+        //normal enviroments in sane situations
+        return setTimeout(fun, 0);
+    }
+    // if setTimeout wasn't available but was latter defined
+    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+        cachedSetTimeout = setTimeout;
+        return setTimeout(fun, 0);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedSetTimeout(fun, 0);
+    } catch(e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+            return cachedSetTimeout.call(null, fun, 0);
+        } catch(e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+            return cachedSetTimeout.call(this, fun, 0);
+        }
+    }
+
+
+}
+function runClearTimeout(marker) {
+    if (cachedClearTimeout === clearTimeout) {
+        //normal enviroments in sane situations
+        return clearTimeout(marker);
+    }
+    // if clearTimeout wasn't available but was latter defined
+    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+        cachedClearTimeout = clearTimeout;
+        return clearTimeout(marker);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedClearTimeout(marker);
+    } catch (e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+            return cachedClearTimeout.call(null, marker);
+        } catch (e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+            return cachedClearTimeout.call(this, marker);
+        }
+    }
+
+
+
+}
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
+
+function cleanUpNextTick() {
+    if (!draining || !currentQueue) {
+        return;
+    }
+    draining = false;
+    if (currentQueue.length) {
+        queue = currentQueue.concat(queue);
+    } else {
+        queueIndex = -1;
+    }
+    if (queue.length) {
+        drainQueue();
+    }
+}
+
+function drainQueue() {
+    if (draining) {
+        return;
+    }
+    var timeout = runTimeout(cleanUpNextTick);
+    draining = true;
+
+    var len = queue.length;
+    while(len) {
+        currentQueue = queue;
+        queue = [];
+        while (++queueIndex < len) {
+            if (currentQueue) {
+                currentQueue[queueIndex].run();
+            }
+        }
+        queueIndex = -1;
+        len = queue.length;
+    }
+    currentQueue = null;
+    draining = false;
+    runClearTimeout(timeout);
+}
+
+process.nextTick = function (fun) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) {
+        for (var i = 1; i < arguments.length; i++) {
+            args[i - 1] = arguments[i];
+        }
+    }
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) {
+        runTimeout(drainQueue);
+    }
+};
+
+// v8 likes predictible objects
+function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+}
+Item.prototype.run = function () {
+    this.fun.apply(null, this.array);
+};
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+process.versions = {};
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+
+process.listeners = function (name) { return [] }
+
+process.binding = function (name) {
+    throw new Error('process.binding is not supported');
+};
+
+process.cwd = function () { return '/' };
+process.chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() { return 0; };
+
+
+/***/ }),
+
+/***/ "./node_modules/process/browser.js?f28c":
 /*!*****************************************!*\
   !*** ./node_modules/process/browser.js ***!
   \*****************************************/
@@ -53460,9 +55766,9 @@ function trustSingle (subnet) {
 /***/ }),
 
 /***/ "./node_modules/public-encrypt/browser.js":
-/*!************************************************!*\
-  !*** ./node_modules/public-encrypt/browser.js ***!
-  \************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/public-encrypt/browser.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -53481,14 +55787,14 @@ exports.publicDecrypt = function publicDecrypt (key, buf) {
 /***/ }),
 
 /***/ "./node_modules/public-encrypt/mgf.js":
-/*!********************************************!*\
-  !*** ./node_modules/public-encrypt/mgf.js ***!
-  \********************************************/
+/*!**********************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/public-encrypt/mgf.js ***!
+  \**********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 var createHash = __webpack_require__(/*! create-hash */ "./node_modules/create-hash/browser.js")
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 
 module.exports = function (seed, len) {
   var t = Buffer.alloc(0)
@@ -53511,9 +55817,9 @@ function i2ops (c) {
 /***/ }),
 
 /***/ "./node_modules/public-encrypt/privateDecrypt.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/public-encrypt/privateDecrypt.js ***!
-  \*******************************************************/
+/*!*********************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/public-encrypt/privateDecrypt.js ***!
+  \*********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -53524,7 +55830,7 @@ var BN = __webpack_require__(/*! bn.js */ "./node_modules/bn.js/lib/bn.js")
 var crt = __webpack_require__(/*! browserify-rsa */ "./node_modules/browserify-rsa/index.js")
 var createHash = __webpack_require__(/*! create-hash */ "./node_modules/create-hash/browser.js")
 var withPublic = __webpack_require__(/*! ./withPublic */ "./node_modules/public-encrypt/withPublic.js")
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 
 module.exports = function privateDecrypt (privateKey, enc, reverse) {
   var padding
@@ -53627,9 +55933,9 @@ function compare (a, b) {
 /***/ }),
 
 /***/ "./node_modules/public-encrypt/publicEncrypt.js":
-/*!******************************************************!*\
-  !*** ./node_modules/public-encrypt/publicEncrypt.js ***!
-  \******************************************************/
+/*!********************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/public-encrypt/publicEncrypt.js ***!
+  \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -53641,7 +55947,7 @@ var xor = __webpack_require__(/*! ./xor */ "./node_modules/public-encrypt/xor.js
 var BN = __webpack_require__(/*! bn.js */ "./node_modules/bn.js/lib/bn.js")
 var withPublic = __webpack_require__(/*! ./withPublic */ "./node_modules/public-encrypt/withPublic.js")
 var crt = __webpack_require__(/*! browserify-rsa */ "./node_modules/browserify-rsa/index.js")
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 
 module.exports = function publicEncrypt (publicKey, msg, reverse) {
   var padding
@@ -53726,14 +56032,14 @@ function nonZero (len) {
 /***/ }),
 
 /***/ "./node_modules/public-encrypt/withPublic.js":
-/*!***************************************************!*\
-  !*** ./node_modules/public-encrypt/withPublic.js ***!
-  \***************************************************/
+/*!*****************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/public-encrypt/withPublic.js ***!
+  \*****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 var BN = __webpack_require__(/*! bn.js */ "./node_modules/bn.js/lib/bn.js")
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 
 function withPublic (paddedMsg, key) {
   return Buffer.from(paddedMsg
@@ -53749,9 +56055,9 @@ module.exports = withPublic
 /***/ }),
 
 /***/ "./node_modules/public-encrypt/xor.js":
-/*!********************************************!*\
-  !*** ./node_modules/public-encrypt/xor.js ***!
-  \********************************************/
+/*!**********************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/public-encrypt/xor.js ***!
+  \**********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -53768,9 +56074,9 @@ module.exports = function xor (a, b) {
 /***/ }),
 
 /***/ "./node_modules/querystring-es3/decode.js":
-/*!************************************************!*\
-  !*** ./node_modules/querystring-es3/decode.js ***!
-  \************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/querystring-es3/decode.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -53864,9 +56170,9 @@ var isArray = Array.isArray || function (xs) {
 /***/ }),
 
 /***/ "./node_modules/querystring-es3/encode.js":
-/*!************************************************!*\
-  !*** ./node_modules/querystring-es3/encode.js ***!
-  \************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/querystring-es3/encode.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -53961,9 +56267,9 @@ var objectKeys = Object.keys || function (obj) {
 /***/ }),
 
 /***/ "./node_modules/querystring-es3/index.js":
-/*!***********************************************!*\
-  !*** ./node_modules/querystring-es3/index.js ***!
-  \***********************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/querystring-es3/index.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -53977,9 +56283,9 @@ exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ "./node
 /***/ }),
 
 /***/ "./node_modules/randombytes/browser.js":
-/*!*********************************************!*\
-  !*** ./node_modules/randombytes/browser.js ***!
-  \*********************************************/
+/*!***********************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/randombytes/browser.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -53998,7 +56304,7 @@ function oldBrowser () {
   throw new Error('Secure random number generation is not supported by this browser.\nUse Chrome, Firefox or Internet Explorer 11')
 }
 
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 var crypto = global.crypto || global.msCrypto
 
 if (crypto && crypto.getRandomValues) {
@@ -54035,14 +56341,14 @@ function randomBytes (size, cb) {
   return bytes
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js?cd00"), __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js?20f2")))
 
 /***/ }),
 
 /***/ "./node_modules/randomfill/browser.js":
-/*!********************************************!*\
-  !*** ./node_modules/randomfill/browser.js ***!
-  \********************************************/
+/*!**********************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/randomfill/browser.js ***!
+  \**********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -54052,7 +56358,7 @@ function randomBytes (size, cb) {
 function oldBrowser () {
   throw new Error('secure random number generation not supported by this browser\nuse chrome, FireFox or Internet Explorer 11')
 }
-var safeBuffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js")
+var safeBuffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265")
 var randombytes = __webpack_require__(/*! randombytes */ "./node_modules/randombytes/browser.js")
 var Buffer = safeBuffer.Buffer
 var kBufferMaxLength = safeBuffer.kMaxLength
@@ -54156,7 +56462,7 @@ function randomFillSync (buf, offset, size) {
   return actualFill(buf, offset, size)
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js?cd00"), __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js?20f2")))
 
 /***/ }),
 
@@ -54629,7 +56935,7 @@ function readStream (stream, encoding, length, limit, callback) {
   }
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js"), __webpack_require__(/*! ./../buffer/index.js */ "./node_modules/buffer/index.js").Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js?c8ba"), __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js?f28c"), __webpack_require__(/*! ./../buffer/index.js */ "./node_modules/buffer/index.js?b639").Buffer))
 
 /***/ }),
 
@@ -54832,7 +57138,7 @@ function parse(val) {
 var deprecate = __webpack_require__(/*! depd */ "./node_modules/depd/lib/browser/index.js")('http-errors')
 var setPrototypeOf = __webpack_require__(/*! setprototypeof */ "./node_modules/raw-body/node_modules/setprototypeof/index.js")
 var statuses = __webpack_require__(/*! statuses */ "./node_modules/raw-body/node_modules/statuses/index.js")
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js")
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?3fb5")
 var toIdentifier = __webpack_require__(/*! toidentifier */ "./node_modules/toidentifier/index.js")
 
 /**
@@ -55251,16 +57557,16 @@ function status (code) {
 /***/ }),
 
 /***/ "./node_modules/ripemd160/index.js":
-/*!*****************************************!*\
-  !*** ./node_modules/ripemd160/index.js ***!
-  \*****************************************/
+/*!*******************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/ripemd160/index.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var Buffer = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js").Buffer
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js")
+var Buffer = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js?1eb7").Buffer
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31")
 var HashBase = __webpack_require__(/*! hash-base */ "./node_modules/hash-base/index.js")
 
 var ARRAY16 = new Array(16)
@@ -55425,7 +57731,80 @@ module.exports = RIPEMD160
 
 /***/ }),
 
-/***/ "./node_modules/safe-buffer/index.js":
+/***/ "./node_modules/safe-buffer/index.js?7265":
+/*!*********************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/safe-buffer/index.js ***!
+  \*********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* eslint-disable node/no-deprecated-api */
+var buffer = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js?1eb7")
+var Buffer = buffer.Buffer
+
+// alternative to using Object.keys for old browsers
+function copyProps (src, dst) {
+  for (var key in src) {
+    dst[key] = src[key]
+  }
+}
+if (Buffer.from && Buffer.alloc && Buffer.allocUnsafe && Buffer.allocUnsafeSlow) {
+  module.exports = buffer
+} else {
+  // Copy properties from require('buffer')
+  copyProps(buffer, exports)
+  exports.Buffer = SafeBuffer
+}
+
+function SafeBuffer (arg, encodingOrOffset, length) {
+  return Buffer(arg, encodingOrOffset, length)
+}
+
+// Copy static methods from Buffer
+copyProps(Buffer, SafeBuffer)
+
+SafeBuffer.from = function (arg, encodingOrOffset, length) {
+  if (typeof arg === 'number') {
+    throw new TypeError('Argument must not be a number')
+  }
+  return Buffer(arg, encodingOrOffset, length)
+}
+
+SafeBuffer.alloc = function (size, fill, encoding) {
+  if (typeof size !== 'number') {
+    throw new TypeError('Argument must be a number')
+  }
+  var buf = Buffer(size)
+  if (fill !== undefined) {
+    if (typeof encoding === 'string') {
+      buf.fill(fill, encoding)
+    } else {
+      buf.fill(fill)
+    }
+  } else {
+    buf.fill(0)
+  }
+  return buf
+}
+
+SafeBuffer.allocUnsafe = function (size) {
+  if (typeof size !== 'number') {
+    throw new TypeError('Argument must be a number')
+  }
+  return Buffer(size)
+}
+
+SafeBuffer.allocUnsafeSlow = function (size) {
+  if (typeof size !== 'number') {
+    throw new TypeError('Argument must be a number')
+  }
+  return buffer.SlowBuffer(size)
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/safe-buffer/index.js?8707":
 /*!*******************************************!*\
   !*** ./node_modules/safe-buffer/index.js ***!
   \*******************************************/
@@ -55433,7 +57812,7 @@ module.exports = RIPEMD160
 /***/ (function(module, exports, __webpack_require__) {
 
 /* eslint-disable node/no-deprecated-api */
-var buffer = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js")
+var buffer = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js?1eb7")
 var Buffer = buffer.Buffer
 
 // alternative to using Object.keys for old browsers
@@ -55510,7 +57889,7 @@ SafeBuffer.allocUnsafeSlow = function (size) {
 
 
 
-var buffer = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js")
+var buffer = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js?1eb7")
 var Buffer = buffer.Buffer
 
 var safer = {}
@@ -55584,7 +57963,7 @@ if (!safer.constants) {
 
 module.exports = safer
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js?f28c")))
 
 /***/ }),
 
@@ -56726,7 +59105,7 @@ function setHeaders (res, headers) {
   }
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../buffer/index.js */ "./node_modules/buffer/index.js").Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../buffer/index.js */ "./node_modules/buffer/index.js?b639").Buffer))
 
 /***/ }),
 
@@ -57603,7 +59982,7 @@ function createRedirectDirectoryListener () {
   }
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../buffer/index.js */ "./node_modules/buffer/index.js").Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../buffer/index.js */ "./node_modules/buffer/index.js?b639").Buffer))
 
 /***/ }),
 
@@ -57777,7 +60156,7 @@ function fresh (url, parsedUrl) {
 
 /***/ }),
 
-/***/ "./node_modules/setimmediate/setImmediate.js":
+/***/ "./node_modules/setimmediate/setImmediate.js?6017":
 /*!***************************************************!*\
   !*** ./node_modules/setimmediate/setImmediate.js ***!
   \***************************************************/
@@ -57971,18 +60350,216 @@ function fresh (url, parsedUrl) {
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js?c8ba"), __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js?f28c")))
+
+/***/ }),
+
+/***/ "./node_modules/setimmediate/setImmediate.js?7382":
+/*!*****************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/setimmediate/setImmediate.js ***!
+  \*****************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
+    "use strict";
+
+    if (global.setImmediate) {
+        return;
+    }
+
+    var nextHandle = 1; // Spec says greater than zero
+    var tasksByHandle = {};
+    var currentlyRunningATask = false;
+    var doc = global.document;
+    var registerImmediate;
+
+    function setImmediate(callback) {
+      // Callback can either be a function or a string
+      if (typeof callback !== "function") {
+        callback = new Function("" + callback);
+      }
+      // Copy function arguments
+      var args = new Array(arguments.length - 1);
+      for (var i = 0; i < args.length; i++) {
+          args[i] = arguments[i + 1];
+      }
+      // Store and register the task
+      var task = { callback: callback, args: args };
+      tasksByHandle[nextHandle] = task;
+      registerImmediate(nextHandle);
+      return nextHandle++;
+    }
+
+    function clearImmediate(handle) {
+        delete tasksByHandle[handle];
+    }
+
+    function run(task) {
+        var callback = task.callback;
+        var args = task.args;
+        switch (args.length) {
+        case 0:
+            callback();
+            break;
+        case 1:
+            callback(args[0]);
+            break;
+        case 2:
+            callback(args[0], args[1]);
+            break;
+        case 3:
+            callback(args[0], args[1], args[2]);
+            break;
+        default:
+            callback.apply(undefined, args);
+            break;
+        }
+    }
+
+    function runIfPresent(handle) {
+        // From the spec: "Wait until any invocations of this algorithm started before this one have completed."
+        // So if we're currently running a task, we'll need to delay this invocation.
+        if (currentlyRunningATask) {
+            // Delay by doing a setTimeout. setImmediate was tried instead, but in Firefox 7 it generated a
+            // "too much recursion" error.
+            setTimeout(runIfPresent, 0, handle);
+        } else {
+            var task = tasksByHandle[handle];
+            if (task) {
+                currentlyRunningATask = true;
+                try {
+                    run(task);
+                } finally {
+                    clearImmediate(handle);
+                    currentlyRunningATask = false;
+                }
+            }
+        }
+    }
+
+    function installNextTickImplementation() {
+        registerImmediate = function(handle) {
+            process.nextTick(function () { runIfPresent(handle); });
+        };
+    }
+
+    function canUsePostMessage() {
+        // The test against `importScripts` prevents this implementation from being installed inside a web worker,
+        // where `global.postMessage` means something completely different and can't be used for this purpose.
+        if (global.postMessage && !global.importScripts) {
+            var postMessageIsAsynchronous = true;
+            var oldOnMessage = global.onmessage;
+            global.onmessage = function() {
+                postMessageIsAsynchronous = false;
+            };
+            global.postMessage("", "*");
+            global.onmessage = oldOnMessage;
+            return postMessageIsAsynchronous;
+        }
+    }
+
+    function installPostMessageImplementation() {
+        // Installs an event handler on `global` for the `message` event: see
+        // * https://developer.mozilla.org/en/DOM/window.postMessage
+        // * http://www.whatwg.org/specs/web-apps/current-work/multipage/comms.html#crossDocumentMessages
+
+        var messagePrefix = "setImmediate$" + Math.random() + "$";
+        var onGlobalMessage = function(event) {
+            if (event.source === global &&
+                typeof event.data === "string" &&
+                event.data.indexOf(messagePrefix) === 0) {
+                runIfPresent(+event.data.slice(messagePrefix.length));
+            }
+        };
+
+        if (global.addEventListener) {
+            global.addEventListener("message", onGlobalMessage, false);
+        } else {
+            global.attachEvent("onmessage", onGlobalMessage);
+        }
+
+        registerImmediate = function(handle) {
+            global.postMessage(messagePrefix + handle, "*");
+        };
+    }
+
+    function installMessageChannelImplementation() {
+        var channel = new MessageChannel();
+        channel.port1.onmessage = function(event) {
+            var handle = event.data;
+            runIfPresent(handle);
+        };
+
+        registerImmediate = function(handle) {
+            channel.port2.postMessage(handle);
+        };
+    }
+
+    function installReadyStateChangeImplementation() {
+        var html = doc.documentElement;
+        registerImmediate = function(handle) {
+            // Create a <script> element; its readystatechange event will be fired asynchronously once it is inserted
+            // into the document. Do so, thus queuing up the task. Remember to clean up once it's been called.
+            var script = doc.createElement("script");
+            script.onreadystatechange = function () {
+                runIfPresent(handle);
+                script.onreadystatechange = null;
+                html.removeChild(script);
+                script = null;
+            };
+            html.appendChild(script);
+        };
+    }
+
+    function installSetTimeoutImplementation() {
+        registerImmediate = function(handle) {
+            setTimeout(runIfPresent, 0, handle);
+        };
+    }
+
+    // If supported, we should attach to the prototype of global, since that is where setTimeout et al. live.
+    var attachTo = Object.getPrototypeOf && Object.getPrototypeOf(global);
+    attachTo = attachTo && attachTo.setTimeout ? attachTo : global;
+
+    // Don't get fooled by e.g. browserify environments.
+    if ({}.toString.call(global.process) === "[object process]") {
+        // For Node.js before 0.9
+        installNextTickImplementation();
+
+    } else if (canUsePostMessage()) {
+        // For non-IE10 modern browsers
+        installPostMessageImplementation();
+
+    } else if (global.MessageChannel) {
+        // For web workers, where supported
+        installMessageChannelImplementation();
+
+    } else if (doc && "onreadystatechange" in doc.createElement("script")) {
+        // For IE 6–8
+        installReadyStateChangeImplementation();
+
+    } else {
+        // For older browsers
+        installSetTimeoutImplementation();
+    }
+
+    attachTo.setImmediate = setImmediate;
+    attachTo.clearImmediate = clearImmediate;
+}(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js?cd00"), __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js?20f2")))
 
 /***/ }),
 
 /***/ "./node_modules/sha.js/hash.js":
-/*!*************************************!*\
-  !*** ./node_modules/sha.js/hash.js ***!
-  \*************************************/
+/*!***************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/sha.js/hash.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 
 // prototype class for hash functions
 function Hash (blockSize, finalSize) {
@@ -58068,9 +60645,9 @@ module.exports = Hash
 /***/ }),
 
 /***/ "./node_modules/sha.js/index.js":
-/*!**************************************!*\
-  !*** ./node_modules/sha.js/index.js ***!
-  \**************************************/
+/*!****************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/sha.js/index.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -58094,9 +60671,9 @@ exports.sha512 = __webpack_require__(/*! ./sha512 */ "./node_modules/sha.js/sha5
 /***/ }),
 
 /***/ "./node_modules/sha.js/sha.js":
-/*!************************************!*\
-  !*** ./node_modules/sha.js/sha.js ***!
-  \************************************/
+/*!**************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/sha.js/sha.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -58108,9 +60685,9 @@ exports.sha512 = __webpack_require__(/*! ./sha512 */ "./node_modules/sha.js/sha5
  * operation was added.
  */
 
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js")
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31")
 var Hash = __webpack_require__(/*! ./hash */ "./node_modules/sha.js/hash.js")
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 
 var K = [
   0x5a827999, 0x6ed9eba1, 0x8f1bbcdc | 0, 0xca62c1d6 | 0
@@ -58199,9 +60776,9 @@ module.exports = Sha
 /***/ }),
 
 /***/ "./node_modules/sha.js/sha1.js":
-/*!*************************************!*\
-  !*** ./node_modules/sha.js/sha1.js ***!
-  \*************************************/
+/*!***************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/sha.js/sha1.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -58214,9 +60791,9 @@ module.exports = Sha
  * See http://pajhome.org.uk/crypt/md5 for details.
  */
 
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js")
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31")
 var Hash = __webpack_require__(/*! ./hash */ "./node_modules/sha.js/hash.js")
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 
 var K = [
   0x5a827999, 0x6ed9eba1, 0x8f1bbcdc | 0, 0xca62c1d6 | 0
@@ -58309,9 +60886,9 @@ module.exports = Sha1
 /***/ }),
 
 /***/ "./node_modules/sha.js/sha224.js":
-/*!***************************************!*\
-  !*** ./node_modules/sha.js/sha224.js ***!
-  \***************************************/
+/*!*****************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/sha.js/sha224.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -58323,10 +60900,10 @@ module.exports = Sha1
  *
  */
 
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js")
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31")
 var Sha256 = __webpack_require__(/*! ./sha256 */ "./node_modules/sha.js/sha256.js")
 var Hash = __webpack_require__(/*! ./hash */ "./node_modules/sha.js/hash.js")
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 
 var W = new Array(64)
 
@@ -58373,9 +60950,9 @@ module.exports = Sha224
 /***/ }),
 
 /***/ "./node_modules/sha.js/sha256.js":
-/*!***************************************!*\
-  !*** ./node_modules/sha.js/sha256.js ***!
-  \***************************************/
+/*!*****************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/sha.js/sha256.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -58387,9 +60964,9 @@ module.exports = Sha224
  *
  */
 
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js")
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31")
 var Hash = __webpack_require__(/*! ./hash */ "./node_modules/sha.js/hash.js")
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 
 var K = [
   0x428A2F98, 0x71374491, 0xB5C0FBCF, 0xE9B5DBA5,
@@ -58519,16 +61096,16 @@ module.exports = Sha256
 /***/ }),
 
 /***/ "./node_modules/sha.js/sha384.js":
-/*!***************************************!*\
-  !*** ./node_modules/sha.js/sha384.js ***!
-  \***************************************/
+/*!*****************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/sha.js/sha384.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js")
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31")
 var SHA512 = __webpack_require__(/*! ./sha512 */ "./node_modules/sha.js/sha512.js")
 var Hash = __webpack_require__(/*! ./hash */ "./node_modules/sha.js/hash.js")
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 
 var W = new Array(160)
 
@@ -58587,15 +61164,15 @@ module.exports = Sha384
 /***/ }),
 
 /***/ "./node_modules/sha.js/sha512.js":
-/*!***************************************!*\
-  !*** ./node_modules/sha.js/sha512.js ***!
-  \***************************************/
+/*!*****************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/sha.js/sha512.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js")
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31")
 var Hash = __webpack_require__(/*! ./hash */ "./node_modules/sha.js/hash.js")
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer
 
 var K = [
   0x428a2f98, 0xd728ae22, 0x71374491, 0x23ef65cd,
@@ -59128,7 +61705,7 @@ Room.prototype.del = function(id){
   }
 };
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js?f28c")))
 
 /***/ }),
 
@@ -59139,7 +61716,7 @@ Room.prototype.del = function(id){
 /*! exports provided: _args, _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _spec, _where, bugs, contributors, dependencies, description, devDependencies, files, homepage, keywords, license, main, name, repository, scripts, version, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"_args\":[[\"socket.io-client@2.3.0\",\"/Users/hieutran/Desktop/EDA_Bootcamp/Project/final-group/SpacePants-backEnd\"]],\"_from\":\"socket.io-client@2.3.0\",\"_id\":\"socket.io-client@2.3.0\",\"_inBundle\":false,\"_integrity\":\"sha512-cEQQf24gET3rfhxZ2jJ5xzAOo/xhZwK+mOqtGRg5IowZsMgwvHwnf/mCRapAAkadhM26y+iydgwsXGObBB5ZdA==\",\"_location\":\"/socket.io-client\",\"_phantomChildren\":{\"component-emitter\":\"1.2.1\"},\"_requested\":{\"type\":\"version\",\"registry\":true,\"raw\":\"socket.io-client@2.3.0\",\"name\":\"socket.io-client\",\"escapedName\":\"socket.io-client\",\"rawSpec\":\"2.3.0\",\"saveSpec\":null,\"fetchSpec\":\"2.3.0\"},\"_requiredBy\":[\"/socket.io\"],\"_resolved\":\"https://registry.npmjs.org/socket.io-client/-/socket.io-client-2.3.0.tgz\",\"_spec\":\"2.3.0\",\"_where\":\"/Users/hieutran/Desktop/EDA_Bootcamp/Project/final-group/SpacePants-backEnd\",\"bugs\":{\"url\":\"https://github.com/Automattic/socket.io-client/issues\"},\"contributors\":[{\"name\":\"Guillermo Rauch\",\"email\":\"rauchg@gmail.com\"},{\"name\":\"Arnout Kazemier\",\"email\":\"info@3rd-eden.com\"},{\"name\":\"Vladimir Dronnikov\",\"email\":\"dronnikov@gmail.com\"},{\"name\":\"Einar Otto Stangvik\",\"email\":\"einaros@gmail.com\"}],\"dependencies\":{\"backo2\":\"1.0.2\",\"base64-arraybuffer\":\"0.1.5\",\"component-bind\":\"1.0.0\",\"component-emitter\":\"1.2.1\",\"debug\":\"~4.1.0\",\"engine.io-client\":\"~3.4.0\",\"has-binary2\":\"~1.0.2\",\"has-cors\":\"1.1.0\",\"indexof\":\"0.0.1\",\"object-component\":\"0.0.3\",\"parseqs\":\"0.0.5\",\"parseuri\":\"0.0.5\",\"socket.io-parser\":\"~3.3.0\",\"to-array\":\"0.1.4\"},\"description\":\"[![Build Status](https://secure.travis-ci.org/socketio/socket.io-client.svg?branch=master)](http://travis-ci.org/socketio/socket.io-client) [![Dependency Status](https://david-dm.org/socketio/socket.io-client.svg)](https://david-dm.org/socketio/socket.io-client) [![devDependency Status](https://david-dm.org/socketio/socket.io-client/dev-status.svg)](https://david-dm.org/socketio/socket.io-client#info=devDependencies) [![NPM version](https://badge.fury.io/js/socket.io-client.svg)](https://www.npmjs.com/package/socket.io-client) ![Downloads](http://img.shields.io/npm/dm/socket.io-client.svg?style=flat) [![](http://slack.socket.io/badge.svg?)](http://slack.socket.io)\",\"devDependencies\":{\"babel-core\":\"^6.24.1\",\"babel-eslint\":\"4.1.7\",\"babel-loader\":\"7.0.0\",\"babel-preset-es2015\":\"6.24.1\",\"concat-stream\":\"^1.6.0\",\"derequire\":\"^2.0.6\",\"eslint-config-standard\":\"4.4.0\",\"eslint-plugin-standard\":\"1.3.1\",\"expect.js\":\"0.3.1\",\"gulp\":\"^3.9.1\",\"gulp-eslint\":\"1.1.1\",\"gulp-file\":\"^0.3.0\",\"gulp-istanbul\":\"^1.1.1\",\"gulp-mocha\":\"^4.3.1\",\"gulp-task-listing\":\"1.0.1\",\"imports-loader\":\"^0.7.1\",\"istanbul\":\"^0.4.5\",\"mocha\":\"^3.3.0\",\"socket.io\":\"2.3.0\",\"socket.io-browsers\":\"^1.0.0\",\"strip-loader\":\"0.1.2\",\"text-blob-builder\":\"0.0.1\",\"webpack-merge\":\"4.1.2\",\"webpack-stream\":\"3.2.0\",\"zuul\":\"~3.11.1\",\"zuul-builder-webpack\":\"^1.2.0\",\"zuul-ngrok\":\"4.0.0\"},\"files\":[\"lib/\",\"dist/\"],\"homepage\":\"https://github.com/Automattic/socket.io-client#readme\",\"keywords\":[\"realtime\",\"framework\",\"websocket\",\"tcp\",\"events\",\"client\"],\"license\":\"MIT\",\"main\":\"./lib/index\",\"name\":\"socket.io-client\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/Automattic/socket.io-client.git\"},\"scripts\":{\"test\":\"gulp test\"},\"version\":\"2.3.0\"}");
+module.exports = JSON.parse("{\"_args\":[[\"socket.io-client@2.3.0\",\"C:\\\\Users\\\\twent\\\\desktop\\\\DevAcademy\\\\SpacePants\\\\SpacePants-backEnd\"]],\"_from\":\"socket.io-client@2.3.0\",\"_id\":\"socket.io-client@2.3.0\",\"_inBundle\":false,\"_integrity\":\"sha512-cEQQf24gET3rfhxZ2jJ5xzAOo/xhZwK+mOqtGRg5IowZsMgwvHwnf/mCRapAAkadhM26y+iydgwsXGObBB5ZdA==\",\"_location\":\"/socket.io-client\",\"_phantomChildren\":{\"component-emitter\":\"1.2.1\"},\"_requested\":{\"type\":\"version\",\"registry\":true,\"raw\":\"socket.io-client@2.3.0\",\"name\":\"socket.io-client\",\"escapedName\":\"socket.io-client\",\"rawSpec\":\"2.3.0\",\"saveSpec\":null,\"fetchSpec\":\"2.3.0\"},\"_requiredBy\":[\"/socket.io\"],\"_resolved\":\"https://registry.npmjs.org/socket.io-client/-/socket.io-client-2.3.0.tgz\",\"_spec\":\"2.3.0\",\"_where\":\"C:\\\\Users\\\\twent\\\\desktop\\\\DevAcademy\\\\SpacePants\\\\SpacePants-backEnd\",\"bugs\":{\"url\":\"https://github.com/Automattic/socket.io-client/issues\"},\"contributors\":[{\"name\":\"Guillermo Rauch\",\"email\":\"rauchg@gmail.com\"},{\"name\":\"Arnout Kazemier\",\"email\":\"info@3rd-eden.com\"},{\"name\":\"Vladimir Dronnikov\",\"email\":\"dronnikov@gmail.com\"},{\"name\":\"Einar Otto Stangvik\",\"email\":\"einaros@gmail.com\"}],\"dependencies\":{\"backo2\":\"1.0.2\",\"base64-arraybuffer\":\"0.1.5\",\"component-bind\":\"1.0.0\",\"component-emitter\":\"1.2.1\",\"debug\":\"~4.1.0\",\"engine.io-client\":\"~3.4.0\",\"has-binary2\":\"~1.0.2\",\"has-cors\":\"1.1.0\",\"indexof\":\"0.0.1\",\"object-component\":\"0.0.3\",\"parseqs\":\"0.0.5\",\"parseuri\":\"0.0.5\",\"socket.io-parser\":\"~3.3.0\",\"to-array\":\"0.1.4\"},\"description\":\"[![Build Status](https://secure.travis-ci.org/socketio/socket.io-client.svg?branch=master)](http://travis-ci.org/socketio/socket.io-client) [![Dependency Status](https://david-dm.org/socketio/socket.io-client.svg)](https://david-dm.org/socketio/socket.io-client) [![devDependency Status](https://david-dm.org/socketio/socket.io-client/dev-status.svg)](https://david-dm.org/socketio/socket.io-client#info=devDependencies) [![NPM version](https://badge.fury.io/js/socket.io-client.svg)](https://www.npmjs.com/package/socket.io-client) ![Downloads](http://img.shields.io/npm/dm/socket.io-client.svg?style=flat) [![](http://slack.socket.io/badge.svg?)](http://slack.socket.io)\",\"devDependencies\":{\"babel-core\":\"^6.24.1\",\"babel-eslint\":\"4.1.7\",\"babel-loader\":\"7.0.0\",\"babel-preset-es2015\":\"6.24.1\",\"concat-stream\":\"^1.6.0\",\"derequire\":\"^2.0.6\",\"eslint-config-standard\":\"4.4.0\",\"eslint-plugin-standard\":\"1.3.1\",\"expect.js\":\"0.3.1\",\"gulp\":\"^3.9.1\",\"gulp-eslint\":\"1.1.1\",\"gulp-file\":\"^0.3.0\",\"gulp-istanbul\":\"^1.1.1\",\"gulp-mocha\":\"^4.3.1\",\"gulp-task-listing\":\"1.0.1\",\"imports-loader\":\"^0.7.1\",\"istanbul\":\"^0.4.5\",\"mocha\":\"^3.3.0\",\"socket.io\":\"2.3.0\",\"socket.io-browsers\":\"^1.0.0\",\"strip-loader\":\"0.1.2\",\"text-blob-builder\":\"0.0.1\",\"webpack-merge\":\"4.1.2\",\"webpack-stream\":\"3.2.0\",\"zuul\":\"~3.11.1\",\"zuul-builder-webpack\":\"^1.2.0\",\"zuul-ngrok\":\"4.0.0\"},\"files\":[\"lib/\",\"dist/\"],\"homepage\":\"https://github.com/Automattic/socket.io-client#readme\",\"keywords\":[\"realtime\",\"framework\",\"websocket\",\"tcp\",\"events\",\"client\"],\"license\":\"MIT\",\"main\":\"./lib/index\",\"name\":\"socket.io-client\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/Automattic/socket.io-client.git\"},\"scripts\":{\"test\":\"gulp test\"},\"version\":\"2.3.0\"}");
 
 /***/ }),
 
@@ -59749,7 +62326,7 @@ function isBuf(obj) {
           (withNativeArrayBuffer && (obj instanceof ArrayBuffer || isView(obj)));
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../buffer/index.js */ "./node_modules/buffer/index.js").Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../buffer/index.js */ "./node_modules/buffer/index.js?b639").Buffer))
 
 /***/ }),
 
@@ -60025,7 +62602,7 @@ formatters.j = function (v) {
 	}
 };
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../process/browser.js */ "./node_modules/process/browser.js?f28c")))
 
 /***/ }),
 
@@ -60795,7 +63372,7 @@ Client.prototype.destroy = function(){
   this.decoder.removeListener('decoded', this.ondecoded);
 };
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js?f28c")))
 
 /***/ }),
 
@@ -61642,7 +64219,7 @@ Namespace.prototype.compress = function(compress){
    return this;
  };
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js?f28c")))
 
 /***/ }),
 
@@ -62277,7 +64854,7 @@ Socket.prototype.run = function(event, fn){
   run(0);
 };
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js?f28c")))
 
 /***/ }),
 
@@ -62553,7 +65130,7 @@ formatters.j = function (v) {
 	}
 };
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../process/browser.js */ "./node_modules/process/browser.js?f28c")))
 
 /***/ }),
 
@@ -63008,9 +65585,9 @@ function plural(ms, msAbs, n, name) {
 /***/ }),
 
 /***/ "./node_modules/stream-browserify/index.js":
-/*!*************************************************!*\
-  !*** ./node_modules/stream-browserify/index.js ***!
-  \*************************************************/
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/stream-browserify/index.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -63038,7 +65615,7 @@ function plural(ms, msAbs, n, name) {
 module.exports = Stream;
 
 var EE = __webpack_require__(/*! events */ "./node_modules/events/events.js").EventEmitter;
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js");
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31");
 
 inherits(Stream, EE);
 Stream.Readable = __webpack_require__(/*! readable-stream/readable.js */ "./node_modules/stream-browserify/node_modules/readable-stream/readable-browser.js");
@@ -63146,9 +65723,9 @@ Stream.prototype.pipe = function(dest, options) {
 /***/ }),
 
 /***/ "./node_modules/stream-browserify/node_modules/readable-stream/duplex-browser.js":
-/*!***************************************************************************************!*\
-  !*** ./node_modules/stream-browserify/node_modules/readable-stream/duplex-browser.js ***!
-  \***************************************************************************************/
+/*!*****************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/stream-browserify/node_modules/readable-stream/duplex-browser.js ***!
+  \*****************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -63158,9 +65735,9 @@ module.exports = __webpack_require__(/*! ./lib/_stream_duplex.js */ "./node_modu
 /***/ }),
 
 /***/ "./node_modules/stream-browserify/node_modules/readable-stream/lib/_stream_duplex.js":
-/*!*******************************************************************************************!*\
-  !*** ./node_modules/stream-browserify/node_modules/readable-stream/lib/_stream_duplex.js ***!
-  \*******************************************************************************************/
+/*!*********************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/stream-browserify/node_modules/readable-stream/lib/_stream_duplex.js ***!
+  \*********************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -63211,7 +65788,7 @@ module.exports = Duplex;
 
 /*<replacement>*/
 var util = Object.create(__webpack_require__(/*! core-util-is */ "./node_modules/core-util-is/lib/util.js"));
-util.inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js");
+util.inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31");
 /*</replacement>*/
 
 var Readable = __webpack_require__(/*! ./_stream_readable */ "./node_modules/stream-browserify/node_modules/readable-stream/lib/_stream_readable.js");
@@ -63300,9 +65877,9 @@ Duplex.prototype._destroy = function (err, cb) {
 /***/ }),
 
 /***/ "./node_modules/stream-browserify/node_modules/readable-stream/lib/_stream_passthrough.js":
-/*!************************************************************************************************!*\
-  !*** ./node_modules/stream-browserify/node_modules/readable-stream/lib/_stream_passthrough.js ***!
-  \************************************************************************************************/
+/*!**************************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/stream-browserify/node_modules/readable-stream/lib/_stream_passthrough.js ***!
+  \**************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -63340,7 +65917,7 @@ var Transform = __webpack_require__(/*! ./_stream_transform */ "./node_modules/s
 
 /*<replacement>*/
 var util = Object.create(__webpack_require__(/*! core-util-is */ "./node_modules/core-util-is/lib/util.js"));
-util.inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js");
+util.inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31");
 /*</replacement>*/
 
 util.inherits(PassThrough, Transform);
@@ -63358,9 +65935,9 @@ PassThrough.prototype._transform = function (chunk, encoding, cb) {
 /***/ }),
 
 /***/ "./node_modules/stream-browserify/node_modules/readable-stream/lib/_stream_readable.js":
-/*!*********************************************************************************************!*\
-  !*** ./node_modules/stream-browserify/node_modules/readable-stream/lib/_stream_readable.js ***!
-  \*********************************************************************************************/
+/*!***********************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/stream-browserify/node_modules/readable-stream/lib/_stream_readable.js ***!
+  \***********************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -63396,7 +65973,7 @@ var pna = __webpack_require__(/*! process-nextick-args */ "./node_modules/proces
 module.exports = Readable;
 
 /*<replacement>*/
-var isArray = __webpack_require__(/*! isarray */ "./node_modules/isarray/index.js");
+var isArray = __webpack_require__(/*! isarray */ "./node_modules/isarray/index.js?12d8");
 /*</replacement>*/
 
 /*<replacement>*/
@@ -63419,7 +65996,7 @@ var Stream = __webpack_require__(/*! ./internal/streams/stream */ "./node_module
 
 /*<replacement>*/
 
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer;
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer;
 var OurUint8Array = global.Uint8Array || function () {};
 function _uint8ArrayToBuffer(chunk) {
   return Buffer.from(chunk);
@@ -63432,7 +66009,7 @@ function _isUint8Array(obj) {
 
 /*<replacement>*/
 var util = Object.create(__webpack_require__(/*! core-util-is */ "./node_modules/core-util-is/lib/util.js"));
-util.inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js");
+util.inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31");
 /*</replacement>*/
 
 /*<replacement>*/
@@ -64384,14 +66961,14 @@ function indexOf(xs, x) {
   }
   return -1;
 }
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../../../../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js?cd00"), __webpack_require__(/*! ./../../../../process/browser.js */ "./node_modules/process/browser.js?20f2")))
 
 /***/ }),
 
 /***/ "./node_modules/stream-browserify/node_modules/readable-stream/lib/_stream_transform.js":
-/*!**********************************************************************************************!*\
-  !*** ./node_modules/stream-browserify/node_modules/readable-stream/lib/_stream_transform.js ***!
-  \**********************************************************************************************/
+/*!************************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/stream-browserify/node_modules/readable-stream/lib/_stream_transform.js ***!
+  \************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -64467,7 +67044,7 @@ var Duplex = __webpack_require__(/*! ./_stream_duplex */ "./node_modules/stream-
 
 /*<replacement>*/
 var util = Object.create(__webpack_require__(/*! core-util-is */ "./node_modules/core-util-is/lib/util.js"));
-util.inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js");
+util.inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31");
 /*</replacement>*/
 
 util.inherits(Transform, Duplex);
@@ -64614,9 +67191,9 @@ function done(stream, er, data) {
 /***/ }),
 
 /***/ "./node_modules/stream-browserify/node_modules/readable-stream/lib/_stream_writable.js":
-/*!*********************************************************************************************!*\
-  !*** ./node_modules/stream-browserify/node_modules/readable-stream/lib/_stream_writable.js ***!
-  \*********************************************************************************************/
+/*!***********************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/stream-browserify/node_modules/readable-stream/lib/_stream_writable.js ***!
+  \***********************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -64688,7 +67265,7 @@ Writable.WritableState = WritableState;
 
 /*<replacement>*/
 var util = Object.create(__webpack_require__(/*! core-util-is */ "./node_modules/core-util-is/lib/util.js"));
-util.inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js");
+util.inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31");
 /*</replacement>*/
 
 /*<replacement>*/
@@ -64703,7 +67280,7 @@ var Stream = __webpack_require__(/*! ./internal/streams/stream */ "./node_module
 
 /*<replacement>*/
 
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer;
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer;
 var OurUint8Array = global.Uint8Array || function () {};
 function _uint8ArrayToBuffer(chunk) {
   return Buffer.from(chunk);
@@ -65308,14 +67885,14 @@ Writable.prototype._destroy = function (err, cb) {
   this.end();
   cb(err);
 };
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../process/browser.js */ "./node_modules/process/browser.js"), __webpack_require__(/*! ./../../../../timers-browserify/main.js */ "./node_modules/timers-browserify/main.js").setImmediate, __webpack_require__(/*! ./../../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../process/browser.js */ "./node_modules/process/browser.js?20f2"), __webpack_require__(/*! ./../../../../timers-browserify/main.js */ "./node_modules/timers-browserify/main.js?f9ef").setImmediate, __webpack_require__(/*! ./../../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js?cd00")))
 
 /***/ }),
 
 /***/ "./node_modules/stream-browserify/node_modules/readable-stream/lib/internal/streams/BufferList.js":
-/*!********************************************************************************************************!*\
-  !*** ./node_modules/stream-browserify/node_modules/readable-stream/lib/internal/streams/BufferList.js ***!
-  \********************************************************************************************************/
+/*!**********************************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/stream-browserify/node_modules/readable-stream/lib/internal/streams/BufferList.js ***!
+  \**********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -65324,7 +67901,7 @@ Writable.prototype._destroy = function (err, cb) {
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer;
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer;
 var util = __webpack_require__(/*! util */ 5);
 
 function copyBuffer(src, target, offset) {
@@ -65403,9 +67980,9 @@ if (util && util.inspect && util.inspect.custom) {
 /***/ }),
 
 /***/ "./node_modules/stream-browserify/node_modules/readable-stream/lib/internal/streams/destroy.js":
-/*!*****************************************************************************************************!*\
-  !*** ./node_modules/stream-browserify/node_modules/readable-stream/lib/internal/streams/destroy.js ***!
-  \*****************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/stream-browserify/node_modules/readable-stream/lib/internal/streams/destroy.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -65488,9 +68065,9 @@ module.exports = {
 /***/ }),
 
 /***/ "./node_modules/stream-browserify/node_modules/readable-stream/lib/internal/streams/stream-browser.js":
-/*!************************************************************************************************************!*\
-  !*** ./node_modules/stream-browserify/node_modules/readable-stream/lib/internal/streams/stream-browser.js ***!
-  \************************************************************************************************************/
+/*!**************************************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/stream-browserify/node_modules/readable-stream/lib/internal/streams/stream-browser.js ***!
+  \**************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -65500,9 +68077,9 @@ module.exports = __webpack_require__(/*! events */ "./node_modules/events/events
 /***/ }),
 
 /***/ "./node_modules/stream-browserify/node_modules/readable-stream/passthrough.js":
-/*!************************************************************************************!*\
-  !*** ./node_modules/stream-browserify/node_modules/readable-stream/passthrough.js ***!
-  \************************************************************************************/
+/*!**************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/stream-browserify/node_modules/readable-stream/passthrough.js ***!
+  \**************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -65512,9 +68089,9 @@ module.exports = __webpack_require__(/*! ./readable */ "./node_modules/stream-br
 /***/ }),
 
 /***/ "./node_modules/stream-browserify/node_modules/readable-stream/readable-browser.js":
-/*!*****************************************************************************************!*\
-  !*** ./node_modules/stream-browserify/node_modules/readable-stream/readable-browser.js ***!
-  \*****************************************************************************************/
+/*!*******************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/stream-browserify/node_modules/readable-stream/readable-browser.js ***!
+  \*******************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -65530,9 +68107,9 @@ exports.PassThrough = __webpack_require__(/*! ./lib/_stream_passthrough.js */ ".
 /***/ }),
 
 /***/ "./node_modules/stream-browserify/node_modules/readable-stream/transform.js":
-/*!**********************************************************************************!*\
-  !*** ./node_modules/stream-browserify/node_modules/readable-stream/transform.js ***!
-  \**********************************************************************************/
+/*!************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/stream-browserify/node_modules/readable-stream/transform.js ***!
+  \************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -65542,9 +68119,9 @@ module.exports = __webpack_require__(/*! ./readable */ "./node_modules/stream-br
 /***/ }),
 
 /***/ "./node_modules/stream-browserify/node_modules/readable-stream/writable-browser.js":
-/*!*****************************************************************************************!*\
-  !*** ./node_modules/stream-browserify/node_modules/readable-stream/writable-browser.js ***!
-  \*****************************************************************************************/
+/*!*******************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/stream-browserify/node_modules/readable-stream/writable-browser.js ***!
+  \*******************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -65554,9 +68131,9 @@ module.exports = __webpack_require__(/*! ./lib/_stream_writable.js */ "./node_mo
 /***/ }),
 
 /***/ "./node_modules/stream-http/index.js":
-/*!*******************************************!*\
-  !*** ./node_modules/stream-http/index.js ***!
-  \*******************************************/
+/*!*********************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/stream-http/index.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -65645,14 +68222,14 @@ http.METHODS = [
 	'UNLOCK',
 	'UNSUBSCRIBE'
 ]
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js?cd00")))
 
 /***/ }),
 
 /***/ "./node_modules/stream-http/lib/capability.js":
-/*!****************************************************!*\
-  !*** ./node_modules/stream-http/lib/capability.js ***!
-  \****************************************************/
+/*!******************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/stream-http/lib/capability.js ***!
+  \******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -65730,19 +68307,19 @@ function isFunction (value) {
 
 xhr = null // Help gc
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js?cd00")))
 
 /***/ }),
 
 /***/ "./node_modules/stream-http/lib/request.js":
-/*!*************************************************!*\
-  !*** ./node_modules/stream-http/lib/request.js ***!
-  \*************************************************/
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/stream-http/lib/request.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer, global, process) {var capability = __webpack_require__(/*! ./capability */ "./node_modules/stream-http/lib/capability.js")
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js")
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31")
 var response = __webpack_require__(/*! ./response */ "./node_modules/stream-http/lib/response.js")
 var stream = __webpack_require__(/*! readable-stream */ "./node_modules/stream-http/node_modules/readable-stream/readable-browser.js")
 var toArrayBuffer = __webpack_require__(/*! to-arraybuffer */ "./node_modules/to-arraybuffer/index.js")
@@ -66069,19 +68646,19 @@ var unsafeHeaders = [
 	'via'
 ]
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../buffer/index.js */ "./node_modules/buffer/index.js").Buffer, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../buffer/index.js */ "./node_modules/buffer/index.js?1eb7").Buffer, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js?cd00"), __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js?20f2")))
 
 /***/ }),
 
 /***/ "./node_modules/stream-http/lib/response.js":
-/*!**************************************************!*\
-  !*** ./node_modules/stream-http/lib/response.js ***!
-  \**************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/stream-http/lib/response.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process, Buffer, global) {var capability = __webpack_require__(/*! ./capability */ "./node_modules/stream-http/lib/capability.js")
-var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js")
+var inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31")
 var stream = __webpack_require__(/*! readable-stream */ "./node_modules/stream-http/node_modules/readable-stream/readable-browser.js")
 
 var rStates = exports.readyStates = {
@@ -66305,14 +68882,14 @@ IncomingMessage.prototype._onXHRProgress = function () {
 	}
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js"), __webpack_require__(/*! ./../../buffer/index.js */ "./node_modules/buffer/index.js").Buffer, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js?20f2"), __webpack_require__(/*! ./../../buffer/index.js */ "./node_modules/buffer/index.js?1eb7").Buffer, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js?cd00")))
 
 /***/ }),
 
 /***/ "./node_modules/stream-http/node_modules/readable-stream/lib/_stream_duplex.js":
-/*!*************************************************************************************!*\
-  !*** ./node_modules/stream-http/node_modules/readable-stream/lib/_stream_duplex.js ***!
-  \*************************************************************************************/
+/*!***************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/stream-http/node_modules/readable-stream/lib/_stream_duplex.js ***!
+  \***************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -66363,7 +68940,7 @@ module.exports = Duplex;
 
 /*<replacement>*/
 var util = Object.create(__webpack_require__(/*! core-util-is */ "./node_modules/core-util-is/lib/util.js"));
-util.inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js");
+util.inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31");
 /*</replacement>*/
 
 var Readable = __webpack_require__(/*! ./_stream_readable */ "./node_modules/stream-http/node_modules/readable-stream/lib/_stream_readable.js");
@@ -66452,9 +69029,9 @@ Duplex.prototype._destroy = function (err, cb) {
 /***/ }),
 
 /***/ "./node_modules/stream-http/node_modules/readable-stream/lib/_stream_passthrough.js":
-/*!******************************************************************************************!*\
-  !*** ./node_modules/stream-http/node_modules/readable-stream/lib/_stream_passthrough.js ***!
-  \******************************************************************************************/
+/*!********************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/stream-http/node_modules/readable-stream/lib/_stream_passthrough.js ***!
+  \********************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -66492,7 +69069,7 @@ var Transform = __webpack_require__(/*! ./_stream_transform */ "./node_modules/s
 
 /*<replacement>*/
 var util = Object.create(__webpack_require__(/*! core-util-is */ "./node_modules/core-util-is/lib/util.js"));
-util.inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js");
+util.inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31");
 /*</replacement>*/
 
 util.inherits(PassThrough, Transform);
@@ -66510,9 +69087,9 @@ PassThrough.prototype._transform = function (chunk, encoding, cb) {
 /***/ }),
 
 /***/ "./node_modules/stream-http/node_modules/readable-stream/lib/_stream_readable.js":
-/*!***************************************************************************************!*\
-  !*** ./node_modules/stream-http/node_modules/readable-stream/lib/_stream_readable.js ***!
-  \***************************************************************************************/
+/*!*****************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/stream-http/node_modules/readable-stream/lib/_stream_readable.js ***!
+  \*****************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -66548,7 +69125,7 @@ var pna = __webpack_require__(/*! process-nextick-args */ "./node_modules/proces
 module.exports = Readable;
 
 /*<replacement>*/
-var isArray = __webpack_require__(/*! isarray */ "./node_modules/isarray/index.js");
+var isArray = __webpack_require__(/*! isarray */ "./node_modules/isarray/index.js?12d8");
 /*</replacement>*/
 
 /*<replacement>*/
@@ -66571,7 +69148,7 @@ var Stream = __webpack_require__(/*! ./internal/streams/stream */ "./node_module
 
 /*<replacement>*/
 
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer;
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer;
 var OurUint8Array = global.Uint8Array || function () {};
 function _uint8ArrayToBuffer(chunk) {
   return Buffer.from(chunk);
@@ -66584,7 +69161,7 @@ function _isUint8Array(obj) {
 
 /*<replacement>*/
 var util = Object.create(__webpack_require__(/*! core-util-is */ "./node_modules/core-util-is/lib/util.js"));
-util.inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js");
+util.inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31");
 /*</replacement>*/
 
 /*<replacement>*/
@@ -67536,14 +70113,14 @@ function indexOf(xs, x) {
   }
   return -1;
 }
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../../../../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js?cd00"), __webpack_require__(/*! ./../../../../process/browser.js */ "./node_modules/process/browser.js?20f2")))
 
 /***/ }),
 
 /***/ "./node_modules/stream-http/node_modules/readable-stream/lib/_stream_transform.js":
-/*!****************************************************************************************!*\
-  !*** ./node_modules/stream-http/node_modules/readable-stream/lib/_stream_transform.js ***!
-  \****************************************************************************************/
+/*!******************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/stream-http/node_modules/readable-stream/lib/_stream_transform.js ***!
+  \******************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -67619,7 +70196,7 @@ var Duplex = __webpack_require__(/*! ./_stream_duplex */ "./node_modules/stream-
 
 /*<replacement>*/
 var util = Object.create(__webpack_require__(/*! core-util-is */ "./node_modules/core-util-is/lib/util.js"));
-util.inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js");
+util.inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31");
 /*</replacement>*/
 
 util.inherits(Transform, Duplex);
@@ -67766,9 +70343,9 @@ function done(stream, er, data) {
 /***/ }),
 
 /***/ "./node_modules/stream-http/node_modules/readable-stream/lib/_stream_writable.js":
-/*!***************************************************************************************!*\
-  !*** ./node_modules/stream-http/node_modules/readable-stream/lib/_stream_writable.js ***!
-  \***************************************************************************************/
+/*!*****************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/stream-http/node_modules/readable-stream/lib/_stream_writable.js ***!
+  \*****************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -67840,7 +70417,7 @@ Writable.WritableState = WritableState;
 
 /*<replacement>*/
 var util = Object.create(__webpack_require__(/*! core-util-is */ "./node_modules/core-util-is/lib/util.js"));
-util.inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js");
+util.inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31");
 /*</replacement>*/
 
 /*<replacement>*/
@@ -67855,7 +70432,7 @@ var Stream = __webpack_require__(/*! ./internal/streams/stream */ "./node_module
 
 /*<replacement>*/
 
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer;
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer;
 var OurUint8Array = global.Uint8Array || function () {};
 function _uint8ArrayToBuffer(chunk) {
   return Buffer.from(chunk);
@@ -68460,14 +71037,14 @@ Writable.prototype._destroy = function (err, cb) {
   this.end();
   cb(err);
 };
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../process/browser.js */ "./node_modules/process/browser.js"), __webpack_require__(/*! ./../../../../timers-browserify/main.js */ "./node_modules/timers-browserify/main.js").setImmediate, __webpack_require__(/*! ./../../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../process/browser.js */ "./node_modules/process/browser.js?20f2"), __webpack_require__(/*! ./../../../../timers-browserify/main.js */ "./node_modules/timers-browserify/main.js?f9ef").setImmediate, __webpack_require__(/*! ./../../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js?cd00")))
 
 /***/ }),
 
 /***/ "./node_modules/stream-http/node_modules/readable-stream/lib/internal/streams/BufferList.js":
-/*!**************************************************************************************************!*\
-  !*** ./node_modules/stream-http/node_modules/readable-stream/lib/internal/streams/BufferList.js ***!
-  \**************************************************************************************************/
+/*!****************************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/stream-http/node_modules/readable-stream/lib/internal/streams/BufferList.js ***!
+  \****************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -68476,7 +71053,7 @@ Writable.prototype._destroy = function (err, cb) {
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer;
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer;
 var util = __webpack_require__(/*! util */ 1);
 
 function copyBuffer(src, target, offset) {
@@ -68555,9 +71132,9 @@ if (util && util.inspect && util.inspect.custom) {
 /***/ }),
 
 /***/ "./node_modules/stream-http/node_modules/readable-stream/lib/internal/streams/destroy.js":
-/*!***********************************************************************************************!*\
-  !*** ./node_modules/stream-http/node_modules/readable-stream/lib/internal/streams/destroy.js ***!
-  \***********************************************************************************************/
+/*!*************************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/stream-http/node_modules/readable-stream/lib/internal/streams/destroy.js ***!
+  \*************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -68640,9 +71217,9 @@ module.exports = {
 /***/ }),
 
 /***/ "./node_modules/stream-http/node_modules/readable-stream/lib/internal/streams/stream-browser.js":
-/*!******************************************************************************************************!*\
-  !*** ./node_modules/stream-http/node_modules/readable-stream/lib/internal/streams/stream-browser.js ***!
-  \******************************************************************************************************/
+/*!********************************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/stream-http/node_modules/readable-stream/lib/internal/streams/stream-browser.js ***!
+  \********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -68652,9 +71229,9 @@ module.exports = __webpack_require__(/*! events */ "./node_modules/events/events
 /***/ }),
 
 /***/ "./node_modules/stream-http/node_modules/readable-stream/readable-browser.js":
-/*!***********************************************************************************!*\
-  !*** ./node_modules/stream-http/node_modules/readable-stream/readable-browser.js ***!
-  \***********************************************************************************/
+/*!*************************************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/stream-http/node_modules/readable-stream/readable-browser.js ***!
+  \*************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -68670,9 +71247,9 @@ exports.PassThrough = __webpack_require__(/*! ./lib/_stream_passthrough.js */ ".
 /***/ }),
 
 /***/ "./node_modules/string_decoder/lib/string_decoder.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/string_decoder/lib/string_decoder.js ***!
-  \***********************************************************/
+/*!*************************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/string_decoder/lib/string_decoder.js ***!
+  \*************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -68702,7 +71279,7 @@ exports.PassThrough = __webpack_require__(/*! ./lib/_stream_passthrough.js */ ".
 
 /*<replacement>*/
 
-var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer;
+var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js?7265").Buffer;
 /*</replacement>*/
 
 var isEncoding = Buffer.isEncoding || function (encoding) {
@@ -68976,7 +71553,7 @@ function simpleEnd(buf) {
 
 /***/ }),
 
-/***/ "./node_modules/timers-browserify/main.js":
+/***/ "./node_modules/timers-browserify/main.js?5118":
 /*!************************************************!*\
   !*** ./node_modules/timers-browserify/main.js ***!
   \************************************************/
@@ -69036,7 +71613,7 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(/*! setimmediate */ "./node_modules/setimmediate/setImmediate.js");
+__webpack_require__(/*! setimmediate */ "./node_modules/setimmediate/setImmediate.js?6017");
 // On some exotic environments, it's not clear which object `setimmediate` was
 // able to install onto.  Search each possibility in the same order as the
 // `setimmediate` library.
@@ -69047,18 +71624,93 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
                          (typeof global !== "undefined" && global.clearImmediate) ||
                          (this && this.clearImmediate);
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js?c8ba")))
+
+/***/ }),
+
+/***/ "./node_modules/timers-browserify/main.js?f9ef":
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/timers-browserify/main.js ***!
+  \**************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {var scope = (typeof global !== "undefined" && global) ||
+            (typeof self !== "undefined" && self) ||
+            window;
+var apply = Function.prototype.apply;
+
+// DOM APIs, for completeness
+
+exports.setTimeout = function() {
+  return new Timeout(apply.call(setTimeout, scope, arguments), clearTimeout);
+};
+exports.setInterval = function() {
+  return new Timeout(apply.call(setInterval, scope, arguments), clearInterval);
+};
+exports.clearTimeout =
+exports.clearInterval = function(timeout) {
+  if (timeout) {
+    timeout.close();
+  }
+};
+
+function Timeout(id, clearFn) {
+  this._id = id;
+  this._clearFn = clearFn;
+}
+Timeout.prototype.unref = Timeout.prototype.ref = function() {};
+Timeout.prototype.close = function() {
+  this._clearFn.call(scope, this._id);
+};
+
+// Does not start the time, just sets up the members needed.
+exports.enroll = function(item, msecs) {
+  clearTimeout(item._idleTimeoutId);
+  item._idleTimeout = msecs;
+};
+
+exports.unenroll = function(item) {
+  clearTimeout(item._idleTimeoutId);
+  item._idleTimeout = -1;
+};
+
+exports._unrefActive = exports.active = function(item) {
+  clearTimeout(item._idleTimeoutId);
+
+  var msecs = item._idleTimeout;
+  if (msecs >= 0) {
+    item._idleTimeoutId = setTimeout(function onTimeout() {
+      if (item._onTimeout)
+        item._onTimeout();
+    }, msecs);
+  }
+};
+
+// setimmediate attaches itself to the global object
+__webpack_require__(/*! setimmediate */ "./node_modules/setimmediate/setImmediate.js?7382");
+// On some exotic environments, it's not clear which object `setimmediate` was
+// able to install onto.  Search each possibility in the same order as the
+// `setimmediate` library.
+exports.setImmediate = (typeof self !== "undefined" && self.setImmediate) ||
+                       (typeof global !== "undefined" && global.setImmediate) ||
+                       (this && this.setImmediate);
+exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
+                         (typeof global !== "undefined" && global.clearImmediate) ||
+                         (this && this.clearImmediate);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js?cd00")))
 
 /***/ }),
 
 /***/ "./node_modules/to-arraybuffer/index.js":
-/*!**********************************************!*\
-  !*** ./node_modules/to-arraybuffer/index.js ***!
-  \**********************************************/
+/*!************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/to-arraybuffer/index.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Buffer = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js").Buffer
+var Buffer = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js?1eb7").Buffer
 
 module.exports = function (buf) {
 	// If the buffer is backed by a Uint8Array, a faster version will work
@@ -69723,9 +72375,9 @@ function unpipe(stream) {
 /***/ }),
 
 /***/ "./node_modules/url/url.js":
-/*!*********************************!*\
-  !*** ./node_modules/url/url.js ***!
-  \*********************************/
+/*!***********************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/url/url.js ***!
+  \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -70467,9 +73119,9 @@ Url.prototype.parseHost = function() {
 /***/ }),
 
 /***/ "./node_modules/url/util.js":
-/*!**********************************!*\
-  !*** ./node_modules/url/util.js ***!
-  \**********************************/
+/*!************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/url/util.js ***!
+  \************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -70495,9 +73147,9 @@ module.exports = {
 /***/ }),
 
 /***/ "./node_modules/util-deprecate/browser.js":
-/*!************************************************!*\
-  !*** ./node_modules/util-deprecate/browser.js ***!
-  \************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/util-deprecate/browser.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -70569,14 +73221,14 @@ function config (name) {
   return String(val).toLowerCase() === 'true';
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js?cd00")))
 
 /***/ }),
 
 /***/ "./node_modules/util/support/isBufferBrowser.js":
-/*!******************************************************!*\
-  !*** ./node_modules/util/support/isBufferBrowser.js ***!
-  \******************************************************/
+/*!********************************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/util/support/isBufferBrowser.js ***!
+  \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -70590,9 +73242,9 @@ module.exports = function isBuffer(arg) {
 /***/ }),
 
 /***/ "./node_modules/util/util.js":
-/*!***********************************!*\
-  !*** ./node_modules/util/util.js ***!
-  \***********************************/
+/*!*************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/util/util.js ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -71175,7 +73827,7 @@ exports.log = function() {
  *     prototype.
  * @param {function} superCtor Constructor function to inherit prototype from.
  */
-exports.inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js");
+exports.inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js?2f31");
 
 exports._extend = function(origin, add) {
   // Don't do anything if add isn't an object
@@ -71300,7 +73952,7 @@ function callbackify(original) {
 }
 exports.callbackify = callbackify;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js?20f2")))
 
 /***/ }),
 
@@ -71500,9 +74152,9 @@ function vary (res, field) {
 /***/ }),
 
 /***/ "./node_modules/vm-browserify/index.js":
-/*!*********************************************!*\
-  !*** ./node_modules/vm-browserify/index.js ***!
-  \*********************************************/
+/*!***********************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/vm-browserify/index.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -71659,7 +74311,38 @@ exports.createContext = Script.createContext = function (context) {
 
 /***/ }),
 
-/***/ "./node_modules/webpack/buildin/global.js":
+/***/ "./node_modules/webpack/buildin/global.js?c8ba":
+/*!************************************************!*\
+  !*** ./node_modules/webpack/buildin/global.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || new Function("return this")();
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+
+/***/ "./node_modules/webpack/buildin/global.js?cd00":
 /*!***********************************!*\
   !*** (webpack)/buildin/global.js ***!
   \***********************************/
@@ -71690,7 +74373,40 @@ module.exports = g;
 
 /***/ }),
 
-/***/ "./node_modules/webpack/buildin/module.js":
+/***/ "./node_modules/webpack/buildin/module.js?62e4":
+/*!************************************************!*\
+  !*** ./node_modules/webpack/buildin/module.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function(module) {
+	if (!module.webpackPolyfill) {
+		module.deprecate = function() {};
+		module.paths = [];
+		// module.parent = undefined by default
+		if (!module.children) module.children = [];
+		Object.defineProperty(module, "loaded", {
+			enumerable: true,
+			get: function() {
+				return module.l;
+			}
+		});
+		Object.defineProperty(module, "id", {
+			enumerable: true,
+			get: function() {
+				return module.i;
+			}
+		});
+		module.webpackPolyfill = 1;
+	}
+	return module;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/webpack/buildin/module.js?ced2":
 /*!***********************************!*\
   !*** (webpack)/buildin/module.js ***!
   \***********************************/
@@ -71744,9 +74460,9 @@ module.exports = function() {
 /***/ }),
 
 /***/ "./node_modules/xtend/immutable.js":
-/*!*****************************************!*\
-  !*** ./node_modules/xtend/immutable.js ***!
-  \*****************************************/
+/*!*******************************************************************************************************!*\
+  !*** C:/Users/twent/Desktop/DevAcademy/SpacePants/SpacePants-backEnd/node_modules/xtend/immutable.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -71804,7 +74520,7 @@ var PORT = process.env.PORT || 3000;
 httpServer.listen(PORT, function () {
   console.log('Listening on port', PORT);
 });
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/process/browser.js */ "./node_modules/process/browser.js?f28c")))
 
 /***/ }),
 
