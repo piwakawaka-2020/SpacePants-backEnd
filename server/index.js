@@ -13,10 +13,16 @@ const io = socket(httpServer)
 io.on('connection', function(socket){
   console.log('Socket id:', socket.id)
   
-  // socket.on('chat', function(data){
-  //   console.log(data)
-  //   io.sockets.emit('chat', data)
-  // })
+  socket.on('user', (userData) =>{
+    console.log(userData)
+    io.sockets.emit('user', userData)
+    socket.broadcast.emit('user', userData)
+  })
+
+  socket.on('room', function(roomData){
+    console.log(roomData)
+    io.sockets.emit('room', roomData)
+  })
 
   // socket.on('typing', function(data){
   //   console.log(data)
