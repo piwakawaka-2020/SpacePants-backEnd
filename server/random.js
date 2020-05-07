@@ -11,5 +11,6 @@ function getRoles(numUsers) {
 }
 
 module.exports = {
-  getRoles
+  getRoles,
+  randNum
 }
