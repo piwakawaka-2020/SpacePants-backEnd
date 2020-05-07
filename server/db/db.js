@@ -1,10 +1,10 @@
-const config = require('../../knexfile').development
-const database = require('knex')(config)
+// const config = require('../../knexfile').development
+// const database = require('knex')(config)
 
-function addUser(userObj, db=database) {
-    return db('users')
-    .insert(userObj)
-}
+// function addUser(userObj, db=database) {
+//     return db('users')
+//     .insert(userObj)
+// }
 
 // function removeUser(socket, db=database) {
 //     return db('users')
@@ -12,7 +12,7 @@ function addUser(userObj, db=database) {
 //     .del()
 // }
 
-module.exports = {
-    addUser,
-    removeUser
-}
+// module.exports = {
+//     addUser,
+//     removeUser
+// }

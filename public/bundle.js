@@ -71792,20 +71792,9 @@ var httpServer = http.createServer(server);
 var io = socket(httpServer);
 io.on('connection', function (socket) {
   console.log('Socket id:', socket.id);
-  db.addUser({
-    userName: 'Simon',
-    role: 'Human',
-    userId: socket.id,
-    roomId: ''
-  }).then(function (res) {
-    return res;
-  });
-  socket.on("disconnect", function (socket) {
-    console.log(socket.id);
-    db.removeUser(socket.id).then(function (res) {
-      return res;
-    });
-  });
+  setTimeout(function () {
+    return socket.disconnect(true);
+  }, 5000);
   socket.on('user', function (userData) {
     console.log(userData.room);
     socket.join(userData, function () {
