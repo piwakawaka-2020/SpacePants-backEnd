@@ -1,5 +1,6 @@
 const http = require('http')
 const socket = require('socket.io')
+const dbFunc = require('./db/db')
 
 // const envConfig = require('dotenv').config()
 // if(envConfig.error) throw envConfig.error
@@ -15,18 +16,22 @@ io.on('connection', function(socket){
   
   socket.on('user', (userData) =>{
     console.log(userData.name + ' is in room ' + userData.room)
-    socket.join(userData, () =>{
-      let room = userData.room
-      let name = userData.name
-      socket.broadcast.to(room).emit('user', name)
+
+    dbFunc.addUser(userData)
+    .then(() =>{
+      socket.join(userData.room, () =>{
+        let room = userData.room
+  
+        dbFunc.getUsersByRoom(room)
+        .then(users =>{
+          const names = users.map(user => user.username)
+          // console.log(users)
+          return io.to(room).emit('user', names)
+        })
+      })
       // DB.getName() get all names match getNameByRoom
     })
   })
-
-  // socket.on('room', function(roomData){
-  //   console.log(roomData)
-  //   io.sockets.emit('room', roomData)
-  // })
 })
 
 const PORT = process.env.PORT || 3000
