@@ -23,10 +23,10 @@ io.on('connection', function(socket) {
     .then(() =>{
       socket.join(userData.room, () =>{
         let room = userData.room
-  
+        let socketId = socket.id 
         dbFunc.getUsersByRoom(room)
         .then(users =>{
-          console.log(users)
+          console.log(socketId)
           const names = users.map(user => user.username)
           return io.to(room).emit('user', names)
         })
