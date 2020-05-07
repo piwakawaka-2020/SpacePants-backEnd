@@ -14,8 +14,7 @@ const io = socket(httpServer)
 io.on('connection', function(socket) {
   console.log('Socket id:', socket.id)
 
-
-  setTimeout(() => socket.disconnect(true), 5000)
+  // setTimeout(() => socket.disconnect(true), 5000)
   
   socket.on('user', (userData) =>{
     console.log(userData.name + ' is in room ' + userData.room)
@@ -27,14 +26,17 @@ io.on('connection', function(socket) {
   
         dbFunc.getUsersByRoom(room)
         .then(users =>{
+          console.log(users)
           const names = users.map(user => user.username)
-          // console.log(users)
           return io.to(room).emit('user', names)
         })
       })
-      // DB.getName() get all names match getNameByRoom
     })
   })
+
+  // socket.on('task' (taskData) =>{
+  //   console.log(taskData.name)
+  // })
 })
 
 const PORT = process.env.PORT || 3000
