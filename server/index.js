@@ -11,17 +11,12 @@ const httpServer = http.createServer(server)
 const io = socket(httpServer)
 
 io.on('connection', function (socket) {
-  console.log('Socket id:', socket.id)
-
   socket.on('user', (userData) => {
-    console.log(userData.name + ' is in room ' + userData.room)
-    console.log(userData)
+
     userData = {
       ...userData,
       socketId: socket.id
     }
-    console.log(userData)
-
 
     dbFunc.addUser(userData)
       .then(() => {
@@ -38,24 +33,24 @@ io.on('connection', function (socket) {
   })
 
   socket.on('startGame', room => {
-    console.log('startGame')
     dbFunc.getUsersByRoom(room)
       .then(users => {
-        // console.log(randFunc.giveRoles(users))
+        roles = randFunc.getRoles(users.length)
 
-        users.forEach(user => {
-          console.log(user.socketId)
-          socket.to(user.socketId).emit('role', user.role)
+        users.forEach((user, i) => {
+          user.role = roles[i]
+          io.to(user.socketId).emit('role', user.role)
+
+          dbFunc.updateUser(user)
+            .then(res => console.log(res))
         })
-
-        // io.broadcast.to(room).emit('role', randFunc.giveRoles(users))
       })
   })
 
   socket.on('disconnect', function () {
     console.log('disconnect socket:', socket.id)
     dbFunc.removeUser(socket.id)
-      .then(res => { })
+      .then(res => console.log(res))
   })
 })
 
