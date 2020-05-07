@@ -12,31 +12,43 @@ const io = socket(httpServer)
 
 io.on('connection', function (socket) {
   socket.on('user', (userData) => {
-
+    
     userData = {
       ...userData,
       socketId: socket.id
     }
 
     dbFunc.addUser(userData)
-      .then(() => {
-        socket.join(userData.room, () => {
-          let room = userData.room
+    .then(() =>{
+      socket.join(userData.room, () =>{
 
-          dbFunc.getUsersByRoom(room)
-            .then(users => {
-              const names = users.map(user => user.username)
-              return io.to(room).emit('user', names)
-            })
+        dbFunc.getUsersByRoom(userData.room)
+        .then(users =>{
+          const names = users.map(user => user.username)
+          return io.to(userData.room).emit('user', names)
         })
       })
+    })
+  })
+
+  socket.on('tasks', () =>{
+    dbFunc.getTasksId()
+    .then(taskId => {
+      const idArray = taskId.map(objId => objId.id)
+
+      const id = randomNumber(0, idArray.length)
+      dbFunc.getTasksById(id)
+      .then(task =>{
+        return socket.emit(task)
+      })
+    })
   })
 
   socket.on('startGame', room => {
     dbFunc.getUsersByRoom(room)
       .then(users => {
         roles = randFunc.getRoles(users.length)
-
+      
         users.forEach((user, i) => {
           user.role = roles[i]
           io.to(user.socketId).emit('role', user.role)
@@ -54,6 +66,11 @@ io.on('connection', function (socket) {
   })
 })
 
+function randomNumber (min, max) {
+  return (
+  Math.floor(Math.random()*(max-min+1))+min
+  )
+}
 
 const PORT = process.env.PORT || 3000
 

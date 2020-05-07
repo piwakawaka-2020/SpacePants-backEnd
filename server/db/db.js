@@ -35,11 +35,22 @@ function removeUser(socketId, db = connection){
     .del()
 }
 
+function getTasksId(db = connection){
+  return db('tasks').select('id')
+}
+
+function getTasksById(taskId, db = connection){
+  return db('tasks')
+  .where('tasks.id', taskId)
+}
+
 module.exports = {
   getUsers,
   addUser,
   getUsersByRoom,
   removeUser,
-  updateUser
+  updateUser,
+  getTasksId,
+  getTasksById
 }
 
