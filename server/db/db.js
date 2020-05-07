@@ -39,7 +39,7 @@ function getTasksId(db = connection){
   return db('tasks').select('id')
 }
 
-function getTasksById(taskId, db = connection){
+function getTaskById(taskId, db = connection){
   return db('tasks')
   .where('tasks.id', taskId)
 }
@@ -57,7 +57,7 @@ module.exports = {
   removeUser,
   updateUser,
   getTasksId,
-  getTasksById,
+  getTaskById,
   getHintsById
 }
 

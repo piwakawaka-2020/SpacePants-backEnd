@@ -31,12 +31,10 @@ io.on('connection', function (socket) {
     })
   })
 
-  socket.on('tasks', () =>{
+  socket.on('task', () =>{
     dbFunc.getTasksId()
     .then(taskId => {
       const idArray = taskId.map(objId => objId.id)
-
-      
 
       const id = randFunc.randNum(idArray.length)
       dbFunc.getTasksById(id)
