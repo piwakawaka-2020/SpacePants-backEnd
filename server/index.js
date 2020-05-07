@@ -31,15 +31,16 @@ io.on('connection', function (socket) {
     })
   })
 
-  socket.on('tasks', () =>{
+  socket.on('task', () =>{
     dbFunc.getTasksId()
     .then(taskId => {
       const idArray = taskId.map(objId => objId.id)
 
-      const id = randomNumber(0, idArray.length)
-      dbFunc.getTasksById(id)
+      const id = randFunc.randNum(idArray.length)
+      dbFunc.getTaskById(id)
       .then(task =>{
-        return socket.emit(task)
+        console.log(task)
+        return socket.emit('task', task)
       })
     })
   })
@@ -65,12 +66,6 @@ io.on('connection', function (socket) {
       .then(res => console.log(res))
   })
 })
-
-function randomNumber (min, max) {
-  return (
-  Math.floor(Math.random()*(max-min+1))+min
-  )
-}
 
 const PORT = process.env.PORT || 3000
 
