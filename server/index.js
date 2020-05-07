@@ -10,9 +10,10 @@ const httpServer = http.createServer(server)
 
 const io = socket(httpServer)
 
-io.on('connection', function(socket){
+io.on('connection', function(socket) {
   console.log('Socket id:', socket.id)
-  console.log(socket.rooms)
+
+  setTimeout(() => socket.disconnect(true), 5000)
   
   socket.on('user', (userData) =>{
     console.log(userData.room)
@@ -32,6 +33,7 @@ io.on('connection', function(socket){
   //   console.log(data)
   //   socket.broadcast.emit('typing', data)
   // })
+
 })
 
 const PORT = process.env.PORT || 3000
