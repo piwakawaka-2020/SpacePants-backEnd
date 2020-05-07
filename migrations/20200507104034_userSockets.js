@@ -7,7 +7,6 @@ exports.up = function(knex) {
         table.string('socketId')
         table.string('roomId')
     })
-  
 };
 
 exports.down = function(knex) {

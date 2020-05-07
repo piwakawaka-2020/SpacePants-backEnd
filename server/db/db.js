@@ -1,18 +1,29 @@
-// const config = require('../../knexfile').development
-// const database = require('knex')(config)
+const knex = require('knex')
+const config = require('../../knexfile')
+const env = process.env.NODE_ENV || 'development'
+const connection = knex(config[env])
 
-// function addUser(userObj, db=database) {
-//     return db('users')
-//     .insert(userObj)
-// }
+module.exports = {
+  getUsers,
+  addUser,
+  getUsersByRoom
+}
 
-// function removeUser(socket, db=database) {
-//     return db('users')
-//     .where('userId', socket)
-//     .del()
-// }
+function addUser(userObj, db = connection) {
+  return db('users')
+  .insert({
+    username: userObj.name,
+    roomId: userObj.room,
+    socketId: userObj.socketId
+  })
+}
 
-// module.exports = {
-//     addUser,
-//     removeUser
-// }
+function getUsers(db = connection){
+  return db('users').select()
+}
+
+function getUsersByRoom(roomId, db = connection){
+  // console.log(roomId)
+  return db('users')
+    .where('users.roomId', '=', roomId)
+}
