@@ -14,11 +14,16 @@ const io = socket(httpServer)
 io.on('connection', function(socket) {
   console.log('Socket id:', socket.id)
 
-
-  setTimeout(() => socket.disconnect(true), 5000)
+  // setTimeout(() => socket.disconnect(true), 15000)
   
   socket.on('user', (userData) =>{
     console.log(userData.name + ' is in room ' + userData.room)
+    console.log(userData)
+    userData = {
+      ...userData,
+      socketId: socket.id}
+    console.log(userData)
+
 
     dbFunc.addUser(userData)
     .then(() =>{
@@ -35,7 +40,39 @@ io.on('connection', function(socket) {
       // DB.getName() get all names match getNameByRoom
     })
   })
+
+  socket.on('disconnect', function(){
+    console.log('disconnect socket:',socket.id)
+    dbFunc.removeUser(socket.id)
+    .then(res => {})
+  })
 })
+
+function timer (mins) {
+  let secondCounter = mins*60
+  let time = setInterval(() => {
+      let minutes = parseInt(secondCounter / 60)
+      const seconds = () => {
+          let secs = secondCounter % 60          
+          if (secs < 10) {
+              return `0${secs}`
+          } else {
+              return parseInt(secs)
+          }
+      }
+      secondCounter--
+
+      console.log( `${minutes}:${seconds()}`)
+      if(secondCounter < 1) {clearInterval(time)}
+  }, 0.1)
+  
+  return time
+}
+
+
+
+
+
 
 const PORT = process.env.PORT || 3000
 
