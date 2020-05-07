@@ -12,25 +12,20 @@ const io = socket(httpServer)
 
 io.on('connection', function(socket){
   console.log('Socket id:', socket.id)
-  console.log(socket.rooms)
   
   socket.on('user', (userData) =>{
-    console.log(userData.room)
+    console.log(userData.name + ' is in room ' + userData.room)
     socket.join(userData, () =>{
       let room = userData.room
       let name = userData.name
-      socket.broadcast.to(room).emit(name)
+      socket.broadcast.to(room).emit('user', name)
+      // DB.getName() get all names match getNameByRoom
     })
   })
 
-  socket.on('room', function(roomData){
-    console.log(roomData)
-    io.sockets.emit('room', roomData)
-  })
-
-  // socket.on('typing', function(data){
-  //   console.log(data)
-  //   socket.broadcast.emit('typing', data)
+  // socket.on('room', function(roomData){
+  //   console.log(roomData)
+  //   io.sockets.emit('room', roomData)
   // })
 })
 
