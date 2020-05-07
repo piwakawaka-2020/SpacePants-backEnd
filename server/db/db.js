@@ -41,7 +41,7 @@ function getTasksId(db = connection){
 
 function getTaskById(taskId, db = connection){
   return db('tasks')
-  .where('tasks.id', taskId)
+  .where('tasks.id', taskId).first()
 }
 
 function getHintsById(hintId, db = connection){

@@ -37,10 +37,10 @@ io.on('connection', function (socket) {
       const idArray = taskId.map(objId => objId.id)
 
       const id = randFunc.randNum(idArray.length)
-      dbFunc.getTasksById(id)
+      dbFunc.getTaskById(id)
       .then(task =>{
-        // console.log(task)
-        socket.emit('task', task.task)
+        console.log(task)
+        io.to(socket.id).emit('task', task.task)
 
         let room = Object.keys(socket.rooms)[0];
         let clients = io.sockets.adapter.rooms[room]
