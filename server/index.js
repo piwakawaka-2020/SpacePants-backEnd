@@ -1,14 +1,16 @@
 const http = require('http')
 const socket = require('socket.io')
-const dbFunc = require('./db/db')
 
+const dbFunc = require('./db/db')
 const randFunc = require('./random')
+const timerImport = require('./timer')
 
 const server = require('./server')
 
 const httpServer = http.createServer(server)
 
 const io = socket(httpServer)
+
 
 io.on('connection', function (socket) {
   socket.on('user', (userData) => {
