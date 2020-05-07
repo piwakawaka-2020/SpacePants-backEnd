@@ -2,8 +2,7 @@ const http = require('http')
 const socket = require('socket.io')
 const dbFunc = require('./db/db')
 
-// const envConfig = require('dotenv').config()
-// if(envConfig.error) throw envConfig.error
+const randFunc = require('./random')
 
 const server = require('./server')
 
@@ -11,27 +10,22 @@ const httpServer = http.createServer(server)
 
 const io = socket(httpServer)
 
-io.on('connection', function(socket) {
-  console.log('Socket id:', socket.id)
-
-  // setTimeout(() => socket.disconnect(true), 15000)
-  
-  socket.on('user', (userData) =>{
-    console.log(userData.name + ' is in room ' + userData.room)
+io.on('connection', function (socket) {
+  socket.on('user', (userData) => {
+    
     userData = {
       ...userData,
-      socketId: socket.id}
-    console.log(userData)
-
+      socketId: socket.id
+    }
 
     dbFunc.addUser(userData)
     .then(() =>{
       socket.join(userData.room, () =>{
-        let room = userData.room
-        dbFunc.getUsersByRoom(room)
+
+        dbFunc.getUsersByRoom(userData.room)
         .then(users =>{
           const names = users.map(user => user.username)
-          return io.to(room).emit('user', names)
+          return io.to(userData.room).emit('user', names)
         })
       })
     })
@@ -50,10 +44,25 @@ io.on('connection', function(socket) {
     })
   })
 
-  socket.on('disconnect', function(){
-    console.log('disconnect socket:',socket.id)
+  socket.on('startGame', room => {
+    dbFunc.getUsersByRoom(room)
+      .then(users => {
+        roles = randFunc.getRoles(users.length)
+      
+        users.forEach((user, i) => {
+          user.role = roles[i]
+          io.to(user.socketId).emit('role', user.role)
+
+          dbFunc.updateUser(user)
+            .then(res => console.log(res))
+        })
+      })
+  })
+
+  socket.on('disconnect', function () {
+    console.log('disconnect socket:', socket.id)
     dbFunc.removeUser(socket.id)
-    .then(res => {})
+      .then(res => console.log(res))
   })
 })
 
@@ -63,30 +72,9 @@ function randomNumber (min, max) {
   )
 }
 
-function timer (mins) {
-  let secondCounter = mins*60
-  let time = setInterval(() => {
-      let minutes = parseInt(secondCounter / 60)
-      const seconds = () => {
-          let secs = secondCounter % 60          
-          if (secs < 10) {
-              return `0${secs}`
-          } else {
-              return parseInt(secs)
-          }
-      }
-      secondCounter--
-
-      console.log( `${minutes}:${seconds()}`)
-      if(secondCounter < 1) {clearInterval(time)}
-  }, 0.1)
-  
-  return time
-}
-
-
 const PORT = process.env.PORT || 3000
 
 httpServer.listen(PORT, function () {
   console.log('Listening on port', PORT)
 })
+
