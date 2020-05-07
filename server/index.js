@@ -10,24 +10,31 @@ const httpServer = http.createServer(server)
 
 const io = socket(httpServer)
 
-io.on('connection', function(socket) {
+io.on('connection', function (socket) {
   console.log('Socket id:', socket.id)
-  
-  socket.on('user', (userData) =>{
+
+  socket.on('user', (userData) => {
     console.log(userData.name + ' is in room ' + userData.room)
+    console.log(userData)
+    userData = {
+      ...userData,
+      socketId: socket.id
+    }
+    console.log(userData)
+
 
     dbFunc.addUser(userData)
-    .then(() =>{
-      socket.join(userData.room, () =>{
-        let room = userData.room
-  
-        dbFunc.getUsersByRoom(room)
-        .then(users =>{
-          const names = users.map(user => user.username)
-          return io.to(room).emit('user', names)
+      .then(() => {
+        socket.join(userData.room, () => {
+          let room = userData.room
+
+          dbFunc.getUsersByRoom(room)
+            .then(users => {
+              const names = users.map(user => user.username)
+              return io.to(room).emit('user', names)
+            })
         })
       })
-    })
   })
 
   socket.on('startGame', room => {
@@ -44,10 +51,18 @@ io.on('connection', function(socket) {
         // io.broadcast.to(room).emit('role', randFunc.giveRoles(users))
       })
   })
+
+  socket.on('disconnect', function () {
+    console.log('disconnect socket:', socket.id)
+    dbFunc.removeUser(socket.id)
+      .then(res => { })
+  })
 })
+
 
 const PORT = process.env.PORT || 3000
 
 httpServer.listen(PORT, function () {
   console.log('Listening on port', PORT)
 })
+

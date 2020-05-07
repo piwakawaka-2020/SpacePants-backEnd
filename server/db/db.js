@@ -6,7 +6,8 @@ const connection = knex(config[env])
 module.exports = {
   getUsers,
   addUser,
-  getUsersByRoom
+  getUsersByRoom,
+  removeUser
 }
 
 function addUser(userObj, db = connection) {
@@ -27,3 +28,12 @@ function getUsersByRoom(roomId, db = connection){
   return db('users')
     .where('users.roomId', '=', roomId)
 }
+
+function removeUser(socketId, db=connection){
+  console.log(typeof socketId)
+  return db('users')
+    .where('users.socketId', socketId)
+    .del()
+}
+
+
