@@ -11,8 +11,11 @@ const httpServer = http.createServer(server)
 
 const io = socket(httpServer)
 
-io.on('connection', function(socket){
+io.on('connection', function(socket) {
   console.log('Socket id:', socket.id)
+
+
+  setTimeout(() => socket.disconnect(true), 5000)
   
   socket.on('user', (userData) =>{
     console.log(userData.name + ' is in room ' + userData.room)
