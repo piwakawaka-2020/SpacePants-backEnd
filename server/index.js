@@ -2,8 +2,7 @@ const http = require('http')
 const socket = require('socket.io')
 const dbFunc = require('./db/db')
 
-// const envConfig = require('dotenv').config()
-// if(envConfig.error) throw envConfig.error
+const randFunc = require('./random')
 
 const server = require('./server')
 
@@ -13,9 +12,6 @@ const io = socket(httpServer)
 
 io.on('connection', function(socket) {
   console.log('Socket id:', socket.id)
-
-
-  setTimeout(() => socket.disconnect(true), 5000)
   
   socket.on('user', (userData) =>{
     console.log(userData.name + ' is in room ' + userData.room)
@@ -28,12 +24,25 @@ io.on('connection', function(socket) {
         dbFunc.getUsersByRoom(room)
         .then(users =>{
           const names = users.map(user => user.username)
-          // console.log(users)
           return io.to(room).emit('user', names)
         })
       })
-      // DB.getName() get all names match getNameByRoom
     })
+  })
+
+  socket.on('startGame', room => {
+    console.log('startGame')
+    dbFunc.getUsersByRoom(room)
+      .then(users => {
+        // console.log(randFunc.giveRoles(users))
+
+        users.forEach(user => {
+          console.log(user.socketId)
+          socket.to(user.socketId).emit('role', user.role)
+        })
+
+        // io.broadcast.to(room).emit('role', randFunc.giveRoles(users))
+      })
   })
 })
 
