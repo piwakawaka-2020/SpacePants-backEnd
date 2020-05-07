@@ -36,6 +36,8 @@ io.on('connection', function (socket) {
     .then(taskId => {
       const idArray = taskId.map(objId => objId.id)
 
+      
+
       const id = randFunc.randNum(idArray.length)
       dbFunc.getTasksById(id)
       .then(task =>{
@@ -56,7 +58,7 @@ io.on('connection', function (socket) {
           } else {
             io.to(human).emit('hint', 'fakeHint')
           }
-        }, randFunc.randNum(10000000))
+        }, randFunc.randNum(100000))
       })
     })
   })
