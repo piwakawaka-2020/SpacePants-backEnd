@@ -13,7 +13,7 @@
     "dev:server": "nodemon server",
     "start": "run-s build server",
     "build": "webpack",
-    "server": "node server",
+    "server": "nodemon server",
     "test": "jest --watchAll"
   },
   "babel": {

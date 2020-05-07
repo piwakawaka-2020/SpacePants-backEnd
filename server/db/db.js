@@ -3,12 +3,6 @@ const config = require('../../knexfile')
 const env = process.env.NODE_ENV || 'development'
 const connection = knex(config[env])
 
-module.exports = {
-  getUsers,
-  addUser,
-  getUsersByRoom
-}
-
 function addUser(userObj, db = connection) {
   return db('users')
   .insert({
@@ -23,7 +17,29 @@ function getUsers(db = connection){
 }
 
 function getUsersByRoom(roomId, db = connection){
-  // console.log(roomId)
   return db('users')
     .where('users.roomId', '=', roomId)
 }
+
+function updateUser(userObj, db = connection) {
+  return db('users')
+    .where('users.socketId', userObj.socketId)
+    .update({
+      ...userObj
+    })
+}
+
+function removeUser(socketId, db = connection){
+  return db('users')
+    .where('users.socketId', socketId)
+    .del()
+}
+
+module.exports = {
+  getUsers,
+  addUser,
+  getUsersByRoom,
+  removeUser,
+  updateUser
+}
+
