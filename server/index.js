@@ -12,11 +12,21 @@ const io = socket(httpServer)
 
 io.on('connection', function(socket){
   console.log('Socket id:', socket.id)
+  console.log(socket.rooms)
   
-  // socket.on('chat', function(data){
-  //   console.log(data)
-  //   io.sockets.emit('chat', data)
-  // })
+  socket.on('user', (userData) =>{
+    console.log(userData.room)
+    socket.join(userData, () =>{
+      let room = userData.room
+      let name = userData.name
+      socket.broadcast.to(room).emit(name)
+    })
+  })
+
+  socket.on('room', function(roomData){
+    console.log(roomData)
+    io.sockets.emit('room', roomData)
+  })
 
   // socket.on('typing', function(data){
   //   console.log(data)
