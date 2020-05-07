@@ -24368,16 +24368,40 @@ exports.decodePayload = function (data, binaryType, callback) {
     return exports.decodePayloadAsBinary(data, binaryType, callback);
   }
 
+<<<<<<< Updated upstream
   if (typeof binaryType === 'function') {
     callback = binaryType;
     binaryType = null;
   }
+||||||| constructed merge base
+    // Load streaming support in Node v0.10+
+    var nodeVerArr = nodeVer.split(".").map(Number);
+    if (nodeVerArr[0] > 0 || nodeVerArr[1] >= 10) {
+        __webpack_require__(/*! ./streams */ 8)(iconv);
+    }
+=======
+    // Load streaming support in Node v0.10+
+    var nodeVerArr = nodeVer.split(".").map(Number);
+    if (nodeVerArr[0] > 0 || nodeVerArr[1] >= 10) {
+        __webpack_require__(/*! ./streams */ 18)(iconv);
+    }
+>>>>>>> Stashed changes
 
+<<<<<<< Updated upstream
   var packet;
   if (data === '') {
     // parser error - ignoring payload
     return callback(err, 0, 1);
   }
+||||||| constructed merge base
+    // Load Node primitive extensions.
+    __webpack_require__(/*! ./extend-node */ 9)(iconv);
+}
+=======
+    // Load Node primitive extensions.
+    __webpack_require__(/*! ./extend-node */ 19)(iconv);
+}
+>>>>>>> Stashed changes
 
   var length = '', n, msg;
 
@@ -25772,12 +25796,24 @@ Socket.prototype.setTransport = function (transport) {
   });
 };
 
+<<<<<<< Updated upstream
 /**
  * Upgrades socket to the given transport
  *
  * @param {Transport} transport
  * @api private
  */
+||||||| constructed merge base
+  _driver() {
+    const tds = __webpack_require__(/*! tedious */ 11);
+    const mssqlTedious = __webpack_require__(/*! mssql */ 12);
+    const base = __webpack_require__(/*! mssql/lib/base */ 13);
+=======
+  _driver() {
+    const tds = __webpack_require__(/*! tedious */ 8);
+    const mssqlTedious = __webpack_require__(/*! mssql */ 9);
+    const base = __webpack_require__(/*! mssql/lib/base */ 10);
+>>>>>>> Stashed changes
 
 Socket.prototype.maybeUpgrade = function (transport) {
   debug('might upgrade socket transport from "%s" to "%s"'
@@ -26558,8 +26594,18 @@ Polling.prototype.onPollRequest = function (req, res) {
   req.cleanup = cleanup;
   req.on('close', onClose);
 
+<<<<<<< Updated upstream
   this.writable = true;
   this.emit('drain');
+||||||| constructed merge base
+  _driver() {
+    return __webpack_require__(/*! mysql */ 14);
+  },
+=======
+  _driver() {
+    return __webpack_require__(/*! mysql */ 11);
+  },
+>>>>>>> Stashed changes
 
   // if we're still writable but had a pending close, trigger an empty send
   if (this.writable && this.shouldClose) {
@@ -27196,6 +27242,7 @@ function serialize(name, val, options) {
   return str;
 }
 
+<<<<<<< Updated upstream
 /**
  * Try decoding a string using a decoding function.
  *
@@ -27203,6 +27250,31 @@ function serialize(name, val, options) {
  * @param {function} decode
  * @private
  */
+||||||| constructed merge base
+  _driver() {
+    return __webpack_require__(/*! mysql2 */ 15);
+  },
+
+  validateConnection(connection) {
+    if (connection._fatalError) {
+      return false;
+    }
+    return true;
+  },
+});
+=======
+  _driver() {
+    return __webpack_require__(/*! mysql2 */ 12);
+  },
+
+  validateConnection(connection) {
+    if (connection._fatalError) {
+      return false;
+    }
+    return true;
+  },
+});
+>>>>>>> Stashed changes
 
 function tryDecode(str, decode) {
   try {
@@ -28038,12 +28110,154 @@ function escapeHtml(string) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< Updated upstream
 "use strict";
 /* WEBPACK VAR INJECTION */(function(Buffer) {/*!
  * etag
  * Copyright(c) 2014-2016 Douglas Christopher Wilson
  * MIT Licensed
  */
+||||||| constructed merge base
+/* WEBPACK VAR INJECTION */(function(process, Buffer) {// Oracledb Client
+// -------
+const each = __webpack_require__(/*! lodash/each */ "./node_modules/lodash/each.js");
+const flatten = __webpack_require__(/*! lodash/flatten */ "./node_modules/lodash/flatten.js");
+const isEmpty = __webpack_require__(/*! lodash/isEmpty */ "./node_modules/lodash/isEmpty.js");
+const isString = __webpack_require__(/*! lodash/isString */ "./node_modules/lodash/isString.js");
+const map = __webpack_require__(/*! lodash/map */ "./node_modules/lodash/map.js");
+const values = __webpack_require__(/*! lodash/values */ "./node_modules/lodash/values.js");
+const inherits = __webpack_require__(/*! inherits */ "./node_modules/knex/node_modules/inherits/inherits_browser.js");
+const QueryCompiler = __webpack_require__(/*! ./query/compiler */ "./node_modules/knex/lib/dialects/oracledb/query/compiler.js");
+const ColumnCompiler = __webpack_require__(/*! ./schema/columncompiler */ "./node_modules/knex/lib/dialects/oracledb/schema/columncompiler.js");
+const { BlobHelper, ReturningHelper, isConnectionError } = __webpack_require__(/*! ./utils */ "./node_modules/knex/lib/dialects/oracledb/utils.js");
+const stream = __webpack_require__(/*! stream */ "./node_modules/stream-browserify/index.js");
+const { promisify } = __webpack_require__(/*! util */ "./node_modules/util/util.js");
+const Transaction = __webpack_require__(/*! ./transaction */ "./node_modules/knex/lib/dialects/oracledb/transaction.js");
+const Client_Oracle = __webpack_require__(/*! ../oracle */ "./node_modules/knex/lib/dialects/oracle/index.js");
+const Oracle_Formatter = __webpack_require__(/*! ../oracle/formatter */ "./node_modules/knex/lib/dialects/oracle/formatter.js");
+
+function Client_Oracledb() {
+  Client_Oracle.apply(this, arguments);
+  // Node.js only have 4 background threads by default, oracledb needs one by connection
+  if (this.driver) {
+    process.env.UV_THREADPOOL_SIZE = process.env.UV_THREADPOOL_SIZE || 1;
+    process.env.UV_THREADPOOL_SIZE =
+      parseInt(process.env.UV_THREADPOOL_SIZE) + this.driver.poolMax;
+  }
+}
+inherits(Client_Oracledb, Client_Oracle);
+
+Client_Oracledb.prototype.driverName = 'oracledb';
+
+Client_Oracledb.prototype._driver = function () {
+  const client = this;
+  const oracledb = __webpack_require__(/*! oracledb */ 16);
+  client.fetchAsString = [];
+  if (this.config.fetchAsString && Array.isArray(this.config.fetchAsString)) {
+    this.config.fetchAsString.forEach(function (type) {
+      if (!isString(type)) return;
+      type = type.toUpperCase();
+      if (oracledb[type]) {
+        if (
+          type !== 'NUMBER' &&
+          type !== 'DATE' &&
+          type !== 'CLOB' &&
+          type !== 'BUFFER'
+        ) {
+          this.logger.warn(
+            'Only "date", "number", "clob" and "buffer" are supported for fetchAsString'
+          );
+        }
+        client.fetchAsString.push(oracledb[type]);
+      }
+    });
+  }
+  return oracledb;
+};
+
+Client_Oracledb.prototype.queryCompiler = function () {
+  return new QueryCompiler(this, ...arguments);
+};
+Client_Oracledb.prototype.columnCompiler = function () {
+  return new ColumnCompiler(this, ...arguments);
+};
+Client_Oracledb.prototype.formatter = function () {
+  return new Oracledb_Formatter(this, ...arguments);
+};
+Client_Oracledb.prototype.transaction = function () {
+  return new Transaction(this, ...arguments);
+};
+=======
+/* WEBPACK VAR INJECTION */(function(process, Buffer) {// Oracledb Client
+// -------
+const each = __webpack_require__(/*! lodash/each */ "./node_modules/lodash/each.js");
+const flatten = __webpack_require__(/*! lodash/flatten */ "./node_modules/lodash/flatten.js");
+const isEmpty = __webpack_require__(/*! lodash/isEmpty */ "./node_modules/lodash/isEmpty.js");
+const isString = __webpack_require__(/*! lodash/isString */ "./node_modules/lodash/isString.js");
+const map = __webpack_require__(/*! lodash/map */ "./node_modules/lodash/map.js");
+const values = __webpack_require__(/*! lodash/values */ "./node_modules/lodash/values.js");
+const inherits = __webpack_require__(/*! inherits */ "./node_modules/knex/node_modules/inherits/inherits_browser.js");
+const QueryCompiler = __webpack_require__(/*! ./query/compiler */ "./node_modules/knex/lib/dialects/oracledb/query/compiler.js");
+const ColumnCompiler = __webpack_require__(/*! ./schema/columncompiler */ "./node_modules/knex/lib/dialects/oracledb/schema/columncompiler.js");
+const { BlobHelper, ReturningHelper, isConnectionError } = __webpack_require__(/*! ./utils */ "./node_modules/knex/lib/dialects/oracledb/utils.js");
+const stream = __webpack_require__(/*! stream */ "./node_modules/stream-browserify/index.js");
+const { promisify } = __webpack_require__(/*! util */ "./node_modules/util/util.js");
+const Transaction = __webpack_require__(/*! ./transaction */ "./node_modules/knex/lib/dialects/oracledb/transaction.js");
+const Client_Oracle = __webpack_require__(/*! ../oracle */ "./node_modules/knex/lib/dialects/oracle/index.js");
+const Oracle_Formatter = __webpack_require__(/*! ../oracle/formatter */ "./node_modules/knex/lib/dialects/oracle/formatter.js");
+
+function Client_Oracledb() {
+  Client_Oracle.apply(this, arguments);
+  // Node.js only have 4 background threads by default, oracledb needs one by connection
+  if (this.driver) {
+    process.env.UV_THREADPOOL_SIZE = process.env.UV_THREADPOOL_SIZE || 1;
+    process.env.UV_THREADPOOL_SIZE =
+      parseInt(process.env.UV_THREADPOOL_SIZE) + this.driver.poolMax;
+  }
+}
+inherits(Client_Oracledb, Client_Oracle);
+
+Client_Oracledb.prototype.driverName = 'oracledb';
+
+Client_Oracledb.prototype._driver = function () {
+  const client = this;
+  const oracledb = __webpack_require__(/*! oracledb */ 13);
+  client.fetchAsString = [];
+  if (this.config.fetchAsString && Array.isArray(this.config.fetchAsString)) {
+    this.config.fetchAsString.forEach(function (type) {
+      if (!isString(type)) return;
+      type = type.toUpperCase();
+      if (oracledb[type]) {
+        if (
+          type !== 'NUMBER' &&
+          type !== 'DATE' &&
+          type !== 'CLOB' &&
+          type !== 'BUFFER'
+        ) {
+          this.logger.warn(
+            'Only "date", "number", "clob" and "buffer" are supported for fetchAsString'
+          );
+        }
+        client.fetchAsString.push(oracledb[type]);
+      }
+    });
+  }
+  return oracledb;
+};
+
+Client_Oracledb.prototype.queryCompiler = function () {
+  return new QueryCompiler(this, ...arguments);
+};
+Client_Oracledb.prototype.columnCompiler = function () {
+  return new ColumnCompiler(this, ...arguments);
+};
+Client_Oracledb.prototype.formatter = function () {
+  return new Oracledb_Formatter(this, ...arguments);
+};
+Client_Oracledb.prototype.transaction = function () {
+  return new Transaction(this, ...arguments);
+};
+>>>>>>> Stashed changes
 
 
 
@@ -28148,6 +28362,7 @@ function isstats (obj) {
     return true
   }
 
+<<<<<<< Updated upstream
   // quack quack
   return obj && typeof obj === 'object' &&
     'ctime' in obj && toString.call(obj.ctime) === '[object Date]' &&
@@ -28155,6 +28370,13 @@ function isstats (obj) {
     'ino' in obj && typeof obj.ino === 'number' &&
     'size' in obj && typeof obj.size === 'number'
 }
+||||||| constructed merge base
+const lobProcessing = function (stream) {
+  const oracledb = __webpack_require__(/*! oracledb */ 16);
+=======
+const lobProcessing = function (stream) {
+  const oracledb = __webpack_require__(/*! oracledb */ 13);
+>>>>>>> Stashed changes
 
 /**
  * Generate a tag for a stat.
@@ -28508,9 +28730,19 @@ EventEmitter.prototype.removeAllListeners =
     function removeAllListeners(type) {
       var listeners, events, i;
 
+<<<<<<< Updated upstream
       events = this._events;
       if (events === undefined)
         return this;
+||||||| constructed merge base
+  _driver() {
+    return __webpack_require__(/*! pg */ 17);
+  },
+=======
+  _driver() {
+    return __webpack_require__(/*! pg */ 14);
+  },
+>>>>>>> Stashed changes
 
       // not listening for removeListener, no need to emit
       if (events.removeListener === undefined) {
@@ -28572,9 +28804,23 @@ function _listeners(target, type, unwrap) {
     unwrapListeners(evlistener) : arrayClone(evlistener, evlistener.length);
 }
 
+<<<<<<< Updated upstream
 EventEmitter.prototype.listeners = function listeners(type) {
   return _listeners(this, type, true);
 };
+||||||| constructed merge base
+  _stream(connection, obj, stream, options) {
+    const PGQueryStream = process.browser
+      ? undefined
+      : __webpack_require__(/*! pg-query-stream */ 18);
+    const sql = obj.sql;
+=======
+  _stream(connection, obj, stream, options) {
+    const PGQueryStream = process.browser
+      ? undefined
+      : __webpack_require__(/*! pg-query-stream */ 15);
+    const sql = obj.sql;
+>>>>>>> Stashed changes
 
 EventEmitter.prototype.rawListeners = function rawListeners(type) {
   return _listeners(this, type, false);
@@ -29217,7 +29463,17 @@ methods.forEach(function(method){
       return this.set(path);
     }
 
+<<<<<<< Updated upstream
     this.lazyrouter();
+||||||| constructed merge base
+  _driver() {
+    return __webpack_require__(/*! pg */ 19);
+  },
+=======
+  _driver() {
+    return __webpack_require__(/*! pg */ 16);
+  },
+>>>>>>> Stashed changes
 
     var route = this._router.route(path);
     route[method].apply(route, slice.call(arguments, 1));
@@ -29577,6 +29833,7 @@ exports.init = function(app){
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< Updated upstream
 "use strict";
 /*!
  * express
@@ -29585,6 +29842,99 @@ exports.init = function(app){
  * Copyright(c) 2014-2015 Douglas Christopher Wilson
  * MIT Licensed
  */
+||||||| constructed merge base
+// SQLite3
+// -------
+const inherits = __webpack_require__(/*! inherits */ "./node_modules/knex/node_modules/inherits/inherits_browser.js");
+const defaults = __webpack_require__(/*! lodash/defaults */ "./node_modules/lodash/defaults.js");
+const map = __webpack_require__(/*! lodash/map */ "./node_modules/lodash/map.js");
+const { promisify } = __webpack_require__(/*! util */ "./node_modules/util/util.js");
+
+const Client = __webpack_require__(/*! ../../client */ "./node_modules/knex/lib/client.js");
+
+const QueryCompiler = __webpack_require__(/*! ./query/compiler */ "./node_modules/knex/lib/dialects/sqlite3/query/compiler.js");
+const SchemaCompiler = __webpack_require__(/*! ./schema/compiler */ "./node_modules/knex/lib/dialects/sqlite3/schema/compiler.js");
+const ColumnCompiler = __webpack_require__(/*! ./schema/columncompiler */ "./node_modules/knex/lib/dialects/sqlite3/schema/columncompiler.js");
+const TableCompiler = __webpack_require__(/*! ./schema/tablecompiler */ "./node_modules/knex/lib/dialects/sqlite3/schema/tablecompiler.js");
+const SQLite3_DDL = __webpack_require__(/*! ./schema/ddl */ "./node_modules/knex/lib/dialects/sqlite3/schema/ddl.js");
+const SQLite3_Formatter = __webpack_require__(/*! ./formatter */ "./node_modules/knex/lib/dialects/sqlite3/formatter.js");
+
+function Client_SQLite3(config) {
+  Client.call(this, config);
+  if (config.useNullAsDefault === undefined) {
+    this.logger.warn(
+      'sqlite does not support inserting default values. Set the ' +
+        '`useNullAsDefault` flag to hide this warning. ' +
+        '(see docs http://knexjs.org/#Builder-insert).'
+    );
+  }
+}
+
+inherits(Client_SQLite3, Client);
+
+Object.assign(Client_SQLite3.prototype, {
+  dialect: 'sqlite3',
+
+  driverName: 'sqlite3',
+
+  _driver() {
+    return __webpack_require__(/*! sqlite3 */ 20);
+  },
+
+  schemaCompiler() {
+    return new SchemaCompiler(this, ...arguments);
+  },
+
+  queryCompiler() {
+    return new QueryCompiler(this, ...arguments);
+  },
+=======
+// SQLite3
+// -------
+const inherits = __webpack_require__(/*! inherits */ "./node_modules/knex/node_modules/inherits/inherits_browser.js");
+const defaults = __webpack_require__(/*! lodash/defaults */ "./node_modules/lodash/defaults.js");
+const map = __webpack_require__(/*! lodash/map */ "./node_modules/lodash/map.js");
+const { promisify } = __webpack_require__(/*! util */ "./node_modules/util/util.js");
+
+const Client = __webpack_require__(/*! ../../client */ "./node_modules/knex/lib/client.js");
+
+const QueryCompiler = __webpack_require__(/*! ./query/compiler */ "./node_modules/knex/lib/dialects/sqlite3/query/compiler.js");
+const SchemaCompiler = __webpack_require__(/*! ./schema/compiler */ "./node_modules/knex/lib/dialects/sqlite3/schema/compiler.js");
+const ColumnCompiler = __webpack_require__(/*! ./schema/columncompiler */ "./node_modules/knex/lib/dialects/sqlite3/schema/columncompiler.js");
+const TableCompiler = __webpack_require__(/*! ./schema/tablecompiler */ "./node_modules/knex/lib/dialects/sqlite3/schema/tablecompiler.js");
+const SQLite3_DDL = __webpack_require__(/*! ./schema/ddl */ "./node_modules/knex/lib/dialects/sqlite3/schema/ddl.js");
+const SQLite3_Formatter = __webpack_require__(/*! ./formatter */ "./node_modules/knex/lib/dialects/sqlite3/formatter.js");
+
+function Client_SQLite3(config) {
+  Client.call(this, config);
+  if (config.useNullAsDefault === undefined) {
+    this.logger.warn(
+      'sqlite does not support inserting default values. Set the ' +
+        '`useNullAsDefault` flag to hide this warning. ' +
+        '(see docs http://knexjs.org/#Builder-insert).'
+    );
+  }
+}
+
+inherits(Client_SQLite3, Client);
+
+Object.assign(Client_SQLite3.prototype, {
+  dialect: 'sqlite3',
+
+  driverName: 'sqlite3',
+
+  _driver() {
+    return __webpack_require__(/*! sqlite3 */ 17);
+  },
+
+  schemaCompiler() {
+    return new SchemaCompiler(this, ...arguments);
+  },
+
+  queryCompiler() {
+    return new QueryCompiler(this, ...arguments);
+  },
+>>>>>>> Stashed changes
 
 
 
@@ -45559,7 +45909,7 @@ function merge(dest, src, redefine) {
  * @private
  */
 
-var http = __webpack_require__(/*! http */ 10);
+var http = __webpack_require__(/*! http */ 20);
 
 /**
  * Module exports.
@@ -74489,6 +74839,60 @@ function extend() {
 
 /***/ }),
 
+<<<<<<< Updated upstream
+||||||| constructed merge base
+/***/ "./server/db/db.js":
+/*!*************************!*\
+  !*** ./server/db/db.js ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var config = __webpack_require__(/*! ../../knexfile */ "./knexfile.js").development;
+
+var database = __webpack_require__(/*! knex */ "./node_modules/knex/knex.js")(config);
+
+function addUser(userObj) {
+  var db = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : database;
+  return db('users').insert(userObj);
+}
+
+module.exports = {
+  addUser: addUser
+};
+
+/***/ }),
+
+=======
+/***/ "./server/db/db.js":
+/*!*************************!*\
+  !*** ./server/db/db.js ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var config = __webpack_require__(/*! ../../knexfile */ "./knexfile.js").development;
+
+var database = __webpack_require__(/*! knex */ "./node_modules/knex/knex.js")(config);
+
+function addUser(userObj) {
+  var db = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : database;
+  return db('users').insert(userObj);
+}
+
+function removeUser(socket) {
+  var db = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : database;
+  return db('users').where('userId', socket).del();
+}
+
+module.exports = {
+  addUser: addUser,
+  removeUser: removeUser
+};
+
+/***/ }),
+
+>>>>>>> Stashed changes
 /***/ "./server/index.js":
 /*!*************************!*\
   !*** ./server/index.js ***!
@@ -74507,7 +74911,35 @@ var server = __webpack_require__(/*! ./server */ "./server/server.js");
 var httpServer = http.createServer(server);
 var io = socket(httpServer);
 io.on('connection', function (socket) {
+<<<<<<< Updated upstream
   console.log('Socket id:', socket.id); // socket.on('chat', function(data){
+||||||| constructed merge base
+  console.log('Socket id:', socket.id);
+  db.addUser({
+    userName: 'Simon',
+    role: 'Human',
+    userId: socket.id,
+    roomId: ''
+  }).then(function (res) {
+    return res;
+  }); // socket.on('chat', function(data){
+=======
+  console.log('Socket id:', socket.id);
+  db.addUser({
+    userName: 'Simon',
+    role: 'Human',
+    userId: socket.id,
+    roomId: ''
+  }).then(function (res) {
+    return res;
+  });
+  socket.on("disconnect", function (socket) {
+    console.log(socket.id);
+    db.removeUser(socket.id).then(function (res) {
+      return res;
+    });
+  }); // socket.on('chat', function(data){
+>>>>>>> Stashed changes
   //   console.log(data)
   //   io.sockets.emit('chat', data)
   // })
@@ -74563,9 +74995,9 @@ module.exports = app;
 /***/ }),
 
 /***/ 10:
-/*!**********************!*\
-  !*** http (ignored) ***!
-  \**********************/
+/*!********************************!*\
+  !*** mssql/lib/base (ignored) ***!
+  \********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -74573,6 +75005,208 @@ module.exports = app;
 
 /***/ }),
 
+<<<<<<< Updated upstream
+||||||| constructed merge base
+/***/ 11:
+/*!*************************!*\
+  !*** tedious (ignored) ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 12:
+/*!***********************!*\
+  !*** mssql (ignored) ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 13:
+/*!********************************!*\
+  !*** mssql/lib/base (ignored) ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 14:
+/*!***********************!*\
+  !*** mysql (ignored) ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 15:
+/*!************************!*\
+  !*** mysql2 (ignored) ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 16:
+/*!**************************!*\
+  !*** oracledb (ignored) ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 17:
+/*!********************!*\
+  !*** pg (ignored) ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 18:
+/*!*********************************!*\
+  !*** pg-query-stream (ignored) ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 19:
+/*!********************!*\
+  !*** pg (ignored) ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+=======
+/***/ 11:
+/*!***********************!*\
+  !*** mysql (ignored) ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 12:
+/*!************************!*\
+  !*** mysql2 (ignored) ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 13:
+/*!**************************!*\
+  !*** oracledb (ignored) ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 14:
+/*!********************!*\
+  !*** pg (ignored) ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 15:
+/*!*********************************!*\
+  !*** pg-query-stream (ignored) ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 16:
+/*!********************!*\
+  !*** pg (ignored) ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 17:
+/*!*************************!*\
+  !*** sqlite3 (ignored) ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 18:
+/*!***************************!*\
+  !*** ./streams (ignored) ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 19:
+/*!*******************************!*\
+  !*** ./extend-node (ignored) ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+>>>>>>> Stashed changes
 /***/ 2:
 /*!**********************!*\
   !*** util (ignored) ***!
@@ -74584,6 +75218,32 @@ module.exports = app;
 
 /***/ }),
 
+<<<<<<< Updated upstream
+||||||| constructed merge base
+/***/ 20:
+/*!*************************!*\
+  !*** sqlite3 (ignored) ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+=======
+/***/ 20:
+/*!**********************!*\
+  !*** http (ignored) ***!
+  \**********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+>>>>>>> Stashed changes
 /***/ 3:
 /*!**********************!*\
   !*** util (ignored) ***!
@@ -74640,9 +75300,9 @@ module.exports = app;
 /***/ }),
 
 /***/ 8:
-/*!***************************!*\
-  !*** ./streams (ignored) ***!
-  \***************************/
+/*!*************************!*\
+  !*** tedious (ignored) ***!
+  \*************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -74651,9 +75311,9 @@ module.exports = app;
 /***/ }),
 
 /***/ 9:
-/*!*******************************!*\
-  !*** ./extend-node (ignored) ***!
-  \*******************************/
+/*!***********************!*\
+  !*** mssql (ignored) ***!
+  \***********************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
