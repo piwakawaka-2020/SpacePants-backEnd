@@ -7,9 +7,10 @@ module.exports = {
   getUsers,
   addUser,
   getUsersByRoom,
+  removeUser,
 
-  getTasks,
-  getTasksRandomById
+  getTasksId,
+  getTasksById
 }
 
 function addUser(userObj, db = connection) {
@@ -31,13 +32,21 @@ function getUsersByRoom(roomId, db = connection){
     .where('users.roomId', '=', roomId)
 }
 
+function removeUser(socketId, db = connection){
+  // console.log(typeof socketId)
+  return db('users')
+    .where('users.socketId', socketId)
+    .del()
+}
+
 // TASKS AND HINTS
 
-function getTasks(db = connection){
-  return db('tasks').select('*')
+function getTasksId(db = connection){
+  return db('tasks').select('id')
 }
 
-function getTasksRandomById(taskId,db = connection){
+function getTasksById(taskId, db = connection){
   return db('tasks')
-    .where('tasks.id', taskId)
+  .where('tasks.id', taskId)
 }
+
