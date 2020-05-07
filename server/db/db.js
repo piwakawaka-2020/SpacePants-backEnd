@@ -6,11 +6,11 @@ function addUser(userObj, db=database) {
     .insert(userObj)
 }
 
-function removeUser(socket, db=database) {
-    return db('users')
-    .where('userId', socket)
-    .del()
-}
+// function removeUser(socket, db=database) {
+//     return db('users')
+//     .where('userId', socket)
+//     .del()
+// }
 
 module.exports = {
     addUser,
