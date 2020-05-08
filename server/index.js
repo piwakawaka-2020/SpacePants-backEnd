@@ -82,6 +82,8 @@ io.on('connection', function (socket) {
             .then(res => console.log(res))
         })
       })
+    timerImport.timer()
+    
   })
 
   socket.on('disconnect', function () {

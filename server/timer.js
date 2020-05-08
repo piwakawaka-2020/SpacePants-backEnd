@@ -1,9 +1,7 @@
-function randomNumber (min, max) {
-   return (
-   Math.floor(Math.random()*(max-min+1))+min
-   )
-}
-let secCounter = 10
+const socket = require ('socket.io')
+
+let secCounter = 300
+const taskTimeValue = 30
 
 function decreaseTime(amount) {
 secCounter -= amount
@@ -19,8 +17,7 @@ function timeDisp () {
             return parseInt(secs)
         }
     }
-    document.getElementById('timer').innerHTML = `${minutes}:${seconds()}`
-
+    io.to(room).emit('timer', `${minutes}:${seconds()}`)
 }
 
 function timer() {const tick = setInterval(() => {
@@ -31,7 +28,7 @@ function timer() {const tick = setInterval(() => {
     }, 1000)
 }
    document.getElementById('start').addEventListener("click", timer)
-   document.getElementById('decrease').addEventListener("click", () => decreaseTime(15))
+   document.getElementById('decrease').addEventListener("click", () => decreaseTime(taskTimeValue))
   
 
 
