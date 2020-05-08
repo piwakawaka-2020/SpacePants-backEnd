@@ -98,8 +98,10 @@ io.on('connection', function (socket) {
         })
       })
     timerFunc.createRoomCounter(room)
-    timerFunc.timer(room)
+    timerFunc.timer(room, io)
   })
+
+  // socket.on('taskComplete', room)
 
   socket.on('disconnect', function () {
     console.log('disconnect socket:', socket.id)
@@ -114,7 +116,4 @@ httpServer.listen(PORT, function () {
   console.log('Listening on port', PORT)
 })
 
-// module.exports = {
-// io,
-// room
-// }
+module.exports = io

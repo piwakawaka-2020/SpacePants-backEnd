@@ -1,5 +1,4 @@
 // const io = require ('./index')
-// const room = require ('./index')
 const gameValues = require('./gameValues')
 
 let secondCounter = {}
@@ -14,7 +13,7 @@ function decreaseTime(room, amount) {
     secondCounter[room] = (secondCounter[room] - amount)
 }
 
-function timeDisp(room) {
+function timeDisp(room, io) {
     let minutes = parseInt(secondCounter[room] / 60)
     let seconds = () => {
         let secs = secondCounter[room] % 60          
@@ -24,12 +23,12 @@ function timeDisp(room) {
             return parseInt(secs)
         }
     }
-    // io.to(room).emit('timer', `${minutes}:${seconds()}`)
-    console.log(`${room}timer => ${minutes}:${seconds()}`)
+    io.to(room).emit('timer', `${minutes}:${seconds()}`)
+    // console.log(`${room}timer => ${minutes}:${seconds()}`)
 }
 
-function timer(room) {const tick = setInterval(() => {
-    timeDisp(room)
+function timer(room, io) {const tick = setInterval(() => {
+    timeDisp(room, io)
     decreaseTime(room, 1)
     if(secondCounter[room] < 0) {
         clearInterval(tick)
