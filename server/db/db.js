@@ -45,12 +45,12 @@ function getTaskById(taskId, db = connection){
 }
 
 function getHintsId(db = connection){
-  return db('hints').select('id')
+  return db('fakeHints').select('id')
 }
 
 function getHintsById(hintId, db = connection){
-  return db('hints')
-  .where('hints.id', hintId).first()
+  return db('fakeHints')
+  .where('fakeHints.id', hintId).first()
 }
 
 module.exports = {
