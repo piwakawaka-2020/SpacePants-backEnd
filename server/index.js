@@ -112,7 +112,7 @@ function getFakeHint(human) {
 
       dbFunc.getHintsById(id)
         .then(hint => {
-          io.to(human).emit('hint', hint.hint)
+          io.to(human).emit('hint', hint.fakeHint)
         })
     })
 }
