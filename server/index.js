@@ -68,17 +68,11 @@ io.on('connection', function (socket) {
     io.to(socket.id).emit('getHint', getBadHint())
   })
 
-  //Random task comes in
-  //Emit task to alien
-  //Random number to check if actual hint or other hint should be sent
-  // hintArray = [hint...]
-  //Random number to decide time at which hint should be sent
-
   socket.on('startGame', room => {
     dbFunc.getUsersByRoom(room)
       .then(users => {
         roles = randFunc.getRoles(users.length)
-      
+
         users.forEach((user, i) => {
           user.role = roles[i]
           io.to(user.socketId).emit('role', user.role)
