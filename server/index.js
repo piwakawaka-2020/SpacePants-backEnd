@@ -1,16 +1,16 @@
 const http = require('http')
 const socket = require('socket.io')
 
-const dbFunc = require('./db/db')
-const randFunc = require('./random')
-const timerImport = require('./timer')
-
 const server = require('./server')
 
 const httpServer = http.createServer(server)
 
 const io = socket(httpServer)
 
+const dbFunc = require('./db/db')
+const randFunc = require('./random')
+const gameValues = require('./gameValues')
+const timerImport = require('./timer')
 
 io.on('connection', function (socket) {
   socket.on('user', (userData) => {
@@ -33,15 +33,30 @@ io.on('connection', function (socket) {
     })
   })
 
-  socket.on('task', () =>{
+  socket.on('startGame', room => {
+    dbFunc.getUsersByRoom(room)
+      .then(users => {
+        roles = randFunc.getRoles(users.length)
+
+        users.forEach((user, i) => {
+          user.role = roles[i]
+          io.to(user.socketId).emit('role', user.role)
+
+          dbFunc.updateUser(user)
+            .then(res => console.log(res))
+        })
+      })
+  })
+
+  socket.on('getTask', () => {
     dbFunc.getTasksId()
     .then(taskId => {
       const idArray = taskId.map(objId => objId.id)
 
-      const id = randFunc.randNum(idArray.length)
+      const id = randFunc.randNum(0, idArray.length)
       dbFunc.getTaskById(id)
       .then(task =>{
-        console.log(task)
+
         io.to(socket.id).emit('task', task.task)
 
         let room = Object.keys(socket.rooms)[0];
@@ -50,15 +65,15 @@ io.on('connection', function (socket) {
         let humans = Object.keys(clients.sockets).filter(client => client != socket.id)
 
         //Pick which human receives message
-        let human = humans[randFunc.randNum(humans.length)]
+        let human = humans[randFunc.randNum(0, humans.length)]
 
         setTimeout(() => {
-          if(randFunc.randNum(100) < 50) {
+          if(randFunc.randNum(10) > gameValues.hintChance) {
             io.to(human).emit('hint', task.hint) 
           } else {
             io.to(human).emit('hint', 'fakeHint')
           }
-        }, randFunc.randNum(100000))
+        }, randFunc.randNum(gameValues.hintTime))
       })
     })
   })
