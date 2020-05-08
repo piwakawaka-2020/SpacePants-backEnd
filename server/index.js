@@ -45,8 +45,8 @@ io.on('connection', function (socket) {
             .then(res => res)
         })
       })
-      timerFunc.createRoomCounter(room)
-      timerFunc.timer(room, io)
+    timerFunc.createRoomCounter(room)
+    timerFunc.timer(room, io)
   })
 
   socket.on('getTask', () => {
@@ -60,25 +60,20 @@ io.on('connection', function (socket) {
   })
 
   socket.on('skipTask', () => {
-    //Pass message to alien saying you've been penalised
-    setTimeout(() => {getTask(socket)}, gameValues.skipTime)
+    setTimeout(() => { getTask(socket) }, gameValues.skipTime)
   })
-
-  // socket.on('getHint', () => {
-  //   io.to(socket.id).emit('getHint', getBadHint())
-  // })
 
   socket.on('getFakeHint', () => {
     console.log('hint request')
     setTimeout(() => {
-        io.to(socket.id).emit('hint', getFakeHint(socket.id))
+      io.to(socket.id).emit('hint', getFakeHint(socket.id))
     }, randFunc.randNum(0, gameValues.fakeHintTime))
   })
 
   socket.on('disconnect', function () {
     console.log('disconnect socket:', socket.id)
     dbFunc.removeUser(socket.id)
-      .then(res => {})
+      .then(res => { })
   })
 })
 
@@ -97,7 +92,6 @@ function getTask(socket) {
 
           let humans = Object.keys(clients.sockets).filter(client => client != socket.id)
 
-          //Pick which human receives message
           let human = humans[randFunc.randNum(0, humans.length)]
 
           setTimeout(() => {
@@ -106,7 +100,7 @@ function getTask(socket) {
             } else {
               getFakeHint(human)
             }
-          }, randFunc.randNum(gameValues.hintTime))
+          }, randFunc.randNum(0, gameValues.hintTime))
         })
     })
 }
