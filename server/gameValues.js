@@ -8,7 +8,7 @@ const skipTime = 30000
 const hintChance = 0.5
 
 //Max wait to deliver hint in milliseconds
-const hintTime = 30000
+const hintTime = 10000
 
 //Max wait to deliver fake hint in milliseconds
 const fakeHintTime = 10000

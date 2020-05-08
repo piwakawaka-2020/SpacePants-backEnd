@@ -69,6 +69,10 @@ io.on('connection', function (socket) {
     }, randFunc.randNum(0, gameValues.fakeHintTime))
   })
 
+  socket.on('alienHistory', history => {
+    //send task history to humans
+  })
+
   socket.on('disconnect', function () {
     console.log('disconnect socket:', socket.id)
     dbFunc.removeUser(socket.id)
