@@ -1,14 +1,15 @@
 // const io = require ('./index')
 const gameValues = require('./gameValues')
 
+//create object to store each room's counter as room: counter key value pair.
+//each room's counter can then be called and modified with secondCounter[room]
 let secondCounter = {}
 
-//push new {room: counter} key value pair to object
+//push new room counter to object and give it a start time value
 function createRoomCounter(room) {
     secondCounter[room] = gameValues.timerStart
 }
-// const taskTimeValue = gameValues.taskCompleteTimeReward
-
+// decrease a rooms counter by any amount of time.
 function decreaseTime(room, amount) {
     secondCounter[room] = (secondCounter[room] - amount)
 }
@@ -35,12 +36,7 @@ function timer(room, io) {const tick = setInterval(() => {
         delete secondCounter[room]}
     }, 1000)
 }
-   //in index on start run timer()
-   //in index on successful task call decreaseTime(taskTimeValue))
   
-
-
-
  module.exports = {
     timeDisp,
     timer,
