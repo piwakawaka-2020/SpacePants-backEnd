@@ -79,6 +79,35 @@ io.on('connection', function (socket) {
   })
 })
 
+function getTask(socket) {
+  dbFunc.getTasksId()
+    .then(taskId => {
+      const idArray = taskId.map(objId => objId.id)
+
+      const id = randFunc.randNum(1, idArray.length)
+      dbFunc.getTaskById(id)
+        .then(task => {
+          io.to(socket.id).emit('task', task.task)
+
+          let room = Object.keys(socket.rooms)[0];
+          let clients = io.sockets.adapter.rooms[room]
+
+          let humans = Object.keys(clients.sockets).filter(client => client != socket.id)
+
+          //Pick which human receives message
+          let human = humans[randFunc.randNum(0, humans.length)]
+
+          setTimeout(() => {
+            if (randFunc.randNum(10) > gameValues.hintChance) {
+              io.to(human).emit('hint', task.hint)
+            } else {
+              io.to(human).emit('hint', getBadHint(socket))
+            }
+          }, randFunc.randNum(gameValues.hintTime))
+        })
+    })
+}
+
 function getBadHint(socket) {
   dbFunc.getHintsId()
     .then(hintId => {
@@ -91,40 +120,11 @@ function getBadHint(socket) {
           io.to(socket.id).emit('hint', hint.hint)
         })
     })
-  }
-  
-  function getTask(socket) {
-    dbFunc.getTasksId()
-      .then(taskId => {
-        const idArray = taskId.map(objId => objId.id)
+}
 
-        const id = randFunc.randNum(1, idArray.length)
-        dbFunc.getTaskById(id)
-          .then(task => {
-            io.to(socket.id).emit('task', task.task)
+const PORT = process.env.PORT || 3000
 
-            let room = Object.keys(socket.rooms)[0];
-            let clients = io.sockets.adapter.rooms[room]
-
-            let humans = Object.keys(clients.sockets).filter(client => client != socket.id)
-
-            //Pick which human receives message
-            let human = humans[randFunc.randNum(0, humans.length)]
-
-            setTimeout(() => {
-              if (randFunc.randNum(10) > gameValues.hintChance) {
-                io.to(human).emit('hint', task.hint)
-              } else {
-                io.to(human).emit('hint', getBadHint(socket))
-              }
-            }, randFunc.randNum(gameValues.hintTime))
-          })
-      })
-  }
-
-  const PORT = process.env.PORT || 3000
-
-  httpServer.listen(PORT, function () {
-    console.log('Listening on port', PORT)
-  })
+httpServer.listen(PORT, function () {
+  console.log('Listening on port', PORT)
+})
 
