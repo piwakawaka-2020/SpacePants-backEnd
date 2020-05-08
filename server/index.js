@@ -64,7 +64,7 @@ io.on('connection', function (socket) {
   })
 
   socket.on('getHint', () => {
-    getBadHint(socket)
+    io.to(socket.id).emit('getHint', getBadHint())
   })
 
   socket.on('callVote', voteData => {
@@ -101,23 +101,22 @@ function getTask(socket) {
             if (randFunc.randNum(10) > gameValues.hintChance) {
               io.to(human).emit('hint', task.hint)
             } else {
-              io.to(human).emit('hint', getBadHint(socket))
+              getBadHint(human)
             }
           }, randFunc.randNum(gameValues.hintTime))
         })
     })
 }
 
-function getBadHint(socket) {
+function getBadHint(human) {
   dbFunc.getHintsId()
     .then(hintId => {
       const idArray = hintId.map(objId => objId.id)
+      const id = randFunc.randNum(1, idArray.length)
 
-      const id = randFunc.randNum(0, idArray.length)
       dbFunc.getHintsById(id)
         .then(hint => {
-          console.log(hint)
-          io.to(socket.id).emit('hint', hint.hint)
+          io.to(human).emit('hint', hint.hint)
         })
     })
 }
