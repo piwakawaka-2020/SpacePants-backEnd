@@ -13,6 +13,7 @@ const gameValues = require('./gameValues')
 const timerFunc = require('./timer')
 
 io.on('connection', function (socket) {
+  console.log('Connect socket: ', socket.id)
   socket.on('user', (userData) => {
     userData = {
       ...userData,
@@ -64,12 +65,8 @@ io.on('connection', function (socket) {
     setTimeout(() => {getTask(socket)}, gameValues.skipTime)
   })
 
-  // socket.on('getHint', () => {
-  //   io.to(socket.id).emit('getHint', getBadHint())
-  // })
-
   socket.on('getFakeHint', () => {
-    console.log('hint request')
+    // console.log('hint request')
     setTimeout(() => {
         io.to(socket.id).emit('hint', getFakeHint(socket.id))
     }, randFunc.randNum(0, gameValues.fakeHintTime))
@@ -79,6 +76,10 @@ io.on('connection', function (socket) {
     console.log('disconnect socket:', socket.id)
     dbFunc.removeUser(socket.id)
       .then(res => {})
+  })
+
+  socket.on('vote', (voteData)=>{
+    io.sockets.emit('vote', voteData)
   })
 })
 
@@ -119,7 +120,8 @@ function getFakeHint(human) {
 
       dbFunc.getHintsById(id)
         .then(hint => {
-          io.to(human).emit('hint', hint.hint)
+          // console.log(hint)
+          io.to(human).emit('hint', hint.fakeHint)
         })
     })
 }
