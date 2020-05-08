@@ -1,5 +1,5 @@
 exports.up = function(knex) {
-    return knex.schema.createTable('hints', (table) => {
+    return knex.schema.createTable('fakeHints', (table) => {
         table.increments('id').primary
         table.string('hint')
     })
@@ -7,5 +7,5 @@ exports.up = function(knex) {
 }
 
 exports.down = function(knex) {
-    return knex.schema.dropTable('hints')
+    return knex.schema.dropTable('fakeHints')
 }

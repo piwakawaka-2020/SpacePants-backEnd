@@ -3,7 +3,6 @@ exports.up = function(knex) {
         table.increments('id').primary
         table.string('task')
         table.string('hint')
-        table.string('category')
     })
   
 }
