@@ -210,6 +210,116 @@ exports.seed = function (knex) {
           task: 'Sneak some song lyrics into the conversation.  Show off how cultured you are',
           hint: 'Aliens love art.  They aren’t good at it, but they love it.',
         },
+        {
+          id: 42,
+          task: 'Go to the the bathroom',
+          hint: 'They can\'t wait'
+        },
+        {
+          id: 43,
+          task: 'Consume half your beverage',
+          hint: 'They might be consuming'
+        },
+        {
+          id: 44,
+          task: 'Work in a movie title into conversation',
+          hint: 'It\'s in long form',
+        },
+        {
+          id: 45,
+          task: 'Talk in double time',
+          hint: 'Speed kills'
+        },
+        {
+          id: 46,
+          task: 'Hum the catchiest tune',
+          hint: 'One hit wonder?'
+        },
+        {
+          id: 47,
+          task: 'Refer to yourself using your name or nickname',
+          hint: 'Third person shooter',
+        },
+        {
+          id: 48,
+          task: 'Burp frequently',
+          hint: 'Gas explodes'
+        },
+        {
+          id: 49,
+          task: 'Talk in song quotes or titles',
+          hint: 'What\'s that song again',
+        },
+        {
+          id: 50,
+          task: 'Clean your glasses',
+          hint: 'I can\'t see'
+        },
+        {
+          id: 51,
+          task: 'Crack your joints',
+          hint: 'Snap, crackle, pop'
+        },
+        {
+          id: 52,
+          task: 'Use long words',
+          hint: 'Did you really say that?',
+        },
+        {
+          id: 53,
+          task: 'Get distracted by something/someone',
+          hint: 'Concentrate'
+        },
+        {
+          id: 54,
+          task: 'Use action words to talk',
+          hint: 'Batman \'66',
+        },
+        {
+          id: 55,
+          task: 'Slowly lower your voice',
+          hint: 'What\'s that?'
+        },
+        {
+          id: 56,
+          task: 'Get a drink',
+          hint: 'They might be consuming'
+        },
+        {
+          id: 57,
+          task: 'Talk about someone you haven\'t seen in ages',
+          hint: 'Blast from the past',
+        },
+        {
+          id: 58,
+          task: 'Only look at the opposite sex',
+          hint: 'Look at me'
+        },
+        {
+          id: 59,
+          task: 'Mention random food items',
+          hint: 'You hungry?',
+        },
+        {
+          id: 60,
+          task: 'Take off clothe items',
+          hint: 'You hot?'
+        },
+        {
+          id: 61,
+          task: 'Use the sentence \"Trust me\" as much as possible',
+          hint: 'Do you?',
+        },
+        {
+          id: 62,
+          task: 'Put on clothe items',
+          hint: 'Tauros',
+        },
+        {
+          id: 63,
+          task: 'No eye contact',
+          hint: 'Concentrate'
+        }
       ])
     })
 }
