@@ -15,6 +15,7 @@ const taskCompleteTimeReward = 30
 
 module.exports = {
   timerStart,
+  skipTime,
   hintChance,
   hintTime,
   fakeHintTime,

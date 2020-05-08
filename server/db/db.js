@@ -44,10 +44,13 @@ function getTaskById(taskId, db = connection){
   .where('tasks.id', taskId).first()
 }
 
+function getHintsId(db = connection){
+  return db('hints').select('id')
+}
+
 function getHintsById(hintId, db = connection){
-  return db('tasks')
-  .select('hint')
-  .where('tasks.id', hintId)
+  return db('hints')
+  .where('hints.id', hintId).first()
 }
 
 module.exports = {
@@ -58,6 +61,7 @@ module.exports = {
   updateUser,
   getTasksId,
   getTaskById,
+  getHintsId,
   getHintsById
 }
 
