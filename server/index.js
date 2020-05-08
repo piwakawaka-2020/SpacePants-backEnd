@@ -10,7 +10,7 @@ const io = socket(httpServer)
 const dbFunc = require('./db/db')
 const randFunc = require('./random')
 const gameValues = require('./gameValues')
-const timerImport = require('./timer')
+const timerFunc = require('./timer')
 
 io.on('connection', function (socket) {
   socket.on('user', (userData) => {
@@ -97,8 +97,8 @@ io.on('connection', function (socket) {
             .then(res => console.log(res))
         })
       })
-    timerImport.timer()
-    
+    timerFunc.createRoomCounter(room)
+    timerFunc.timer(room)
   })
 
   socket.on('disconnect', function () {
@@ -114,3 +114,7 @@ httpServer.listen(PORT, function () {
   console.log('Listening on port', PORT)
 })
 
+// module.exports = {
+// io,
+// room
+// }
