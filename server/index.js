@@ -61,9 +61,7 @@ io.on('connection', function (socket) {
 
   socket.on('skipTask', () => {
     //Pass message to alien saying you've been penalised
-    setTimeout(() => {
-      getTask(socket)
-    }, gameValues.skipTime)
+    setTimeout(() => {getTask(socket)}, gameValues.skipTime)
   })
 
   socket.on('getHint', () => {
