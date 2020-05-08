@@ -2,7 +2,7 @@
 const timerStart = 300
 
 // Time penalty for skipping task
-const skipTime = 30
+const skipTime = 30000
 
 // How likely to deliver actual clue (0-1)
 const hintChance = 0.5
