@@ -66,15 +66,21 @@ io.on('connection', function (socket) {
         //Pick which human receives message
         let human = humans[randFunc.randNum(0, humans.length)]
 
+        // console.log(humans)
+
         setTimeout(() => {
           if(randFunc.randNum(10) > gameValues.hintChance) {
             io.to(human).emit('hint', task.hint) 
           } else {
-            io.to(human).emit('hint', 'fakeHint')
+            io.to(human).emit('hint', getBadHint(socket))
           }
         }, randFunc.randNum(gameValues.hintTime))
       })
     })
+  })
+
+  socket.on('getHint', () =>{
+    getBadHint(socket)
   })
 
   socket.on('callVote', voteData => {
@@ -88,6 +94,20 @@ io.on('connection', function (socket) {
       .then(res => console.log(res))
   })
 })
+
+function getBadHint(socket) {
+  dbFunc.getHintsId()
+  .then(hintId =>{
+    const idArray = hintId.map(objId => objId.id)
+
+    const id = randFunc.randNum(0, idArray.length)
+    dbFunc.getHintsById(id)
+    .then(hint =>{
+      console.log(hint)
+      io.to(socket.id).emit('hint', hint.hint)
+    })
+  })
+}
 
 const PORT = process.env.PORT || 3000
 
