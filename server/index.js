@@ -64,8 +64,15 @@ io.on('connection', function (socket) {
     setTimeout(() => {getTask(socket)}, gameValues.skipTime)
   })
 
-  socket.on('getHint', () => {
-    io.to(socket.id).emit('getHint', getBadHint())
+  // socket.on('getHint', () => {
+  //   io.to(socket.id).emit('getHint', getBadHint())
+  // })
+
+  socket.on('getFakeHint', () => {
+    console.log('hint request')
+    setTimeout(() => {
+        io.to(socket.id).emit('hint', getFakeHint(socket.id))
+    }, randFunc.randNum(0, gameValues.fakeHintTime))
   })
 
   socket.on('disconnect', function () {
@@ -97,14 +104,14 @@ function getTask(socket) {
             if (randFunc.randNum(10) > gameValues.hintChance) {
               io.to(human).emit('hint', task.hint)
             } else {
-              getBadHint(human)
+              getFakeHint(human)
             }
           }, randFunc.randNum(gameValues.hintTime))
         })
     })
 }
 
-function getBadHint(human) {
+function getFakeHint(human) {
   dbFunc.getHintsId()
     .then(hintId => {
       const idArray = hintId.map(objId => objId.id)
