@@ -14,7 +14,6 @@ const timerFunc = require('./timer')
 
 io.on('connection', function (socket) {
   socket.on('user', (userData) => {
-
     userData = {
       ...userData,
       socketId: socket.id
@@ -43,54 +42,36 @@ io.on('connection', function (socket) {
           io.to(user.socketId).emit('role', user.role)
 
           dbFunc.updateUser(user)
-            .then(res => console.log(res))
+            .then(res => res)
         })
       })
+      timerFunc.createRoomCounter(room)
+      timerFunc.timer(room, io)
   })
 
   socket.on('getTask', () => {
     getTask(socket)
   })
 
-  socket.on('completeTask', () => {
-    //update time
+  socket.on('completeTask', room => {
+    let t = gameValues.taskCompleteTimeReward
+    timerFunc.decreaseTime(room, t)
     getTask(socket)
   })
 
   socket.on('skipTask', () => {
     //Pass message to alien saying you've been penalised
-    setTimeout(() => {
-      getTask(socket)
-    }, gameValues.skipTime)
+    setTimeout(() => {getTask(socket)}, gameValues.skipTime)
   })
 
   socket.on('getHint', () => {
     io.to(socket.id).emit('getHint', getBadHint())
   })
 
-  socket.on('startGame', room => {
-    dbFunc.getUsersByRoom(room)
-      .then(users => {
-        roles = randFunc.getRoles(users.length)
-
-        users.forEach((user, i) => {
-          user.role = roles[i]
-          io.to(user.socketId).emit('role', user.role)
-
-          dbFunc.updateUser(user)
-            .then(res => console.log(res))
-        })
-      })
-    timerFunc.createRoomCounter(room)
-    timerFunc.timer(room, io)
-  })
-
-  // socket.on('taskComplete', room)
-
   socket.on('disconnect', function () {
     console.log('disconnect socket:', socket.id)
     dbFunc.removeUser(socket.id)
-      .then(res => console.log(res))
+      .then(res => {})
   })
 })
 
