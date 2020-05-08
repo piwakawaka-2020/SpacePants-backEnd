@@ -64,7 +64,6 @@ io.on('connection', function (socket) {
   })
 
   socket.on('getFakeHint', () => {
-    console.log('hint request')
     setTimeout(() => {
       io.to(socket.id).emit('hint', getFakeHint(socket.id))
     }, randFunc.randNum(0, gameValues.fakeHintTime))
