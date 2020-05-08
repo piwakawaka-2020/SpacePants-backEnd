@@ -8,10 +8,10 @@ const skipTime = 30000
 const hintChance = 0.5
 
 //Max wait to deliver hint in milliseconds
-const hintTime = 1000
+const hintTime = 30000
 
 //Max wait to deliver fake hint in milliseconds
-const fakeHintTime = 45000
+const fakeHintTime = 10000
 
 //Time bonus on successful completion of task in seconds
 const taskCompleteTimeReward = 30
