@@ -56,6 +56,13 @@ io.on('connection', function (socket) {
     getTask(socket)
   })
 
+  socket.on('skipTask', () => {
+    //Pass message to alien saying you've been penalised
+    setTimeout(() => {
+      getTask(socket)
+    }, gameValues.skipTime)
+  })
+
   socket.on('callVote', voteData => {
     let room = Object.keys(socket.rooms)[0];
     io.to(room).emit('vote', voteData)

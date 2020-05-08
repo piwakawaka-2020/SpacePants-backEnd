@@ -1,5 +1,8 @@
 // Start value of game timer in milliseconds
-const timerStart = 3000
+const timerStart = 300000
+
+//Skip task penalty length in milliseconds
+const skipTime = 30000
 
 // How likely to deliver actual clue (0-1)
 const hintChance = 0.5
@@ -15,6 +18,7 @@ const taskCompleteTimeReward = 30
 
 module.exports = {
   timerStart,
+  skipTime,
   hintChance,
   hintTime,
   fakeHintTime,
