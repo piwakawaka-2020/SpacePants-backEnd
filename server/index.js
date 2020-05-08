@@ -73,10 +73,11 @@ function getTask(socket) {
     .then(taskId => {
       const idArray = taskId.map(objId => objId.id)
 
-      const id = randFunc.randNum(0, idArray.length)
+      const id = randFunc.randNum(1, idArray.length)
+      console.log(id)
       dbFunc.getTaskById(id)
         .then(task => {
-
+          console.log(task)
           io.to(socket.id).emit('task', task.task)
 
           let room = Object.keys(socket.rooms)[0];
