@@ -66,13 +66,11 @@ io.on('connection', function (socket) {
         //Pick which human receives message
         let human = humans[randFunc.randNum(0, humans.length)]
 
-        // console.log(humans)
-
         setTimeout(() => {
           if(randFunc.randNum(10) > gameValues.hintChance) {
             io.to(human).emit('hint', task.hint) 
           } else {
-            io.to(human).emit('hint', getBadHint(socket))
+            io.to(human).emit('hint', getBadHint(humans))
           }
         }, randFunc.randNum(gameValues.hintTime))
       })
@@ -104,7 +102,10 @@ function getBadHint(socket) {
     dbFunc.getHintsById(id)
     .then(hint =>{
       console.log(hint)
-      io.to(socket.id).emit('hint', hint.hint)
+      console.log(socket)
+      for(let i =0; i < socket.length; i++){
+        io.to(socket[i]).emit('hint', hint.hint)
+      }
     })
   })
 }
