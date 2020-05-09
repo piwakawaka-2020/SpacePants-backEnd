@@ -18,7 +18,7 @@ io.on('connection', function (socket) {
   console.log('Connect socket: ', socket.id)
 
   socket.on('user', (userData) => {
-    console.log(userData)
+    // console.log(userData)
     userData = {
       ...userData,
       socketId: socket.id
@@ -42,7 +42,7 @@ io.on('connection', function (socket) {
     dbFunc.getRoomList()
     .then(roomsData => {
       const rooms = [...new Set(roomsData.map(room => room.roomId))]
-      console.log(rooms)
+      // console.log(rooms)
       return io.to(socket.id).emit('roomList', rooms)
     })
   })
@@ -92,6 +92,12 @@ io.on('connection', function (socket) {
   //Takes the result of each vote
   socket.on('sendVote', voteData => {
     voteFun.collateVotes(io, voteData.room, voteData.vote)
+  })
+
+  // Check the final result
+  socket.on('checkResult', resultData =>{
+    console.log('send ', resultData.result, ' to ', resultData.room)
+    return io.to(resultData.room).emit('checkResult', resultData)
   })
 
   socket.on('alienHistory', history => {
