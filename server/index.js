@@ -81,13 +81,13 @@ io.on('connection', function (socket) {
   })
 
   //Takes vote call from humans and sends vote request to room
-  socket.on('triggerVote', (voteData) => {
-    io.to(voteData.room).emit('receiveVote', voteData)
+  socket.on('triggerVote', ({ room, voteData }) => {
+    io.to(room).emit('receiveVote', voteData)
   })
 
   //Takes the result of each vote
-  socket.on('sendVote', ({ room, vote }) => {
-    voteFunc.collateVotes(io, room, vote)
+  socket.on('sendVote', ({ room, voteData}) => {
+    voteFunc.collateVotes(io, room, voteData)
   })
 
   socket.on('alienHistory', ({ tasks, room }) => {
