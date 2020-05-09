@@ -96,7 +96,6 @@ io.on('connection', function (socket) {
   })
 
   socket.on('disconnect', function () {
-    console.log('disconnect socket:', socket.id)
     dbFunc.removeUser(socket.id)
       .then(res => { })
   })
@@ -114,27 +113,30 @@ function getTask(socket) {
           //Send task to the Alien
           io.to(socket.id).emit('task', task.task)
 
-          //Get room code
-          let room = Object.keys(socket.rooms)[1]
-
-          //Get all sockets in room
-          let clients = io.sockets.adapter.rooms[room].sockets
-
-          //Filter out Alien socket
-          let humans = Object.keys(clients).filter(client => client != socket.id)
-
-          //Pick one lucky human to maybe receive a good hint
-          let human = humans[randFunc.randNum(0, humans.length)]
-
-          setTimeout(() => {
-            if (randFunc.randNum(0, 1) < gameValues.hintChance) {
-              io.to(human).emit('hint', task.hint)
-            } else {
-              getFakeHint(human)
-            }
-          }, randFunc.randNum(0, gameValues.hintTime))
+          //Maybe send corresponding hint to a human
+          sendRealHint(socket, task.hint)
         })
     })
+}
+
+function sendRealHint(socket, hint) {
+  //Get room code
+  let room = Object.keys(socket.rooms)[1]
+
+  //Get all sockets in room
+  let clients = io.sockets.adapter.rooms[room].sockets
+
+  //Filter out Alien socket
+  let humans = Object.keys(clients).filter(client => client != socket.id)
+
+  //Pick one lucky human to maybe receive a good hint
+  let human = humans[randFunc.randNum(0, humans.length)]
+
+  setTimeout(() => {
+    if (randFunc.randNum(0, 1) < gameValues.hintChance) {
+      io.to(human).emit('hint', hint)
+    }
+  }, randFunc.randNum(0, gameValues.hintTime))
 }
 
 function getFakeHint(human) {
