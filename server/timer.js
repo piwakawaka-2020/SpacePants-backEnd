@@ -24,13 +24,14 @@ function timeDisp(room, io) {
             return parseInt(secs)
         }
     }
+
     io.to(room).emit('timer', `${minutes}:${seconds()}`)
-    // console.log(`${room}timer => ${minutes}:${seconds()}`)
 }
 
 function timer(room, io) {const tick = setInterval(() => {
     timeDisp(room, io)
     decreaseTime(room, 1)
+    
     if(secondCounter[room] < 0) {
         clearInterval(tick)
         //1. find alien in room - > emit to that socket get the task data from Alien front end
