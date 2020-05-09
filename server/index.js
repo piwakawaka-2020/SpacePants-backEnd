@@ -73,8 +73,7 @@ io.on('connection', function (socket) {
   })
 
   socket.on('sendVote', (voteData) => {
-    let room = Object.keys(socket.rooms)[0]
-    socket.broadcast.to(room).emit('receiveVote', voteData)
+    io.to(voteData.room).emit('receiveVote', voteData)
   })
 
   socket.on('disconnect', function () {
