@@ -13,7 +13,9 @@ const gameValues = require('./gameValues')
 const timerFunc = require('./timer')
 
 io.on('connection', function (socket) {
-  console.log('connect socket:', socket.id)
+
+  console.log('Connect socket: ', socket.id)
+
   socket.on('user', (userData) => {
     console.log(userData)
     userData = {
@@ -79,6 +81,10 @@ io.on('connection', function (socket) {
     setTimeout(() => {
       io.to(socket.id).emit('hint', getFakeHint(socket.id))
     }, randFunc.randNum(0, gameValues.fakeHintTime))
+  })
+
+  socket.on('sendVote', (voteData) => {
+    io.to(voteData.room).emit('receiveVote', voteData)
   })
 
   socket.on('alienHistory', history => {
