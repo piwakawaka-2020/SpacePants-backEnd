@@ -26,5 +26,6 @@ function clear(room) {
 }
 
 module.exports = {
-  collateVotes
+  collateVotes,
+  clear
 }
