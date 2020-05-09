@@ -61,12 +61,10 @@ io.on('connection', function (socket) {
   })
 
   socket.on('skipTask', () => {
-    //Pass message to alien saying you've been penalised
     setTimeout(() => { getTask(socket) }, gameValues.skipTime)
   })
 
   socket.on('getFakeHint', () => {
-    // console.log('hint request')
     setTimeout(() => {
       io.to(socket.id).emit('hint', getFakeHint(socket.id))
     }, randFunc.randNum(0, gameValues.fakeHintTime))
@@ -74,6 +72,10 @@ io.on('connection', function (socket) {
 
   socket.on('sendVote', (voteData) => {
     io.to(voteData.room).emit('receiveVote', voteData)
+  })
+
+  socket.on('alienHistory', history => {
+    //send task history to humans
   })
 
   socket.on('disconnect', function () {
@@ -98,7 +100,6 @@ function getTask(socket) {
 
           let humans = Object.keys(clients.sockets).filter(client => client != socket.id)
 
-          //Pick which human receives message
           let human = humans[randFunc.randNum(0, humans.length)]
 
           setTimeout(() => {
@@ -107,7 +108,7 @@ function getTask(socket) {
             } else {
               getFakeHint(human)
             }
-          }, randFunc.randNum(gameValues.hintTime))
+          }, randFunc.randNum(0, gameValues.hintTime))
         })
     })
 }
@@ -120,7 +121,6 @@ function getFakeHint(human) {
 
       dbFunc.getHintsById(id)
         .then(hint => {
-          // console.log(hint)
           io.to(human).emit('hint', hint.fakeHint)
         })
     })
