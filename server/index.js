@@ -14,12 +14,16 @@ const timerFunc = require('./timer')
 const voteFun = require('./votes')
 
 io.on('connection', function (socket) {
+
   console.log('Connect socket: ', socket.id)
+
   socket.on('user', (userData) => {
+    console.log(userData)
     userData = {
       ...userData,
       socketId: socket.id
     }
+    console.log(userData)
 
     dbFunc.addUser(userData)
       .then(() => {
@@ -32,6 +36,15 @@ io.on('connection', function (socket) {
             })
         })
       })
+  })
+
+  socket.on('getRoomList', () => {
+    dbFunc.getRoomList()
+    .then(roomsData => {
+      const rooms = [...new Set(roomsData.map(room => room.roomId))]
+      console.log(rooms)
+      return io.to(socket.id).emit('roomList', rooms)
+    })
   })
 
   socket.on('startGame', room => {
