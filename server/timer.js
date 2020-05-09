@@ -33,6 +33,8 @@ function timer(room, io) {const tick = setInterval(() => {
     decreaseTime(room, 1)
     if(secondCounter[room] < 0) {
         clearInterval(tick)
+        //1. find alien in room - > emit to that socket get the task data from Alien front end
+        //emit to the whole room (game over, (task data))
         delete secondCounter[room]}
     }, 1000)
 }
