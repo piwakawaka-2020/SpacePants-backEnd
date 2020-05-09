@@ -11,6 +11,7 @@ const dbFunc = require('./db/db')
 const randFunc = require('./random')
 const gameValues = require('./gameValues')
 const timerFunc = require('./timer')
+const voteFun = require('./votes')
 
 io.on('connection', function (socket) {
 
@@ -83,8 +84,14 @@ io.on('connection', function (socket) {
     }, randFunc.randNum(0, gameValues.fakeHintTime))
   })
 
-  socket.on('sendVote', (voteData) => {
+  //Takes vote call from humans and sends vote request to room
+  socket.on('triggerVote', (voteData) => {
     io.to(voteData.room).emit('receiveVote', voteData)
+  })
+
+  //Takes the result of each vote
+  socket.on('sendVote', voteData => {
+    voteFun.collateVotes(io, voteData.room, voteData.vote)
   })
 
   socket.on('alienHistory', history => {
