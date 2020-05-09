@@ -16,11 +16,19 @@ const fakeHintTime = 10000
 //Time bonus on successful completion of task in seconds
 const taskCompleteTimeReward = 30
 
+//Number of entries in task db
+const numTasks = 63
+
+//Number of entries in fakeHint db
+const numFakeHints = 65
+
 module.exports = {
   timerStart,
   skipTime,
   hintChance,
   hintTime,
   fakeHintTime,
-  taskCompleteTimeReward
+  taskCompleteTimeReward,
+  numTasks,
+  numFakeHints
 }

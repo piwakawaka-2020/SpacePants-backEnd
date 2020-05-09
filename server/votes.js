@@ -16,8 +16,9 @@ function collateVotes(io, room, vote) {
   // }
 
   if(votes[room].length === clients.length) {
-    const aye = votes[room].filter(el => el)
-    io.to(room).emit('voteResult', (aye.length > votes[room].length / 2))
+    const aye = votes[room].filter(el => el.motion)
+
+    io.to(room).emit('voteResult', {result: (aye.length > votes[room].length / 2), person: votes[room][0].person})
   }
 }
 
