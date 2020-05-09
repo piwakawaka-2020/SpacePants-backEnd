@@ -16,6 +16,11 @@ function getUsers(db = connection){
   return db('users').select()
 }
 
+function getRoomList(db = connection){
+  return db('users')
+  .select('users.roomId')
+}
+
 function getUsersByRoom(roomId, db = connection){
   return db('users')
     .where('users.roomId', '=', roomId)
@@ -44,20 +49,25 @@ function getTaskById(taskId, db = connection){
   .where('tasks.id', taskId).first()
 }
 
+function getHintsId(db = connection){
+  return db('fakeHints').select('id')
+}
+
 function getHintsById(hintId, db = connection){
-  return db('tasks')
-  .select('hint')
-  .where('tasks.id', hintId)
+  return db('fakeHints')
+  .where('fakeHints.id', hintId).first()
 }
 
 module.exports = {
   getUsers,
   addUser,
+  getRoomList,
   getUsersByRoom,
   removeUser,
   updateUser,
   getTasksId,
   getTaskById,
+  getHintsId,
   getHintsById
 }
 
