@@ -1,3 +1,5 @@
+const dbFunc = require('./db/db')
+
 let votes = {}
 
 function collateVotes(io, room, vote) {
@@ -15,10 +17,14 @@ function collateVotes(io, room, vote) {
   //   io.to(room).emit('voteResult', votes[room].every(el => el === true))
   // }
 
-  if(votes[room].length === clients.length) {
+  if (votes[room].length === clients.length) {
     const aye = votes[room].filter(el => el.motion)
 
-    io.to(room).emit('voteResult', {result: (aye.length > votes[room].length / 2), person: votes[room][0].person})
+    dbFunc.getUserByNameAndRoom(votes[room][0].person, room)
+      .then(user => {
+        console.log('user', user)
+        io.to(room).emit('voteResult', { result: (aye.length > votes[room].length / 2), role: user.role })
+      })
   }
 }
 
