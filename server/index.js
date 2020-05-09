@@ -102,21 +102,17 @@ io.on('connection', function (socket) {
 })
 
 function getTask(socket) {
-  dbFunc.getTasksId()
-    .then(taskId => {
-      const idArray = taskId.map(objId => objId.id)
+  const id = randFunc.randNum(1, gameValues.numTasks)
+  dbFunc.getTaskById(id)
+    .then(task => {
 
-      const id = randFunc.randNum(1, idArray.length)
-      dbFunc.getTaskById(id)
-        .then(task => {
+      //Send task to the Alien
+      io.to(socket.id).emit('task', task.task)
 
-          //Send task to the Alien
-          io.to(socket.id).emit('task', task.task)
-
-          //Maybe send corresponding hint to a human
-          sendRealHint(socket, task.hint)
-        })
+      //Maybe send corresponding hint to a human
+      sendRealHint(socket, task.hint)
     })
+  // })
 }
 
 function sendRealHint(socket, hint) {
@@ -140,15 +136,11 @@ function sendRealHint(socket, hint) {
 }
 
 function getFakeHint(human) {
-  dbFunc.getHintsId()
-    .then(hintId => {
-      const idArray = hintId.map(objId => objId.id)
-      const id = randFunc.randNum(1, idArray.length)
+  const id = randFunc.randNum(1, gameValues.numFakeHints)
 
-      dbFunc.getHintsById(id)
-        .then(hint => {
-          io.to(human).emit('hint', hint.fakeHint)
-        })
+  dbFunc.getHintsById(id)
+    .then(hint => {
+      io.to(human).emit('hint', hint.fakeHint)
     })
 }
 
