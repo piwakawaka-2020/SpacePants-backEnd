@@ -1,4 +1,4 @@
-// Start value of game timer in milliseconds
+// Start value of game timer in seconds
 const timerStart = 300
 
 // Time penalty for skipping task
