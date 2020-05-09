@@ -16,6 +16,12 @@ function getUsers(db = connection){
   return db('users').select()
 }
 
+function getUserByNameAndRoom(name, room, db = connection) {
+  return db('users')
+    .where('users.username', '=', name).andWhere('users.roomId', '=', room).first()
+    .then(user => user)
+}
+
 function getRoomList(db = connection){
   return db('users')
   .select('users.roomId')
@@ -60,6 +66,7 @@ function getHintsById(hintId, db = connection){
 
 module.exports = {
   getUsers,
+  getUserByNameAndRoom,
   addUser,
   getRoomList,
   getUsersByRoom,
