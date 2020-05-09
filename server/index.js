@@ -11,19 +11,16 @@ const dbFunc = require('./db/db')
 const randFunc = require('./random')
 const gameValues = require('./gameValues')
 const timerFunc = require('./timer')
-const voteFun = require('./votes')
+const voteFunc = require('./votes')
 
 io.on('connection', function (socket) {
 
-  console.log('Connect socket: ', socket.id)
-
   socket.on('user', (userData) => {
-    console.log(userData)
+
     userData = {
       ...userData,
       socketId: socket.id
     }
-    console.log(userData)
 
     dbFunc.addUser(userData)
       .then(() => {
@@ -42,7 +39,6 @@ io.on('connection', function (socket) {
     dbFunc.getRoomList()
     .then(roomsData => {
       const rooms = [...new Set(roomsData.map(room => room.roomId))]
-      console.log(rooms)
       return io.to(socket.id).emit('roomList', rooms)
     })
   })
@@ -90,12 +86,13 @@ io.on('connection', function (socket) {
   })
 
   //Takes the result of each vote
-  socket.on('sendVote', voteData => {
-    voteFun.collateVotes(io, voteData.room, voteData.vote)
+  socket.on('sendVote', ({room, vote}) => {
+    voteFunc.collateVotes(io, room, vote)
   })
 
-  socket.on('alienHistory', history => {
-    //send task history to humans
+  socket.on('alienHistory', ({ tasks, room }) => {
+    voteFunc.clear(room)
+    io.to(room).emit('taskList', tasks)
   })
 
   socket.on('disconnect', function () {

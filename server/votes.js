@@ -21,6 +21,10 @@ function collateVotes(io, room, vote) {
   }
 }
 
+function clear(room) {
+  delete votes[room]
+}
+
 module.exports = {
   collateVotes
 }
