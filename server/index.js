@@ -11,19 +11,16 @@ const dbFunc = require('./db/db')
 const randFunc = require('./random')
 const gameValues = require('./gameValues')
 const timerFunc = require('./timer')
-const voteFun = require('./votes')
+const voteFunc = require('./votes')
 
 io.on('connection', function (socket) {
 
-  console.log('Connect socket: ', socket.id)
-
   socket.on('user', (userData) => {
-    console.log(userData)
+
     userData = {
       ...userData,
       socketId: socket.id
     }
-    console.log(userData)
 
     dbFunc.addUser(userData)
       .then(() => {
@@ -40,11 +37,10 @@ io.on('connection', function (socket) {
 
   socket.on('getRoomList', () => {
     dbFunc.getRoomList()
-    .then(roomsData => {
-      const rooms = [...new Set(roomsData.map(room => room.roomId))]
-      console.log(rooms)
-      return io.to(socket.id).emit('roomList', rooms)
-    })
+      .then(roomsData => {
+        const rooms = [...new Set(roomsData.map(room => room.roomId))]
+        return io.to(socket.id).emit('roomList', rooms)
+      })
   })
 
   socket.on('startGame', room => {
@@ -85,64 +81,70 @@ io.on('connection', function (socket) {
   })
 
   //Takes vote call from humans and sends vote request to room
-  socket.on('triggerVote', (voteData) => {
-    io.to(voteData.room).emit('receiveVote', voteData)
+  socket.on('triggerVote', ({ room, voteData }) => {
+    io.to(room).emit('receiveVote', voteData)
   })
 
   //Takes the result of each vote
-  socket.on('sendVote', voteData => {
-    voteFun.collateVotes(io, voteData.room, voteData.vote)
+  socket.on('sendVote', ({ room, voteData}) => {
+    voteFunc.collateVotes(io, room, voteData)
   })
 
-  socket.on('alienHistory', history => {
-    //send task history to humans
+  socket.on('alienHistory', ({ tasks, room }) => {
+    io.to(room).emit('taskList', tasks)
+  })
+
+  socket.on('checkUsers', roomId => {
+    dbFunc.getUsersByRoom(roomId)
+    .then(userList => socket.emit('usersWaiting', userList))
   })
 
   socket.on('disconnect', function () {
-    console.log('disconnect socket:', socket.id)
     dbFunc.removeUser(socket.id)
       .then(res => { })
   })
 })
 
 function getTask(socket) {
-  dbFunc.getTasksId()
-    .then(taskId => {
-      const idArray = taskId.map(objId => objId.id)
+  const id = randFunc.randNum(1, gameValues.numTasks)
+  dbFunc.getTaskById(id)
+    .then(task => {
 
-      const id = randFunc.randNum(1, idArray.length)
-      dbFunc.getTaskById(id)
-        .then(task => {
-          io.to(socket.id).emit('task', task.task)
+      //Send task to the Alien
+      io.to(socket.id).emit('task', task.task)
 
-          let room = Object.keys(socket.rooms)[0];
-          let clients = io.sockets.adapter.rooms[room]
-
-          let humans = Object.keys(clients.sockets).filter(client => client != socket.id)
-
-          let human = humans[randFunc.randNum(0, humans.length)]
-
-          setTimeout(() => {
-            if (randFunc.randNum(10) > gameValues.hintChance) {
-              io.to(human).emit('hint', task.hint)
-            } else {
-              getFakeHint(human)
-            }
-          }, randFunc.randNum(0, gameValues.hintTime))
-        })
+      //Maybe send corresponding hint to a human
+      sendRealHint(socket, task.hint)
     })
+  // })
+}
+
+function sendRealHint(socket, hint) {
+  //Get room code
+  let room = Object.keys(socket.rooms)[1]
+
+  //Get all sockets in room
+  let clients = io.sockets.adapter.rooms[room].sockets
+
+  //Filter out Alien socket
+  let humans = Object.keys(clients).filter(client => client != socket.id)
+
+  //Pick one lucky human to maybe receive a good hint
+  let human = humans[randFunc.randNum(0, humans.length)]
+
+  setTimeout(() => {
+    if (randFunc.randNum(0, 1) < gameValues.hintChance) {
+      io.to(human).emit('hint', hint)
+    }
+  }, randFunc.randNum(0, gameValues.hintTime))
 }
 
 function getFakeHint(human) {
-  dbFunc.getHintsId()
-    .then(hintId => {
-      const idArray = hintId.map(objId => objId.id)
-      const id = randFunc.randNum(1, idArray.length)
+  const id = randFunc.randNum(1, gameValues.numFakeHints)
 
-      dbFunc.getHintsById(id)
-        .then(hint => {
-          io.to(human).emit('hint', hint.fakeHint)
-        })
+  dbFunc.getHintsById(id)
+    .then(hint => {
+      io.to(human).emit('hint', hint.fakeHint)
     })
 }
 
