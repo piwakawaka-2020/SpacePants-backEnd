@@ -17,10 +17,10 @@ const fakeHintTime = 10000
 const taskCompleteTimeReward = 30
 
 //Number of entries in task db
-const numTasks = 63
+const numTasks = 62
 
 //Number of entries in fakeHint db
-const numFakeHints = 65
+const numFakeHints = 58
 
 module.exports = {
   timerStart,
