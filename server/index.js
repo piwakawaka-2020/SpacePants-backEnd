@@ -91,7 +91,6 @@ io.on('connection', function (socket) {
   })
 
   socket.on('alienHistory', ({ tasks, room }) => {
-    voteFunc.clear(room)
     io.to(room).emit('taskList', tasks)
   })
 
