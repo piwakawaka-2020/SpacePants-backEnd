@@ -1,4 +1,4 @@
-const dbFunc = require('./db/db')
+const util = require('./util')
 
 let votes = {}
 
@@ -10,18 +10,16 @@ function collateVotes(io, room, vote) {
     votes[room] = [vote]
   }
 
-  let clients = io.sockets.adapter.rooms[room]
+  let users = util.getUsersByRoom(io, room)
 
-  if (votes[room].length === clients.length) {
+  if (votes[room].length === users.length) {
     const aye = votes[room].filter(el => el.motion)
 
     let result = aye.length > votes[room].length / 2
 
     if (result) {
-      dbFunc.getUserByNameAndRoom(votes[room][0].person, room)
-        .then(user => {
-          io.to(room).emit('gameOver', { winner: user.role === 'Alien' ? 'Humans' : 'Alien' })
-        })
+      let accused = votes[room].find(el => el.role)
+      io.to(room).emit('gameOver', { winner: accused.role === 'Alien' ? 'Humans' : 'The Alien' })
     } else {
       io.to(room).emit('voteFailed')
     }

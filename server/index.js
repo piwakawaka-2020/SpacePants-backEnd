@@ -29,6 +29,11 @@ io.on('connection', function (socket) {
     io.to(socket.id).emit('roomList', util.getAllRooms(io))
   })
 
+  socket.on('checkUsers', room => {
+    let users = util.getUsersByRoom(io, room)
+    io.to(socket.id).emit('usersWaiting', users)
+  })
+
   socket.on('startGame', room => {
     let users = util.getSocketsByRoom(io, room)
 
@@ -67,26 +72,13 @@ io.on('connection', function (socket) {
     io.to(room).emit('receiveVote', voteData)
   })
 
-  //Takes the result of each vote
+  //Takes each vote and sends a final result
   socket.on('sendVote', ({ room, voteData }) => {
     voteFunc.collateVotes(io, room, voteData)
   })
 
   socket.on('alienHistory', endData => {
     io.to(endData.room).emit('finalScreen', endData)
-  })
-
-  socket.on('checkUsers', roomId => {
-    dbFunc.getUsersByRoom(roomId)
-      .then(userList => {
-        const userArr = userList.map(user => user.username)
-        return io.to(socket.id).emit('usersWaiting', userArr)
-      })
-  })
-
-  socket.on('disconnect', function () {
-    dbFunc.removeUser(socket.id)
-      .then(res => { })
   })
 })
 
@@ -101,18 +93,14 @@ function getTask(socket) {
       //Maybe send corresponding hint to a human
       sendRealHint(socket, task.hint)
     })
-  // })
 }
 
 function sendRealHint(socket, hint) {
-  //Get room code
-  let room = Object.keys(socket.rooms)[1]
-
-  //Get all sockets in room
-  let clients = io.sockets.adapter.rooms[room].sockets
+  let room = util.getRoomBySocket(socket)
+  let users = util.getUsersByRoom(io, room)
 
   //Filter out Alien socket
-  let humans = Object.keys(clients).filter(client => client != socket.id)
+  let humans = users.filter(user => user != socket.id)
 
   //Pick one lucky human to maybe receive a good hint
   let human = humans[randFunc.randNum(0, humans.length)]
@@ -138,5 +126,3 @@ const PORT = process.env.PORT || 3000
 httpServer.listen(PORT, function () {
   console.log('Listening on port', PORT)
 })
-
-module.exports = io
