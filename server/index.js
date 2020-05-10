@@ -81,17 +81,16 @@ io.on('connection', function (socket) {
   })
 
   //Takes vote call from humans and sends vote request to room
-  socket.on('triggerVote', (voteData) => {
-    io.to(voteData.room).emit('receiveVote', voteData)
+  socket.on('triggerVote', ({ room, voteData }) => {
+    io.to(room).emit('receiveVote', voteData)
   })
 
   //Takes the result of each vote
-  socket.on('sendVote', ({ room, vote }) => {
-    voteFunc.collateVotes(io, room, vote)
+  socket.on('sendVote', ({ room, voteData}) => {
+    voteFunc.collateVotes(io, room, voteData)
   })
 
   socket.on('alienHistory', ({ tasks, room }) => {
-    voteFunc.clear(room)
     io.to(room).emit('taskList', tasks)
   })
 
@@ -101,57 +100,51 @@ io.on('connection', function (socket) {
   })
 
   socket.on('disconnect', function () {
-    console.log('disconnect socket:', socket.id)
     dbFunc.removeUser(socket.id)
       .then(res => { })
   })
 })
 
 function getTask(socket) {
-  dbFunc.getTasksId()
-    .then(taskId => {
-      const idArray = taskId.map(objId => objId.id)
+  const id = randFunc.randNum(1, gameValues.numTasks)
+  dbFunc.getTaskById(id)
+    .then(task => {
 
-      const id = randFunc.randNum(1, idArray.length)
-      dbFunc.getTaskById(id)
-        .then(task => {
+      //Send task to the Alien
+      io.to(socket.id).emit('task', task.task)
 
-          //Send task to the Alien
-          io.to(socket.id).emit('task', task.task)
-
-          //Get room code
-          let room = Object.keys(socket.rooms)[1]
-
-          //Get all sockets in room
-          let clients = io.sockets.adapter.rooms[room].sockets
-
-          //Filter out Alien socket
-          let humans = Object.keys(clients).filter(client => client != socket.id)
-
-          //Pick one lucky human to maybe receive a good hint
-          let human = humans[randFunc.randNum(0, humans.length)]
-
-          setTimeout(() => {
-            if (randFunc.randNum(0, 1) < gameValues.hintChance) {
-              io.to(human).emit('hint', task.hint)
-            } else {
-              getFakeHint(human)
-            }
-          }, randFunc.randNum(0, gameValues.hintTime))
-        })
+      //Maybe send corresponding hint to a human
+      sendRealHint(socket, task.hint)
     })
+  // })
+}
+
+function sendRealHint(socket, hint) {
+  //Get room code
+  let room = Object.keys(socket.rooms)[1]
+
+  //Get all sockets in room
+  let clients = io.sockets.adapter.rooms[room].sockets
+
+  //Filter out Alien socket
+  let humans = Object.keys(clients).filter(client => client != socket.id)
+
+  //Pick one lucky human to maybe receive a good hint
+  let human = humans[randFunc.randNum(0, humans.length)]
+
+  setTimeout(() => {
+    if (randFunc.randNum(0, 1) < gameValues.hintChance) {
+      io.to(human).emit('hint', hint)
+    }
+  }, randFunc.randNum(0, gameValues.hintTime))
 }
 
 function getFakeHint(human) {
-  dbFunc.getHintsId()
-    .then(hintId => {
-      const idArray = hintId.map(objId => objId.id)
-      const id = randFunc.randNum(1, idArray.length)
+  const id = randFunc.randNum(1, gameValues.numFakeHints)
 
-      dbFunc.getHintsById(id)
-        .then(hint => {
-          io.to(human).emit('hint', hint.fakeHint)
-        })
+  dbFunc.getHintsById(id)
+    .then(hint => {
+      io.to(human).emit('hint', hint.fakeHint)
     })
 }
 
