@@ -95,6 +95,11 @@ io.on('connection', function (socket) {
     io.to(room).emit('taskList', tasks)
   })
 
+  socket.on('checkUsers', roomId => {
+    dbFunc.getUsersByRoom(roomId)
+    .then(userList => socket.emit('usersWaiting', userList))
+  })
+
   socket.on('disconnect', function () {
     console.log('disconnect socket:', socket.id)
     dbFunc.removeUser(socket.id)
