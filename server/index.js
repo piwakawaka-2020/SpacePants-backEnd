@@ -96,7 +96,10 @@ io.on('connection', function (socket) {
 
   socket.on('checkUsers', roomId => {
     dbFunc.getUsersByRoom(roomId)
-    .then(userList => socket.emit('usersWaiting', userList))
+    .then(userList => {
+      const userArr = userList.map(user => user.username)
+      return io.to(socket.id).emit('usersWaiting', userArr)
+    })
   })
 
   socket.on('disconnect', function () {

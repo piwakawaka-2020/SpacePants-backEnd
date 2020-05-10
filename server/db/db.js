@@ -29,6 +29,7 @@ function getRoomList(db = connection){
 
 function getUsersByRoom(roomId, db = connection){
   return db('users')
+    .select('users.username')
     .where('users.roomId', '=', roomId)
 }
 
