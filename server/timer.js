@@ -34,7 +34,9 @@ function timer(room, io) {const tick = setInterval(() => {
     
     if(secondCounter[room] < 0) {
         clearInterval(tick)
-        io.to(room).emit('gameOver')
+
+        io.to(room).emit('gameOver', {winner: 'Alien'})
+        
         delete secondCounter[room]}
     }, 1000)
 }

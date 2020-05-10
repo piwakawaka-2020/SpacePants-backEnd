@@ -90,8 +90,8 @@ io.on('connection', function (socket) {
     voteFunc.collateVotes(io, room, voteData)
   })
 
-  socket.on('alienHistory', ({ tasks, room }) => {
-    io.to(room).emit('taskList', tasks)
+  socket.on('alienHistory', endData => {
+    io.to(endData.room).emit('finalScreen', endData)
   })
 
   socket.on('checkUsers', roomId => {
