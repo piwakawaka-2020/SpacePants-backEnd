@@ -12,50 +12,32 @@ const randFunc = require('./random')
 const gameValues = require('./gameValues')
 const timerFunc = require('./timer')
 const voteFunc = require('./votes')
+const util = require('./util')
 
 io.on('connection', function (socket) {
 
   socket.on('user', (userData) => {
+    socket.username = userData.name
 
-    userData = {
-      ...userData,
-      socketId: socket.id
-    }
-
-    dbFunc.addUser(userData)
-      .then(() => {
-        socket.join(userData.room, () => {
-
-          dbFunc.getUsersByRoom(userData.room)
-            .then(users => {
-              const names = users.map(user => user.username)
-              return io.to(userData.room).emit('user', names)
-            })
-        })
-      })
+    socket.join(userData.room, () => {
+      let users = util.getUsersByRoom(io, userData.room)
+      io.to(userData.room).emit('user', users)
+    })
   })
 
   socket.on('getRoomList', () => {
-    dbFunc.getRoomList()
-      .then(roomsData => {
-        const rooms = [...new Set(roomsData.map(room => room.roomId))]
-        return io.to(socket.id).emit('roomList', rooms)
-      })
+    io.to(socket.id).emit('roomList', util.getAllRooms(io))
   })
 
   socket.on('startGame', room => {
-    dbFunc.getUsersByRoom(room)
-      .then(users => {
-        roles = randFunc.getRoles(users.length)
+    let users = util.getSocketsByRoom(io, room)
 
-        users.forEach((user, i) => {
-          user.role = roles[i]
-          io.to(user.socketId).emit('role', user.role)
+    roles = randFunc.getRoles(users.length)
 
-          dbFunc.updateUser(user)
-            .then(res => res)
-        })
-      })
+    users.forEach((user, i) => {
+      io.to(user).emit('role', roles[i])
+    })
+
     timerFunc.createRoomCounter(room)
     timerFunc.timer(room, io)
   })
@@ -86,7 +68,7 @@ io.on('connection', function (socket) {
   })
 
   //Takes the result of each vote
-  socket.on('sendVote', ({ room, voteData}) => {
+  socket.on('sendVote', ({ room, voteData }) => {
     voteFunc.collateVotes(io, room, voteData)
   })
 
@@ -96,10 +78,10 @@ io.on('connection', function (socket) {
 
   socket.on('checkUsers', roomId => {
     dbFunc.getUsersByRoom(roomId)
-    .then(userList => {
-      const userArr = userList.map(user => user.username)
-      return io.to(socket.id).emit('usersWaiting', userArr)
-    })
+      .then(userList => {
+        const userArr = userList.map(user => user.username)
+        return io.to(socket.id).emit('usersWaiting', userArr)
+      })
   })
 
   socket.on('disconnect', function () {
