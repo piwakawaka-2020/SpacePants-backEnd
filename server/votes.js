@@ -24,15 +24,12 @@ function collateVotes(io, room, vote) {
       .then(user => {
         console.log('user', user)
         io.to(room).emit('voteResult', { result: (aye.length > votes[room].length / 2), role: user.role })
+
+        delete votes[room]
       })
   }
 }
 
-function clear(room) {
-  delete votes[room]
-}
-
 module.exports = {
   collateVotes,
-  clear
 }
