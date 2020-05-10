@@ -1,4 +1,3 @@
-// const io = require ('./index')
 const gameValues = require('./gameValues')
 
 //create object to store each room's counter as room: counter key value pair.
