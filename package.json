@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "run-p dev:server",
     "dev:server": "nodemon server",
-    "start": "run-s build server",
+    "start": "node server",
     "server": "nodemon server",
     "test": "jest --watchAll",
     "postinstall": "knex migrate:latest"
