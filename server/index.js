@@ -61,9 +61,9 @@ io.on('connection', function (socket) {
     setTimeout(() => { getTask(socket) }, gameValues.skipTime)
   })
 
-  socket.on('getFakeHint', () => {
+  socket.on('getBadHint', () => {
     setTimeout(() => {
-      io.to(socket.id).emit('hint', getFakeHint(socket.id))
+      io.to(socket.id).emit('hint', sendBadHint(socket.id))
     }, randFunc.randNum(0, gameValues.fakeHintTime))
   })
 
@@ -91,11 +91,11 @@ function getTask(socket) {
       io.to(socket.id).emit('task', task.task)
 
       //Maybe send corresponding hint to a human
-      sendRealHint(socket, task.hint)
+      sendRealHint(socket, task.hint_id)
     })
 }
 
-function sendRealHint(socket, hint) {
+function sendRealHint(socket, hintId) {
   let room = util.getRoomBySocket(socket)
   let users = util.getUsersByRoom(io, room)
 
@@ -107,17 +107,20 @@ function sendRealHint(socket, hint) {
 
   setTimeout(() => {
     if (randFunc.randNum(0, 1) < gameValues.hintChance) {
-      io.to(human).emit('hint', hint)
+      dbFunc.getHintById(hintId)
+        .then(hint => {
+          io.to(human).emit('hint', hint.hint)
+        })
     }
   }, randFunc.randNum(0, gameValues.hintTime))
 }
 
-function getFakeHint(human) {
+function sendBadHint(human) {
   const id = randFunc.randNum(1, gameValues.numFakeHints)
 
-  dbFunc.getHintsById(id)
+  dbFunc.getHintById(id)
     .then(hint => {
-      io.to(human).emit('hint', hint.fakeHint)
+      io.to(human).emit('hint', hint.hint)
     })
 }
 
