@@ -1,4 +1,3 @@
-// const io = require ('./index')
 const gameValues = require('./gameValues')
 
 //create object to store each room's counter as room: counter key value pair.
@@ -34,7 +33,9 @@ function timer(room, io) {const tick = setInterval(() => {
     
     if(secondCounter[room] < 0) {
         clearInterval(tick)
-        io.to(room).emit('gameOver')
+
+        io.to(room).emit('gameOver', {winner: 'Alien'})
+        
         delete secondCounter[room]}
     }, 1000)
 }
