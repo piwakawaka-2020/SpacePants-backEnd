@@ -25,6 +25,12 @@ io.on('connection', function (socket) {
     })
   })
 
+  socket.on('leaveRoom', room => {
+    socket.leave(room)
+    let users = util.getUsersByRoom(io, room)
+    io.to(room).emit('user', users)
+  })
+
   socket.on('getRoomList', () => {
     io.to(socket.id).emit('roomList', util.getAllRooms(io))
   })
