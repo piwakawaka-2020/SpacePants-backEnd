@@ -86,6 +86,10 @@ io.on('connection', function (socket) {
   socket.on('alienHistory', endData => {
     io.to(endData.room).emit('finalScreen', endData)
   })
+
+  socket.on('playAgain', () => {
+    io.to(util.getRoomBySocket(socket)).emit('playAgain')
+  })
 })
 
 function getTask(socket) {
