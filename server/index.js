@@ -27,8 +27,10 @@ io.on('connection', function (socket) {
 
   socket.on('leaveRoom', room => {
     socket.leave(room, () => {
-      let users = util.getUsersByRoom(io, room)
-      io.to(room).emit('user', users)
+      if(util.getAllRooms(io).includes(room)) {
+        let users = util.getUsersByRoom(io, room)
+        io.to(room).emit('user', users)
+      }
     })
   })
 
