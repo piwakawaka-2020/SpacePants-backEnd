@@ -48,8 +48,13 @@ io.on('connection', function (socket) {
     io.sockets.adapter.rooms[room].category = category
   })
 
-  socket.on('startGame', room => {
+  socket.on('preloadTasks', () => {
+    const room = util.getRoomBySocket(socket)
     taskFunc.getAllTasks(io, room)
+  })
+
+  socket.on('startGame', room => {
+    // taskFunc.getAllTasks(io, room)
 
     let users = util.getSocketsByRoom(io, room)
 
