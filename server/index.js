@@ -60,6 +60,7 @@ io.on('connection', function (socket) {
   socket.on('completeTask', room => {
     let t = gameValues.taskCompleteTimeReward
     timerFunc.decreaseTime(room, t)
+    timerFunc.timeDisp(room, io)
     getTask(socket)
   })
 
