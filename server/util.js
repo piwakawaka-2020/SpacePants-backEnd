@@ -20,9 +20,15 @@ function getUsersByRoom(io, room) {
   return keys.map(key => io.sockets.connected[key].username)
 }
 
+//Return category setting for room
+function getCategoryByRoom(io, room) {
+  return io.sockets.adapter.rooms[room].category
+}
+
 module.exports = {
   getAllRooms,
   getRoomBySocket,
   getSocketsByRoom,
-  getUsersByRoom
+  getUsersByRoom,
+  getCategoryByRoom
 }
