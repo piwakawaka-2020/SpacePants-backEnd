@@ -87,6 +87,11 @@ io.on('connection', function (socket) {
     }, randFunc.randNum(0, gameValues.fakeHintTime))
   })
 
+  socket.on('disableVote', () => {
+    const room = util.getRoomBySocket(socket)
+    io.to(room).emit('disableVote')
+  })
+
   //Takes vote call from humans and sends vote request to room
   socket.on('triggerVote', ({ room, voteData }) => {
     io.to(room).emit('receiveVote', voteData)
