@@ -27,7 +27,7 @@ io.on('connection', function (socket) {
 
   socket.on('leaveRoom', room => {
     socket.leave(room, () => {
-      if(util.getAllRooms(io).includes(room)) {
+      if (util.getAllRooms(io).includes(room)) {
         let users = util.getUsersByRoom(io, room)
         io.to(room).emit('user', users)
       }
@@ -41,6 +41,11 @@ io.on('connection', function (socket) {
   socket.on('checkUsers', room => {
     let users = util.getUsersByRoom(io, room)
     io.to(socket.id).emit('usersWaiting', users)
+  })
+
+  socket.on('setRoomCategory', category => {
+    const room = util.getRoomBySocket(socket)
+    io.sockets.adapter.rooms[room].category = category
   })
 
   socket.on('startGame', room => {
@@ -57,14 +62,15 @@ io.on('connection', function (socket) {
   })
 
   socket.on('getTask', () => {
-    getTask(socket)
+    const category = util.getCategoryBySocket(io, socket)
+    getTask(socket, category)
   })
 
   socket.on('completeTask', room => {
     let t = gameValues.taskCompleteTimeReward
     let counter = timerFunc.secondCounter[room]
     let limit = 30
-    counter - t < limit ? timerFunc.decreaseTime(room, (counter-limit)) : timerFunc.decreaseTime(room, t)    
+    counter - t < limit ? timerFunc.decreaseTime(room, (counter - limit)) : timerFunc.decreaseTime(room, t)
     timerFunc.timeDisp(room, io)
     getTask(socket)
   })
@@ -98,20 +104,27 @@ io.on('connection', function (socket) {
   })
 })
 
-function getTask(socket) {
-  const id = randFunc.randNum(1, gameValues.numTasks)
-  dbFunc.getTaskById(id)
+function getTask(socket, category) {
+
+  let id = 0
+
+  if(category === 'remote') {
+    id = randFunc.randNum(1, gameValues.numRemote)
+  } else {
+    id = randFunc.randNum(1, gameValues.numTasks)
+  }
+
+  dbFunc.getTaskById(id, category)
     .then(task => {
-
-      //Send task to the Alien
+      console.log(task)
       io.to(socket.id).emit('task', task.task)
-
-      //Maybe send corresponding hint to a human
       sendRealHint(socket, task.hint_id)
     })
 }
 
+
 function sendRealHint(socket, hintId) {
+
   let room = util.getRoomBySocket(socket)
   let users = util.getUsersByRoom(io, room)
 
@@ -123,6 +136,7 @@ function sendRealHint(socket, hintId) {
 
   setTimeout(() => {
     if (randFunc.randNum(0, 1) < gameValues.hintChance) {
+      
       dbFunc.getHintById(hintId)
         .then(hint => {
           io.to(human).emit('hint', hint.hint)
