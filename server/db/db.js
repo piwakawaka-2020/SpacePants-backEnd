@@ -10,7 +10,8 @@ function getTaskById(taskId, db = connection){
 
 function getHintById(hintId, db = connection){
   return db('hints')
-  .where('hints.id', hintId).first()
+  .where('hints.id', hintId)
+  .first()
 }
 
 module.exports = {

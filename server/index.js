@@ -27,7 +27,6 @@ io.on('connection', function (socket) {
 
   socket.on('leaveRoom', room => {
     socket.leave(room, () => {
-
       if(util.getAllRooms(io).includes(room)) {
         let users = util.getUsersByRoom(io, room)
         io.to(room).emit('user', users)
@@ -64,7 +63,8 @@ io.on('connection', function (socket) {
   socket.on('completeTask', room => {
     let t = gameValues.taskCompleteTimeReward
     let counter = timerFunc.secondCounter[room]
-    counter - t < 30 ? timer = 30 : timerFunc.decreaseTime(room, t)    
+    let limit = 30
+    counter - t < limit ? timerFunc.decreaseTime(room, (counter-limit)) : timerFunc.decreaseTime(room, t)    
     timerFunc.timeDisp(room, io)
     getTask(socket)
   })
