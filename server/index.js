@@ -7,11 +7,11 @@ const httpServer = http.createServer(server)
 
 const io = socket(httpServer)
 
-const dbFunc = require('./db/db')
 const randFunc = require('./random')
 const gameValues = require('./gameValues')
 const timerFunc = require('./timer')
 const voteFunc = require('./votes')
+const taskFunc = require('././tasks')
 const util = require('./util')
 
 io.on('connection', function (socket) {
@@ -62,8 +62,8 @@ io.on('connection', function (socket) {
   })
 
   socket.on('getTask', () => {
-    const category = util.getCategoryBySocket(io, socket)
-    getTask(socket, category)
+    // const category = util.getCategoryBySocket(io, socket)
+    taskFunc.getTask(socket, io)
   })
 
   socket.on('completeTask', room => {
@@ -72,16 +72,16 @@ io.on('connection', function (socket) {
     let limit = 30
     counter - t < limit ? timerFunc.decreaseTime(room, (counter - limit)) : timerFunc.decreaseTime(room, t)
     timerFunc.timeDisp(room, io)
-    getTask(socket)
+    taskFunc.getTask(socket, io)
   })
 
   socket.on('skipTask', () => {
-    setTimeout(() => { getTask(socket) }, gameValues.skipTime)
+    setTimeout(() => { taskFunc.getTask(socket, io) }, gameValues.skipTime)
   })
 
   socket.on('getBadHint', () => {
     setTimeout(() => {
-      io.to(socket.id).emit('hint', sendBadHint(socket.id))
+      io.to(socket.id).emit('hint', taskFunc.sendBadHint(socket.id, io))
     }, randFunc.randNum(0, gameValues.fakeHintTime))
   })
 
@@ -103,56 +103,6 @@ io.on('connection', function (socket) {
     io.to(util.getRoomBySocket(socket)).emit('playAgain')
   })
 })
-
-function getTask(socket, category) {
-
-  let id = 0
-
-  if(category === 'remote') {
-    id = randFunc.randNum(1, gameValues.numRemote)
-  } else {
-    id = randFunc.randNum(1, gameValues.numTasks)
-  }
-
-  dbFunc.getTaskById(id, category)
-    .then(task => {
-      console.log(task)
-      io.to(socket.id).emit('task', task.task)
-      sendRealHint(socket, task.hint_id)
-    })
-}
-
-
-function sendRealHint(socket, hintId) {
-
-  let room = util.getRoomBySocket(socket)
-  let users = util.getUsersByRoom(io, room)
-
-  //Filter out Alien socket
-  let humans = users.filter(user => user != socket.id)
-
-  //Pick one lucky human to maybe receive a good hint
-  let human = humans[randFunc.randNum(0, humans.length)]
-
-  setTimeout(() => {
-    if (randFunc.randNum(0, 1) < gameValues.hintChance) {
-      
-      dbFunc.getHintById(hintId)
-        .then(hint => {
-          io.to(human).emit('hint', hint.hint)
-        })
-    }
-  }, randFunc.randNum(0, gameValues.hintTime))
-}
-
-function sendBadHint(human) {
-  const id = randFunc.randNum(1, gameValues.numFakeHints)
-
-  dbFunc.getHintById(id)
-    .then(hint => {
-      io.to(human).emit('hint', hint.hint)
-    })
-}
 
 const PORT = process.env.PORT || 3000
 
