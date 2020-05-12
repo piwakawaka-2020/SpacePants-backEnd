@@ -35,7 +35,9 @@ function endTimer (room, tick) {
 function timer(room, io) {const tick = setInterval(() => {
     timeDisp(room, io)
     decreaseTime(room, 1)
-    
+    if(secondCounter[room] == null) {
+        endTimer(room, tick)
+    }
     if(secondCounter[room] < 0) {
         endTimer(room, tick)
         io.to(room).emit('gameOver', {winner: 'Alien'})
@@ -47,5 +49,6 @@ function timer(room, io) {const tick = setInterval(() => {
     timeDisp,
     timer,
     decreaseTime,
-    createRoomCounter
+    createRoomCounter,
+    secondCounter
  }

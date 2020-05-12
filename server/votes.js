@@ -1,4 +1,5 @@
 const util = require('./util')
+const timerFunc = require('./endTimer')
 
 let votes = {}
 
@@ -20,6 +21,7 @@ function collateVotes(io, room, vote) {
     if (result) {
       let accused = votes[room].find(el => el.role)
       io.to(room).emit('gameOver', { winner: accused.role === 'Alien' ? 'Humans' : 'The Alien' })
+      timerFunc.secondCounter[room] = null
     } else {
       io.to(room).emit('voteFailed')
     }
