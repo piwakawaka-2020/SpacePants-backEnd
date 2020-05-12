@@ -1,5 +1,5 @@
 const util = require('./util')
-const timerFunc = require('./endTimer')
+const timerFunc = require('./timer.js')
 
 let votes = {}
 
