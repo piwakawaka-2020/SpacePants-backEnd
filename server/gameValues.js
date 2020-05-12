@@ -20,7 +20,10 @@ const taskCompleteTimeReward = 30
 const timeFloor = 30
 
 //Number of entries in task db
-const numTasks = 62
+const numTasks = 61
+
+//Number of entries in remote category
+const numRemote = 43
 
 //Number of entries in fakeHint db
 const numFakeHints = 58
