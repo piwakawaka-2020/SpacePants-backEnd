@@ -20,8 +20,8 @@ function getUsersByRoom(io, room) {
   return keys.map(key => io.sockets.connected[key].username)
 }
 
-function getCategoryBySocket(io, socket) {
-  const room = getRoomBySocket(socket)
+function getCategoryByRoom(io, room) {
+  // const room = getRoomBySocket(socket)
   return io.sockets.adapter.rooms[room].category
 }
 
@@ -30,5 +30,5 @@ module.exports = {
   getRoomBySocket,
   getSocketsByRoom,
   getUsersByRoom,
-  getCategoryBySocket
+  getCategoryByRoom
 }

@@ -9,12 +9,13 @@ function getTaskById(taskId, db = connection) {
 }
 
 function getAllTasks(db = connection) {
-  return db('tasks')
+  return db('tasks').select('task', 'hint_id')
 }
 
 function getAllRemoteTasks(db = connection) {
   return db('tasks')
     .where('tasks.category', 'remote')
+    .select('task', 'hint_id')
 }
 
 function getHintById(hintId, db = connection) {

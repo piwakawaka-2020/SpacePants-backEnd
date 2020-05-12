@@ -49,6 +49,8 @@ io.on('connection', function (socket) {
   })
 
   socket.on('startGame', room => {
+    taskFunc.getAllTasks(io, room)
+
     let users = util.getSocketsByRoom(io, room)
 
     roles = randFunc.getRoles(users.length)

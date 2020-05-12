@@ -3,15 +3,37 @@ const dbFunc = require('./db/db')
 const randFunc = require('./random')
 const gameValues = require('./gameValues')
 
+const tasks = []
+
+function getAllTasks(io, room) {
+  const category = util.getCategoryByRoom(io, room)
+
+  if (category === 'remote') {
+    dbFunc.getAllRemoteTasks()
+      .then(allTasks => {
+        tasks[room] = allTasks
+      })
+  } else {
+    dbFunc.getAllTasks()
+      .then(allTasks => {
+        tasks[room] = allTasks
+      })
+  }
+}
+
 function getTask(socket, io) {
 
-  id = randFunc.randNum(1, gameValues.numTasks)
+  const room = util.getRoomBySocket(socket)
+  const id = randFunc.randNum(0, tasks[room].length - 1)
 
-  dbFunc.getTaskById(id)
-    .then(task => {
-      io.to(socket.id).emit('task', task.task)
-      sendRealHint(socket, io, task.hint_id)
-    })
+  console.log(tasks[room][id])
+
+  io.to(socket.id).emit('task', tasks[room][id].task)
+
+  sendRealHint(socket, io, tasks[room][id].hint_id)
+
+  tasks[room].splice(id, 1)
+
 }
 
 function sendRealHint(socket, io, hintId) {
@@ -46,6 +68,7 @@ function sendBadHint(human, io) {
 }
 
 module.exports = {
+  getAllTasks,
   getTask,
   sendRealHint,
   sendBadHint
