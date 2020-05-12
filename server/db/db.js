@@ -3,19 +3,25 @@ const config = require('../../knexfile')
 const env = process.env.NODE_ENV || 'development'
 const connection = knex(config[env])
 
-function getTaskById(taskId, db = connection){
-  return db('tasks')
-  .where('tasks.id', taskId).first()
+function getAllTasks(db = connection) {
+  return db('tasks').select('task', 'hint_id')
 }
 
-function getHintById(hintId, db = connection){
+function getAllRemoteTasks(db = connection) {
+  return db('tasks')
+    .where('tasks.category', 'remote')
+    .select('task', 'hint_id')
+}
+
+function getHintById(hintId, db = connection) {
   return db('hints')
-  .where('hints.id', hintId)
-  .first()
+    .where('hints.id', hintId)
+    .first()
 }
 
 module.exports = {
-  getTaskById,
-  getHintById
+  getAllTasks,
+  getAllRemoteTasks,
+  getHintById,
 }
 
