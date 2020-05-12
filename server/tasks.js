@@ -26,14 +26,11 @@ function getTask(socket, io) {
   const room = util.getRoomBySocket(socket)
   const id = randFunc.randNum(0, tasks[room].length - 1)
 
-  console.log(tasks[room][id])
-
   io.to(socket.id).emit('task', tasks[room][id].task)
 
   sendRealHint(socket, io, tasks[room][id].hint_id)
 
   tasks[room].splice(id, 1)
-
 }
 
 function sendRealHint(socket, io, hintId) {

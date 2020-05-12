@@ -20,8 +20,8 @@ function getUsersByRoom(io, room) {
   return keys.map(key => io.sockets.connected[key].username)
 }
 
+//Return category setting for room
 function getCategoryByRoom(io, room) {
-  // const room = getRoomBySocket(socket)
   return io.sockets.adapter.rooms[room].category
 }
 
