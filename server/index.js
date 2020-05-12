@@ -25,6 +25,15 @@ io.on('connection', function (socket) {
     })
   })
 
+  socket.on('leaveRoom', room => {
+    socket.leave(room, () => {
+      if(util.getAllRooms(io).includes(room)) {
+        let users = util.getUsersByRoom(io, room)
+        io.to(room).emit('user', users)
+      }
+    })
+  })
+
   socket.on('getRoomList', () => {
     io.to(socket.id).emit('roomList', util.getAllRooms(io))
   })
@@ -53,7 +62,10 @@ io.on('connection', function (socket) {
 
   socket.on('completeTask', room => {
     let t = gameValues.taskCompleteTimeReward
-    timerFunc.decreaseTime(room, t)
+    let counter = timerFunc.secondCounter[room]
+    let limit = 30
+    counter - t < limit ? timerFunc.decreaseTime(room, (counter-limit)) : timerFunc.decreaseTime(room, t)    
+    timerFunc.timeDisp(room, io)
     getTask(socket)
   })
 
@@ -79,6 +91,10 @@ io.on('connection', function (socket) {
 
   socket.on('alienHistory', endData => {
     io.to(endData.room).emit('finalScreen', endData)
+  })
+
+  socket.on('playAgain', () => {
+    io.to(util.getRoomBySocket(socket)).emit('playAgain')
   })
 })
 
