@@ -7,11 +7,11 @@ const httpServer = http.createServer(server)
 
 const io = socket(httpServer)
 
-const dbFunc = require('./db/db')
 const randFunc = require('./random')
 const gameValues = require('./gameValues')
 const timerFunc = require('./timer')
 const voteFunc = require('./votes')
+const taskFunc = require('././tasks')
 const util = require('./util')
 
 io.on('connection', function (socket) {
@@ -27,7 +27,7 @@ io.on('connection', function (socket) {
 
   socket.on('leaveRoom', room => {
     socket.leave(room, () => {
-      if(util.getAllRooms(io).includes(room)) {
+      if (util.getAllRooms(io).includes(room)) {
         let users = util.getUsersByRoom(io, room)
         io.to(room).emit('user', users)
       }
@@ -43,7 +43,19 @@ io.on('connection', function (socket) {
     io.to(socket.id).emit('usersWaiting', users)
   })
 
+  socket.on('setRoomCategory', category => {
+    const room = util.getRoomBySocket(socket)
+    io.sockets.adapter.rooms[room].category = category
+  })
+
+  socket.on('preloadTasks', () => {
+    const room = util.getRoomBySocket(socket)
+    taskFunc.getAllTasks(io, room)
+  })
+
   socket.on('startGame', room => {
+    // taskFunc.getAllTasks(io, room)
+
     let users = util.getSocketsByRoom(io, room)
 
     roles = randFunc.getRoles(users.length)
@@ -57,26 +69,32 @@ io.on('connection', function (socket) {
   })
 
   socket.on('getTask', () => {
-    getTask(socket)
+    // const category = util.getCategoryBySocket(io, socket)
+    taskFunc.getTask(socket, io)
   })
 
   socket.on('completeTask', room => {
     let t = gameValues.taskCompleteTimeReward
     let counter = timerFunc.secondCounter[room]
     let limit = 30
-    counter - t < limit ? timerFunc.decreaseTime(room, (counter-limit)) : timerFunc.decreaseTime(room, t)    
+    counter - t < limit ? timerFunc.decreaseTime(room, (counter - limit)) : timerFunc.decreaseTime(room, t)
     timerFunc.timeDisp(room, io)
-    getTask(socket)
+    taskFunc.getTask(socket, io)
   })
 
   socket.on('skipTask', () => {
-    setTimeout(() => { getTask(socket) }, gameValues.skipTime)
+    setTimeout(() => { taskFunc.getTask(socket, io) }, gameValues.skipTime)
   })
 
   socket.on('getBadHint', () => {
     setTimeout(() => {
-      io.to(socket.id).emit('hint', sendBadHint(socket.id))
+      io.to(socket.id).emit('hint', taskFunc.sendBadHint(socket.id, io))
     }, randFunc.randNum(0, gameValues.fakeHintTime))
+  })
+
+  socket.on('disableVote', () => {
+    const room = util.getRoomBySocket(socket)
+    io.to(room).emit('disableVote')
   })
 
   //Takes vote call from humans and sends vote request to room
@@ -97,48 +115,6 @@ io.on('connection', function (socket) {
     io.to(util.getRoomBySocket(socket)).emit('playAgain')
   })
 })
-
-function getTask(socket) {
-  const id = randFunc.randNum(1, gameValues.numTasks)
-  dbFunc.getTaskById(id)
-    .then(task => {
-
-      //Send task to the Alien
-      io.to(socket.id).emit('task', task.task)
-
-      //Maybe send corresponding hint to a human
-      sendRealHint(socket, task.hint_id)
-    })
-}
-
-function sendRealHint(socket, hintId) {
-  let room = util.getRoomBySocket(socket)
-  let users = util.getUsersByRoom(io, room)
-
-  //Filter out Alien socket
-  let humans = users.filter(user => user != socket.id)
-
-  //Pick one lucky human to maybe receive a good hint
-  let human = humans[randFunc.randNum(0, humans.length)]
-
-  setTimeout(() => {
-    if (randFunc.randNum(0, 1) < gameValues.hintChance) {
-      dbFunc.getHintById(hintId)
-        .then(hint => {
-          io.to(human).emit('hint', hint.hint)
-        })
-    }
-  }, randFunc.randNum(0, gameValues.hintTime))
-}
-
-function sendBadHint(human) {
-  const id = randFunc.randNum(1, gameValues.numFakeHints)
-
-  dbFunc.getHintById(id)
-    .then(hint => {
-      io.to(human).emit('hint', hint.hint)
-    })
-}
 
 const PORT = process.env.PORT || 3000
 
