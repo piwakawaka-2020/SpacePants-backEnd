@@ -48,8 +48,13 @@ io.on('connection', function (socket) {
     io.sockets.adapter.rooms[room].category = category
   })
 
-  socket.on('startGame', room => {
+  socket.on('preloadTasks', () => {
+    const room = util.getRoomBySocket(socket)
     taskFunc.getAllTasks(io, room)
+  })
+
+  socket.on('startGame', room => {
+    // taskFunc.getAllTasks(io, room)
 
     let users = util.getSocketsByRoom(io, room)
 
@@ -85,6 +90,11 @@ io.on('connection', function (socket) {
     setTimeout(() => {
       io.to(socket.id).emit('hint', taskFunc.sendBadHint(socket.id, io))
     }, randFunc.randNum(0, gameValues.fakeHintTime))
+  })
+
+  socket.on('disableVote', () => {
+    const room = util.getRoomBySocket(socket)
+    io.to(room).emit('disableVote')
   })
 
   //Takes vote call from humans and sends vote request to room
