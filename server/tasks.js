@@ -7,23 +7,15 @@ const tasks = []
 
 function getAllTasks(io, socket, room) {
   dbFunc.getAllTasks()
-    .then(allTasks => {
-      tasks[room] = allTasks
-      getTask(socket, io)
-    })
+    .then(allTasks => tasks[room] = allTasks)
 }
 
 function getRemoteTasks(io, socket, room) {
   dbFunc.getAllRemoteTasks()
-    .then(allTasks => {
-      tasks[room] = allTasks
-      getTask(socket, io)
-    })
+    .then(allTasks => tasks[room] = allTasks)
 }
 
 function getTask(socket, io) {
-  console.log('getTask', tasks[room])
-
   const room = util.getRoomBySocket(socket)
 
   const id = randFunc.randNum(0, tasks[room].length - 1)
@@ -36,7 +28,6 @@ function getTask(socket, io) {
 }
 
 function sendRealHint(socket, io, hintId) {
-
   let room = util.getRoomBySocket(socket)
   let users = util.getUsersByRoom(io, room)
 
