@@ -54,7 +54,6 @@ io.on('connection', function (socket) {
   })
 
   socket.on('startGame', room => {
-    // taskFunc.getAllTasks(io, room)
 
     let users = util.getSocketsByRoom(io, room)
 
@@ -69,7 +68,6 @@ io.on('connection', function (socket) {
   })
 
   socket.on('getTask', () => {
-    // const category = util.getCategoryBySocket(io, socket)
     taskFunc.getTask(socket, io)
   })
 
