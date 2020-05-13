@@ -22,6 +22,7 @@ io.on('connection', function (socket) {
     socket.join(userData.room, () => {
       let users = util.getUsersByRoom(io, userData.room)
       io.to(userData.room).emit('user', users)
+      console.log('user')
     })
   })
 
@@ -30,6 +31,7 @@ io.on('connection', function (socket) {
       if (util.getAllRooms(io).includes(room)) {
         let users = util.getUsersByRoom(io, room)
         io.to(room).emit('user', users)
+        console.log('leaveRoom')
       }
     })
   })
@@ -55,7 +57,15 @@ io.on('connection', function (socket) {
 
   socket.on('preloadTasks', () => {
     const room = util.getRoomBySocket(socket)
-    taskFunc.getAllTasks(io, socket, room)
+    const category = util.getCategoryByRoom(io, room)
+    console.log('preload category', category)
+
+    if(category === 'remote') {
+      taskFunc.getRemoteTasks(io, socket, room)
+    } else {
+      taskFunc.getAllTasks(io, socket, room)
+    }
+    console.log('preloadTasks')
   })
 
   socket.on('startGame', room => {
