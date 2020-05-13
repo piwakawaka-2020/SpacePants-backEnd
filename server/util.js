@@ -16,7 +16,6 @@ function getSocketsByRoom(io, room) {
 //Returns array of names
 function getUsersByRoom(io, room) {
   let keys = Object.keys(io.sockets.adapter.rooms[room].sockets)
-
   return keys.map(key => io.sockets.connected[key].username)
 }
 
