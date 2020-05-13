@@ -22,6 +22,7 @@ io.on('connection', function (socket) {
     socket.join(userData.room, () => {
       let users = util.getUsersByRoom(io, userData.room)
       io.to(userData.room).emit('user', users)
+      console.log('user')
     })
   })
 
@@ -30,6 +31,7 @@ io.on('connection', function (socket) {
       if (util.getAllRooms(io).includes(room)) {
         let users = util.getUsersByRoom(io, room)
         io.to(room).emit('user', users)
+        console.log('leaveRoom')
       }
     })
   })
@@ -41,6 +43,7 @@ io.on('connection', function (socket) {
   socket.on('checkUsers', room => {
     let users = util.getUsersByRoom(io, room)
     io.to(socket.id).emit('usersWaiting', users)
+    console.log('checkUsers')
   })
 
   socket.on('setRoomCategory', category => {
@@ -51,6 +54,7 @@ io.on('connection', function (socket) {
   socket.on('preloadTasks', () => {
     const room = util.getRoomBySocket(socket)
     taskFunc.getAllTasks(io, socket, room)
+    console.log('preloadTasks')
   })
 
   socket.on('startGame', room => {
