@@ -66,7 +66,7 @@ exports.seed = knex => {
         },
         {
           id: 11,
-          task: 'Stop talking mid sentence. If questioned refuse to acknowledge that you started questions.',
+          task: 'Stop talking mid sentence. If questioned, refuse to acknowledge that you started talking.  It\'s a real power move',
           hint_id: 11,
           category: 'remote'
         },
