@@ -6,6 +6,7 @@ const gameValues = require('./gameValues')
 const tasks = []
 
 function getAllTasks(io, socket, room) {
+  console.log('getAllTasks room:', room)
   const category = util.getCategoryByRoom(io, room)
 
   if (category === 'remote') {
@@ -24,6 +25,7 @@ function getAllTasks(io, socket, room) {
 }
 
 function getTask(socket, io) {
+  console.log('getTask', tasks[room])
 
   const room = util.getRoomBySocket(socket)
 
