@@ -6,22 +6,19 @@ const gameValues = require('./gameValues')
 const tasks = []
 
 function getAllTasks(io, socket, room) {
-  console.log('getAllTasks room:', room)
-  const category = util.getCategoryByRoom(io, room)
+  dbFunc.getAllTasks()
+    .then(allTasks => {
+      tasks[room] = allTasks
+      getTask(socket, io)
+    })
+}
 
-  if (category === 'remote') {
-    dbFunc.getAllRemoteTasks()
-      .then(allTasks => {
-        tasks[room] = allTasks
-        getTask(socket, io)
-      })
-  } else {
-    dbFunc.getAllTasks()
-      .then(allTasks => {
-        tasks[room] = allTasks
-        getTask(socket, io)
-      })
-  }
+function getRemoteTasks(io, socket, room) {
+  dbFunc.getAllRemoteTasks()
+    .then(allTasks => {
+      tasks[room] = allTasks
+      getTask(socket, io)
+    })
 }
 
 function getTask(socket, io) {
@@ -71,6 +68,7 @@ function sendBadHint(human, io) {
 
 module.exports = {
   getAllTasks,
+  getRemoteTasks,
   getTask,
   sendRealHint,
   sendBadHint

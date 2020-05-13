@@ -57,7 +57,14 @@ io.on('connection', function (socket) {
 
   socket.on('preloadTasks', () => {
     const room = util.getRoomBySocket(socket)
-    taskFunc.getAllTasks(io, socket, room)
+    const category = util.getCategoryByRoom(room)
+    console.log('preload category', category)
+
+    if(category === 'remote') {
+      taskFunc.getRemoteTasks(io, socket, room)
+    } else {
+      taskFunc.getAllTasks(io, socket, room)
+    }
     console.log('preloadTasks')
   })
 
