@@ -1,7 +1,7 @@
 const gameValues = require('./gameValues')
 
-//create object to store each room's counter as room: counter key value pair.
-//each room's counter can then be called and modified with secondCounter[room]
+//create object to store each room's counter as "room: counter" key value pair.
+//each room's counter can then be called and modified with syntax secondCounter[room]
 let secondCounter = {}
 
 //push new room counter to object and give it a start time value
@@ -27,7 +27,7 @@ function timeDisp(room, io) {
     io.to(room).emit('timer', `${minutes}:${seconds()}`)
 }
 
-function endTimer (room, tick) {
+function endTimer (room, tick, io) {
     clearInterval(tick)
     delete secondCounter[room]
 }
@@ -35,11 +35,11 @@ function endTimer (room, tick) {
 function timer(room, io) {const tick = setInterval(() => {
     timeDisp(room, io)
     decreaseTime(room, 1)
-    if(secondCounter[room] == null) {
-        endTimer(room, tick)
+    if(secondCounter[room] == null) { //check if game is ended.
+        endTimer(room, tick, io)
     }
     if(secondCounter[room] < 0) {
-        endTimer(room, tick)
+        endTimer(room, tick, io)
         io.to(room).emit('gameOver', {winner: 'Alien'})
         }
     }, 1000)

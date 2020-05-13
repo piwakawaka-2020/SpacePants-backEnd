@@ -1,4 +1,4 @@
-// Start value of game timer in milliseconds
+// Start value of game timer in seconds
 const timerStart = 300
 
 // Time penalty for skipping task
@@ -15,6 +15,9 @@ const fakeHintTime = 10000
 
 //Time bonus on successful completion of task in seconds
 const taskCompleteTimeReward = 30
+
+//Floor limit that time can be reduced to on task completion in seconds
+const timeFloor = 30
 
 //Number of entries in task db
 const numTasks = 61
@@ -33,6 +36,6 @@ module.exports = {
   fakeHintTime,
   taskCompleteTimeReward,
   numTasks,
-  numRemote,
-  numFakeHints
+  numFakeHints,
+  timeFloor
 }
