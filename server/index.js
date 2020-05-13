@@ -40,7 +40,12 @@ io.on('connection', function (socket) {
 
   socket.on('checkUsers', room => {
     let users = util.getUsersByRoom(io, room)
-    io.to(socket.id).emit('usersWaiting', users)
+    let inProgress = timerFunc.secondCounter[room] ? true : false
+    let waitingData = {
+      users,
+      inProgress,
+    }
+    io.to(socket.id).emit('usersWaiting', waitingData)
   })
 
   socket.on('setRoomCategory', category => {

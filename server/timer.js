@@ -27,19 +27,20 @@ function timeDisp(room, io) {
     io.to(room).emit('timer', `${minutes}:${seconds()}`)
 }
 
-function endTimer (room, tick) {
+function endTimer (room, tick, io) {
     clearInterval(tick)
     delete secondCounter[room]
+    io.to(`${room} - game in progress`).emit('waitOver', room)
 }
 
 function timer(room, io) {const tick = setInterval(() => {
     timeDisp(room, io)
     decreaseTime(room, 1)
     if(secondCounter[room] == null) { //check if game is ended.
-        endTimer(room, tick)
+        endTimer(room, tick, io)
     }
     if(secondCounter[room] < 0) {
-        endTimer(room, tick)
+        endTimer(room, tick, io)
         io.to(room).emit('gameOver', {winner: 'Alien'})
         }
     }, 1000)
