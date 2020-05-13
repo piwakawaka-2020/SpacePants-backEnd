@@ -50,7 +50,7 @@ io.on('connection', function (socket) {
 
   socket.on('preloadTasks', () => {
     const room = util.getRoomBySocket(socket)
-    taskFunc.getAllTasks(io, room)
+    taskFunc.getAllTasks(io, socket, room)
   })
 
   socket.on('startGame', room => {
