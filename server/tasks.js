@@ -5,18 +5,20 @@ const gameValues = require('./gameValues')
 
 const tasks = []
 
-function getAllTasks(io, room) {
+function getAllTasks(io, socket, room) {
   const category = util.getCategoryByRoom(io, room)
 
   if (category === 'remote') {
     dbFunc.getAllRemoteTasks()
       .then(allTasks => {
         tasks[room] = allTasks
+        getTask(socket, io)
       })
   } else {
     dbFunc.getAllTasks()
       .then(allTasks => {
         tasks[room] = allTasks
+        getTask(socket, io)
       })
   }
 }
@@ -24,6 +26,7 @@ function getAllTasks(io, room) {
 function getTask(socket, io) {
 
   const room = util.getRoomBySocket(socket)
+
   const id = randFunc.randNum(0, tasks[room].length - 1)
 
   io.to(socket.id).emit('task', tasks[room][id].task)
