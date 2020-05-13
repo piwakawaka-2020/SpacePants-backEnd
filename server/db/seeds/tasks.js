@@ -48,13 +48,13 @@ exports.seed = knex => {
         },
         {
           id: 8,
-          task: 'Convince a human to trust you by using the phrase ‘trust me’ three times',
+          task: 'Convince a human to trust you by using the phrase ‘trust me’ three times.',
           hint_id: 8,
           category: 'remote'
         },
         {
           id: 9,
-          task: 'Drop something.  Then you can pick it up to show off your human dexterity',
+          task: 'Drop something.  Then you can pick it up to show off your human dexterity.',
           hint_id: 9,
           category: 'local'
         },
@@ -120,13 +120,13 @@ exports.seed = knex => {
         },
         {
           id: 20,
-          task: 'Accuse someone of farting.  Humans are very proud of their sounds and like others to take note',
+          task: 'Accuse someone of farting.  Humans are very proud of their sounds and like others to take note.',
           hint_id: 20,
           category: 'remote'
         },
         {
           id: 21,
-          task: 'Close your eyes for 10 seconds.  This will show you are deep in thought and very involved in the conversation',
+          task: 'Close your eyes for 10 seconds.  This will show you are deep in thought and very involved in the conversation.',
           hint_id: 21,
           category: 'remote'
         },
@@ -138,19 +138,19 @@ exports.seed = knex => {
         },
         {
           id: 23,
-          task: 'Pretend to sneeze.  Show the humans that you know how to use your nose',
+          task: 'Pretend to sneeze.  Show the humans that you know how to use your nose.',
           hint_id: 23,
           category: 'remote'
         },
         {
           id: 24,
-          task: 'Mention a body part.  The humans will be impressed with your knowledge of anatomy',
+          task: 'Mention a body part.  The humans will be impressed with your knowledge of anatomy.',
           hint_id: 24,
           category: 'remote'
         },
         {
           id: 25,
-          task: 'Make up a story about a different human that you are totally friends with',
+          task: 'Make up a story about a different human that you are totally friends with.',
           hint_id: 25,
           category: 'remote'
         },
@@ -168,25 +168,25 @@ exports.seed = knex => {
         },
         {
           id: 28,
-          task: 'Wildly exaggerate something.  This will make you seem cool',
+          task: 'Wildly exaggerate something.  This will make you seem cool.',
           hint_id: 8,
           category: 'remote'
         },
         {
           id: 29,
-          task: 'Put an uncomfortably long pause in the middle of a sentence.  The silence gives space for thought',
+          task: 'Put an uncomfortably long pause in the middle of a sentence.  The silence gives space for thought.',
           hint_id: 12,
           category: 'remote'
         },
         {
           id: 30,
-          task: 'Poke your tongue out.  Just to make sure it works',
+          task: 'Poke your tongue out.  Just to make sure it works.',
           hint_id: 24,
           category: 'remote'
         },
         {
           id: 31,
-          task: 'Do a squat.  Show off your human muscles',
+          task: 'Do a squat.  Show off your human muscles.',
           hint_id: 28,
           category: 'local'
         },
@@ -204,13 +204,13 @@ exports.seed = knex => {
         },
         {
           id: 34,
-          task: 'Use the same word twice in one sentence.  Show off your favourite word to your human friends',
+          task: 'Use the same word twice in one sentence.  Show off your favourite word to your human friends.',
           hint_id: 15,
           category: 'remote'
         },
         {
           id: 35,
-          task: 'Voice a firm opinion on a particular pet',
+          task: 'Voice a firm opinion on a particular pet.',
           hint_id: 29,
           category: 'remote'
         },
@@ -246,31 +246,31 @@ exports.seed = knex => {
         },
         {
           id: 41,
-          task: 'Sneak some song lyrics into the conversation.  Show off how cultured you are',
+          task: 'Sneak some song lyrics into the conversation.  Show off how cultured you are.',
           hint_id: 38,
           category: 'remote'
         },
         {
           id: 42,
-          task: 'Go to the the bathroom',
-          hint_id: 31,
+          task: 'Put on an item of clothing.  Change your style!',
+          hint_id: 37,
           category: 'local'
         },
         {
           id: 43,
-          task: 'If you have a drink, drink half of it.  If you don\'t pretend!',
+          task: 'If you have a drink, drink half of it.  If you don\'t, pretend!',
           hint_id: 32,
           category: 'local'
         },
         {
           id: 44,
-          task: 'Work in a movie title into conversation',
+          task: 'Work in a movie title into conversation.',
           hint_id: 38,
           category: 'remote'
         },
         {
           id: 45,
-          task: 'Talk in double time',
+          task: 'Talk in double time.',
           hint_id: 33,
           category: 'remote'
         },
@@ -282,19 +282,19 @@ exports.seed = knex => {
         },
         {
           id: 47,
-          task: 'Refer to yourself using your name or nickname',
+          task: 'Refer to yourself using your name or nickname.',
           hint_id: 34,
           category: 'remote'
         },
         {
           id: 48,
-          task: 'Burp frequently',
+          task: 'Burp. That\'s a thing that some humans do.',
           hint_id: 24,
           category: 'remote'
         },
         {
           id: 49,
-          task: 'Talk in song quotes or titles',
+          task: 'Talk in song quotes or titles.',
           hint_id: 38,
           category: 'remote'
         },
@@ -318,7 +318,7 @@ exports.seed = knex => {
         },
         {
           id: 53,
-          task: 'Get distracted by something/someone.  This will make you seem "aloof" to your new friends',
+          task: 'Get distracted by something/someone.  This will make you seem "aloof" to your new friends.',
           hint_id: 11,
           category: 'local'
         },
@@ -330,31 +330,31 @@ exports.seed = knex => {
         },
         {
           id: 55,
-          task: 'Slowly lower your voice',
+          task: 'Slowly lower your voice.  In pitch or volume is up to you.',
           hint_id: 33,
           category: 'remote'
         },
         {
           id: 56,
-          task: 'Get a drink!  It\'s the coooool thing to do',
+          task: 'Get a drink!  It\'s what everyone else is doing.',
           hint_id: 32,
           category: 'local'
         },
         {
           id: 57,
-          task: 'Talk about someone you haven\'t seen in ages',
+          task: 'Talk about someone you haven\'t seen in ages.  You have friends, right?',
           hint_id: 25,
           category: 'remote'
         },
         {
           id: 63,
-          task: 'Don\'t make  eye contact for 20 seconds.  Eyes are weird and squishy',
+          task: 'Don\'t make  eye contact for 20 seconds.  Eyes are weird and squishy.',
           hint_id: 12,
           category: 'local'
         },
         {
           id: 59,
-          task: 'Mention random food items',
+          task: 'Mention random food items.  Whatever takes your fancy.',
           hint_id: 36,
           category: 'remote'
         },
