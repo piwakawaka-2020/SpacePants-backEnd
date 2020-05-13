@@ -106,8 +106,9 @@ io.on('connection', function (socket) {
     io.to(endData.room).emit('finalScreen', endData)
   })
 
-  socket.on('playAgain', () => {
+  socket.on('playAgain', (room) => {
     io.to(util.getRoomBySocket(socket)).emit('playAgain')
+    io.to(`${room} - game in progress`).emit('waitOver', room)
   })
 })
 

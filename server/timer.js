@@ -30,7 +30,6 @@ function timeDisp(room, io) {
 function endTimer (room, tick, io) {
     clearInterval(tick)
     delete secondCounter[room]
-    io.to(`${room} - game in progress`).emit('waitOver', room)
 }
 
 function timer(room, io) {const tick = setInterval(() => {
